@@ -1,0 +1,170 @@
+%{
+    #include <iostream>
+    #include "hw3_output.hpp"
+    #include "Semantics.h"
+    using namespace std;
+    int yylex();
+    extern int yylineno;
+    extern std::string curFuncName;
+    extern char *yytext;
+    void yyerror(const char* err);
+%}
+
+%nonassoc VOID;
+%nonassoc INT;
+%nonassoc BYTE;
+%nonassoc B;
+%nonassoc BOOL;
+%nonassoc CONST;
+%nonassoc TRUE;
+%nonassoc FALSE;
+%nonassoc RETURN;
+%nonassoc WHILE;
+%nonassoc BREAK;
+%nonassoc CONTINUE;
+%nonassoc SC;
+%nonassoc COMMA;
+%nonassoc LBRACE;
+%nonassoc RBRACE;
+%nonassoc ID;
+%nonassoc NUM;
+%nonassoc STRING;
+%left LPAREN;
+%left RPAREN;
+%right NOT;
+%left MULT;
+%left DIV;
+%left PLUS;
+%left MINUS;
+%nonassoc RELOPNONASSOC;
+%left RELOPLEFT;
+%left AND;
+%left OR;
+%right IF;
+%right ELSE;
+%right ASSIGN;
+
+%%
+program: m_glob funcs {$$ = new program();};
+
+funcs: /*epsilon*/{$$ = new funcs();};|
+        funcDecl funcs {$$ = new funcs();};
+
+funcDecl: retType ID m_funcNewScope LPAREN formals RPAREN LBRACE statements RBRACE{$$ = new funcDecl(
+                                                                                    dynamic_cast<retType*>($1),
+                                                                                    $2,
+                                                                                    dynamic_cast<formals*>($5),
+                                                                                    dynamic_cast<statements*>($8));
+                                                                                    };
+
+retType: type{$$ = new retType(dynamic_cast<type*>($1));};
+        |VOID{$$ = new retType($1);};
+
+formals: /*epsilon*/{$$ = new formals();};
+	|formalsList{$$ = new formals(dynamic_cast<formalsList*>($1));};
+
+formalsList: formalDecl{$$ = new formalsList(dynamic_cast<formalsDecl*>($1));};
+	|formalDecl COMMA formalsList{$$ = new formalsList(dynamic_cast<formalsDecl*>($1), dynamic_cast<formalsList*>($3));};
+
+formalDecl: typeAnnotation type ID{$$ = new formalsDecl(dynamic_cast<typeAnnotation*>($1)
+                                                        ,dynamic_cast<type*>($2),
+                                                        $3);};
+
+statements: statement{$$ = new statements(dynamic_cast<statement*>($1));}
+	|statements statement{$$ = new statements(dynamic_cast<statements*>($1), dynamic_cast<statement*>($2));};
+
+statement: OpenStatement {$$ = new statement(dynamic_cast<OpenStatement*>($1));}
+	|ClosedStatement {$$ = new statement(dynamic_cast<ClosedStatement*>($1));};
+
+OpenStatement: IF LPAREN m_newScope exp RPAREN statement{$$ = new OpenStatement("IF",
+                                                                                dynamic_cast<exp*>($4),
+                                                                                dynamic_cast<statement*>($6),
+                                                                                $1->lineNum);}
+		|IF LPAREN m_newScope exp RPAREN ClosedStatement m_endScope ELSE  m_newScope OpenStatement{$$ = new OpenStatement("IF",
+                                                                                                                        dynamic_cast<exp*>($4),
+                                                                                                                        dynamic_cast<ClosedStatement*>($6),
+                                                                                                                        "ELSE",
+                                                                                                                        dynamic_cast<OpenStatement*>($10),
+                                                                                                                        $1->lineNum);}
+		|WHILE m_newScopeWhile LPAREN exp RPAREN OpenStatement{$$ = new OpenStatement("WHILE",
+		                                                                              dynamic_cast<exp*>($4),
+		                                                                              dynamic_cast<OpenStatement*>($6),
+		                                                                              $1->lineNum);};
+
+ClosedStatement:SimpleStatement {$$ = new ClosedStatement(dynamic_cast<SimpleStatement*>($1));}
+		|IF LPAREN m_newScope exp RPAREN ClosedStatement m_endScope ELSE m_newScope ClosedStatement{$$ = new ClosedStatement("IF",
+		                                                                                                          dynamic_cast<exp*>($4),
+		                                                                                                          dynamic_cast<ClosedStatement*>($6),
+		                                                                                                          "ELSE",
+		                                                                                                          dynamic_cast<ClosedStatement*>($9),
+		                                                                                                          $1->lineNum);}
+		|WHILE m_newScopeWhile LPAREN exp RPAREN ClosedStatement{$$ = new ClosedStatement("WHILE",
+                                                                                            dynamic_cast<exp*>($4),
+                                                                                            dynamic_cast<ClosedStatement*>($6),$1->lineNum);};
+
+SimpleStatement: LBRACE m_newScope statements RBRACE{$$ = new SimpleStatement(dynamic_cast<statements*>($3));} //TODO - Maybe we need to perform the m_nesScope() function here
+	|typeAnnotation type ID SC{$$ = new SimpleStatement(dynamic_cast<typeAnnotation*>($1),
+                                                        dynamic_cast<type*>($2),
+                                                        $3);}
+	|typeAnnotation type ID ASSIGN exp SC{$$ = new SimpleStatement(dynamic_cast<typeAnnotation*>($1),
+                                                                   dynamic_cast<type*>($2),
+                                                                   $3,dynamic_cast<exp*>($5));}
+	|ID ASSIGN exp SC{$$ = new SimpleStatement($1, "ASSIGN", dynamic_cast<exp*>($3));}
+	|call SC{$$ = new SimpleStatement(dynamic_cast<call*>($1));}
+	|RETURN SC{$$ = new SimpleStatement($1);}
+	|RETURN exp SC{$$ = new SimpleStatement($1, dynamic_cast<exp*>($2));}
+	|BREAK SC{$$ = new SimpleStatement($1);}
+	|CONTINUE SC{$$ = new SimpleStatement($1);};
+
+call: ID LPAREN expList RPAREN{$$ = new call($1, dynamic_cast<expList*>($3));};
+	|ID LPAREN RPAREN{$$ = new call($1);};
+
+expList: exp{$$ = new expList(dynamic_cast<exp*>($1));};
+	|exp COMMA expList{$$ = new expList(dynamic_cast<exp*>($1),dynamic_cast<expList*>($3));};
+
+type: INT{$$ = new type($1);};
+	|BYTE{$$ = new type($1);};
+	|BOOL{$$ = new type($1);};
+
+typeAnnotation: /*epsilon*/{$$ = new typeAnnotation();};
+		|CONST{$$ = new typeAnnotation($1);};
+
+
+exp: LPAREN exp RPAREN{$$ = new exp(dynamic_cast<exp*>($2));};
+	|exp MULT exp{$$ = new exp(dynamic_cast<exp*>($1), "MULT", dynamic_cast<exp*>($3),$2->lineNum);};
+	|exp DIV exp{$$ = new exp(dynamic_cast<exp*>($1), "DIV", dynamic_cast<exp*>($3),$2->lineNum);};
+	|exp PLUS exp{$$ = new exp(dynamic_cast<exp*>($1), "PLUS", dynamic_cast<exp*>($3),$2->lineNum);};
+	|exp MINUS exp{$$ = new exp(dynamic_cast<exp*>($1), "MINUS", dynamic_cast<exp*>($3),$2->lineNum);};
+	|ID{cout<<"this is ID"<<endl;$$ = new exp($1,"ID");};
+	|call{$$ = new exp(dynamic_cast<call*>($1));};
+	|NUM{$$ = new exp($1, 0, false);};
+	|NUM B{cout<<"this is NUMB"<<endl;$$ = new exp($1, 0, true);};
+	|STRING{$$ = new exp($1,"STRING");};
+	|TRUE{$$ = new exp(true);};
+	|FALSE{$$ = new exp(false);};
+	|NOT exp{$$ = new exp("NOT", dynamic_cast<exp*>($2),$1->lineNum);};
+	|exp AND exp{$$ = new exp(dynamic_cast<exp*>($1), "AND", dynamic_cast<exp*>($3),$2->lineNum);};
+	|exp OR exp{$$ = new exp(dynamic_cast<exp*>($1), "OR", dynamic_cast<exp*>($3),$2->lineNum);};
+	|exp RELOPNONASSOC exp{$$ = new exp(dynamic_cast<exp*>($1), "RELOPNONASSOC", dynamic_cast<exp*>($3),$2->lineNum);};
+	|exp RELOPLEFT exp{$$ = new exp(dynamic_cast<exp*>($1), "RELOPLEFT", dynamic_cast<exp*>($3),$2->lineNum);};
+	|LPAREN typeAnnotation type RPAREN exp{$$ = new exp(dynamic_cast<typeAnnotation*>($2), dynamic_cast<type*>($3), dynamic_cast<exp*>($5),$1->lineNum);};
+
+m_glob: /*epsilon*/     {m_glob();};
+
+m_funcNewScope: /*epsilon*/ {curFuncName = yytext;m_newScope();};
+
+m_newScope: /*epsilon*/ {m_newScope();};
+
+m_newScopeWhile: /*epsilon*/    {m_newScopeWhile();};
+
+m_endScope: /*epsilon*/         {m_endScope();};
+%%
+
+void yyerror (const char* err) {
+    std::cout<< "this is yyerror"<<std::endl;
+    output::errorSyn(yylineno);
+    exit(0);
+}
+int main() {
+    return yyparse();
+}
