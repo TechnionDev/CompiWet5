@@ -25,7 +25,8 @@ class typeAnnotation;
 class exp;
 
 extern int yylineno;
-
+class RegisterManager;
+extern RegisterManager registerManager;
 
 class Node {
   public:
@@ -34,7 +35,6 @@ class Node {
 	Node() = default;
 	Node(string val, int lineNumber = -1) : val(val), lineNum(lineNumber) {};
 	virtual ~Node() = default;
-
 };
 #define YYSTYPE Node*
 class symbolRow {
@@ -63,6 +63,8 @@ class symbolTable {
 	bool isWhileScope = false;
 	bool contains(string id, vector<string> type);
 };
+
+bool isIdentifierExists(string id);
 
 void m_glob();
 
@@ -192,7 +194,7 @@ class type : public Node {
 
 class typeAnnotation : public Node {
   public:
-	bool isConst= false;
+	bool isConst = false;
 	typeAnnotation() = default;
 	typeAnnotation(Node *annoType);
 };
@@ -200,12 +202,13 @@ class typeAnnotation : public Node {
 class exp : public Node {
   public:
 	string expType;
+	string id;
 	exp();
 	exp(exp *exp);
 	exp(exp *firstExp, string op, exp *secExp, int lineNum);
 	exp(Node *id, string type);
 	exp(call *call);
-	exp(Node *val,int dontUseIT, bool isB);
+	exp(Node *val, int dontUseIT, bool isB);
 	exp(bool val);
 	exp(string op, exp *exp, int lineNum);
 	exp(typeAnnotation *typeAnnotation, type *type, exp *exp, int lineNum);

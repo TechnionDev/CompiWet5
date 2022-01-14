@@ -2,12 +2,17 @@
     #include <iostream>
     #include "hw3_output.hpp"
     #include "Semantics.h"
+    #include "register.h"
+    #include "bp.hpp"
     using namespace std;
     int yylex();
     extern int yylineno;
     extern std::string curFuncName;
     extern char *yytext;
     void yyerror(const char* err);
+
+    CodeBuffer& buffer = CodeBuffer::instance();
+    extern RegisterManager registerManager;
 %}
 
 %nonassoc VOID;
@@ -135,10 +140,10 @@ exp: LPAREN exp RPAREN{$$ = new exp(dynamic_cast<exp*>($2));};
 	|exp DIV exp{$$ = new exp(dynamic_cast<exp*>($1), "DIV", dynamic_cast<exp*>($3),$2->lineNum);};
 	|exp PLUS exp{$$ = new exp(dynamic_cast<exp*>($1), "PLUS", dynamic_cast<exp*>($3),$2->lineNum);};
 	|exp MINUS exp{$$ = new exp(dynamic_cast<exp*>($1), "MINUS", dynamic_cast<exp*>($3),$2->lineNum);};
-	|ID{cout<<"this is ID"<<endl;$$ = new exp($1,"ID");};
+	|ID{$$ = new exp($1,"ID");};
 	|call{$$ = new exp(dynamic_cast<call*>($1));};
 	|NUM{$$ = new exp($1, 0, false);};
-	|NUM B{cout<<"this is NUMB"<<endl;$$ = new exp($1, 0, true);};
+	|NUM B{$$ = new exp($1, 0, true);};
 	|STRING{$$ = new exp($1,"STRING");};
 	|TRUE{$$ = new exp(true);};
 	|FALSE{$$ = new exp(false);};
@@ -161,7 +166,6 @@ m_endScope: /*epsilon*/         {m_endScope();};
 %%
 
 void yyerror (const char* err) {
-    std::cout<< "this is yyerror"<<std::endl;
     output::errorSyn(yylineno);
     exit(0);
 }
