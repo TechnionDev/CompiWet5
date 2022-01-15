@@ -145,7 +145,7 @@ bool isInWhile() {
 //////////////////////////////////////////////////
 
 void Node::loadExp() {
-	if (this->NodeType == "ID"){
+	if (this->NodeType == "ID") {
 		this->NodeRegister = registerManager.loadVarName(this->NodeId);
 	}
 }
@@ -167,7 +167,7 @@ funcDecl::funcDecl(retType *retType, Node *id, formals *formals, statements *sta
 			output::errorDef(id->lineNum, id->val);
 			exit(0);
 		}
-		if (retType->typeName != "VOID" || formals->formalsVector.size() != 0){
+		if (retType->typeName != "VOID" || formals->formalsVector.size() != 0) {
 			output::errorMismatch(id->lineNum);
 			exit(0);
 		}
@@ -356,16 +356,21 @@ SimpleStatement::SimpleStatement(Node *cmd) : Node("SimpleStatement") {
 			output::errorMismatch(cmd->lineNum);
 			exit(0);
 		}
+		buffer.emit("ret void");
 	} else if (cmd->val == "break") {
 		if (!isInWhile()) {
 			output::errorUnexpectedBreak(cmd->lineNum);
 			exit(0);
 		}
+		int jmpInstr = buffer.emit("br label @");
+		this->nextList.push_back({jmpInstr, FIRST});
 	} else if (cmd->val == "continue") {
 		if (!isInWhile()) {
 			output::errorUnexpectedContinue(cmd->lineNum);
 			exit(0);
 		}
+		int jmpInstr = buffer.emit("br label @");
+		this->startLoopList.push_back({jmpInstr, FIRST});
 	}
 }
 //return VOID, break, continue
@@ -387,6 +392,7 @@ SimpleStatement::SimpleStatement(typeAnnotation *typeAnnotation, type *type, Nod
 	offsetStack.back() = pos + 1;
 	symbolRow newIdentifier(id->val, pos, {type->typeName}, typeAnnotation->isConst, {}, false);
 	globSymTable.back().SymbolTable.push_back(newIdentifier);
+	registerManager.createRegister(typeAnnotation->isConst, type->typeName, id, nullptr);
 } //typeAnnotation type ID SC
 
 SimpleStatement::SimpleStatement(typeAnnotation *typeAnnotation, type *type, Node *id, exp *exp) : Node(
@@ -407,7 +413,7 @@ SimpleStatement::SimpleStatement(typeAnnotation *typeAnnotation, type *type, Nod
 	offsetStack.back() = pos + 1;
 	symbolRow newIdentifier(id->val, pos, {type->typeName}, typeAnnotation->isConst, {}, false);
 	globSymTable.back().SymbolTable.push_back(newIdentifier);
-
+	registerManager.createRegister(typeAnnotation->isConst, type->typeName, id, exp);
 }    //typeAnnotation type ID ASSIGN exp SC
 
 SimpleStatement::SimpleStatement(Node *id, string assign, exp *exp) : Node("SimpleStatement") {
@@ -428,6 +434,8 @@ SimpleStatement::SimpleStatement(Node *id, string assign, exp *exp) : Node("Simp
 		output::errorConstMismatch(id->lineNum);
 		exit(0);
 	}
+
+	registerManager.createRegister(isIdentifierConst(id->val), idType[0], id, exp);
 }//ID ASSIGN exp SC
 
 SimpleStatement::SimpleStatement(call *call) : Node("SimpleStatement") {
@@ -440,6 +448,10 @@ SimpleStatement::SimpleStatement(Node *node, exp *exp) : Node("SimpleStatement")
 		output::errorMismatch(node->lineNum);
 		exit(0);
 	}
+	exp->loadExp();
+	stringstream code;
+	code << "ret i32 " << registerManager.getVarRegister(this->NodeId, this->NodeRegister);
+	buffer.emit(code.str());
 }//RETURN exp SC
 
 call::call(Node *id, expList *expList) : Node("call") {
@@ -541,6 +553,7 @@ exp::exp() : Node("exp") {
 
 exp::exp(exp *exp) : Node("exp") {
 	this->expType = exp->expType;
+	this->isLiteral = exp->isLiteral;
 }
 
 exp::exp(exp *firstExp, string op, exp *secExp, int lineNum) : Node("exp") {
@@ -564,7 +577,7 @@ exp::exp(exp *firstExp, string op, exp *secExp, int lineNum) : Node("exp") {
 		this->expType = "BOOL";
 		firstExp->loadExp();
 		secExp->loadExp();
-		this->NodeRegister = registerManager.commperCodeGen(firstExp,op, secExp);
+		this->NodeRegister = registerManager.compareCodeGen(firstExp, op, secExp);
 	} else {
 		output::errorSyn(lineNum);
 		exit(0);
@@ -577,7 +590,7 @@ exp::exp(exp *firstExp, string op, exp *secExp, int lineNum, Marker *marker) {
 		exit(0);
 	}
 	this->expType = "BOOL";
-	if (op == "AND"){
+	if (op == "AND") {
 		int rightJmpInstr = buffer.emit("br label @");
 		string rightLabel = buffer.genLabel();
 		buffer.bpatch(marker->nextList, rightLabel);
@@ -588,7 +601,8 @@ exp::exp(exp *firstExp, string op, exp *secExp, int lineNum, Marker *marker) {
 		string compReg1 = registerManager.getNextRegisterName();
 		stringstream code;
 		firstExp->loadExp();
-		code << compReg1 << " = icmp eq i32 " << registerManager.getVarRegister(firstExp->NodeId, firstExp->NodeRegister) << ", 0";
+		code << compReg1 << " = icmp eq i32 "
+			 << registerManager.getVarRegister(firstExp->NodeId, firstExp->NodeRegister) << ", 0";
 		buffer.emit(code.str());
 		stringstream code2;
 		code2 << "br i1 " << compReg1 << ", label @, label @";
@@ -600,7 +614,8 @@ exp::exp(exp *firstExp, string op, exp *secExp, int lineNum, Marker *marker) {
 		string compReg = registerManager.getNextRegisterName();
 		stringstream code3;
 		secExp->loadExp();
-		code3 << compReg1 << " = icmp ne i32 " << registerManager.getVarRegister(secExp->NodeId, secExp->NodeRegister) << ", 0" << endl;
+		code3 << compReg1 << " = icmp ne i32 " << registerManager.getVarRegister(secExp->NodeId, secExp->NodeRegister)
+			  << ", 0" << endl;
 		code3 << compReg << " = zext i1 " << compReg1 << " to i32";
 		buffer.emit(code3.str());
 		int jmpInstr = buffer.emit("br label @");
@@ -612,17 +627,17 @@ exp::exp(exp *firstExp, string op, exp *secExp, int lineNum, Marker *marker) {
 		code4 << resReg << " = phi i32 [0, @], [" << compReg << ", @]";
 		int phiInstr = buffer.emit(code4.str());
 		//backpatch
-		vector<pair<int,BranchLabelIndex>> v1 = {{branchInstr, FIRST}, {jmpInstr, FIRST}};
+		vector<pair<int, BranchLabelIndex>> v1 = {{branchInstr, FIRST}, {jmpInstr, FIRST}};
 		buffer.bpatch(v1, label2);
-		vector<pair<int,BranchLabelIndex>> v2 = {{phiInstr, SECOND}, {rightJmpInstr, FIRST}};
+		vector<pair<int, BranchLabelIndex>> v2 = {{phiInstr, SECOND}, {rightJmpInstr, FIRST}};
 		buffer.bpatch(v2, label);
-		vector<pair<int,BranchLabelIndex>> v3 = {{phiInstr, FIRST}};
+		vector<pair<int, BranchLabelIndex>> v3 = {{phiInstr, FIRST}};
 		buffer.bpatch(v3, rightLabel);
-		vector<pair<int,BranchLabelIndex>> v4 = {{branchInstr, SECOND}};
+		vector<pair<int, BranchLabelIndex>> v4 = {{branchInstr, SECOND}};
 		buffer.bpatch(v4, marker->nextInstruction);
 		// update the result value to be the last register
 		this->NodeRegister = resReg;
-	}else{
+	} else {
 		int rightJmpInstr = buffer.emit("br label @");
 		string rightLabel = buffer.genLabel();
 		buffer.bpatch(marker->nextList, rightLabel);
@@ -633,7 +648,8 @@ exp::exp(exp *firstExp, string op, exp *secExp, int lineNum, Marker *marker) {
 		string compReg1 = registerManager.getNextRegisterName();
 		stringstream code;
 		firstExp->loadExp();
-		code << compReg1 << " = icmp ne i32 " << registerManager.getVarRegister(firstExp->NodeId, secExp->NodeRegister) << ", 0";
+		code << compReg1 << " = icmp ne i32 " << registerManager.getVarRegister(firstExp->NodeId, secExp->NodeRegister)
+			 << ", 0";
 		buffer.emit(code.str());
 		stringstream code2;
 		code2 << "br i1 " << compReg1 << ", label @, label @";
@@ -645,7 +661,8 @@ exp::exp(exp *firstExp, string op, exp *secExp, int lineNum, Marker *marker) {
 		string compReg = registerManager.getNextRegisterName();
 		stringstream code3;
 		secExp->loadExp();
-		code3 << compReg1 << " = icmp ne i32 " << registerManager.getVarRegister(secExp->NodeId, secExp->NodeRegister) << ", 0" << endl;
+		code3 << compReg1 << " = icmp ne i32 " << registerManager.getVarRegister(secExp->NodeId, secExp->NodeRegister)
+			  << ", 0" << endl;
 		code3 << compReg << " = zext i1 " << compReg1 << " to i32";
 		buffer.emit(code3.str());
 		int jmpInstr = buffer.emit("br label @");
@@ -657,13 +674,13 @@ exp::exp(exp *firstExp, string op, exp *secExp, int lineNum, Marker *marker) {
 		code4 << resReg << " = phi i32 [1, @], [" << compReg << ", @]";
 		int phiInstr = buffer.emit(code4.str());
 		//backpatch
-		vector<pair<int,BranchLabelIndex>> v1 = {{branchInstr, FIRST}, {jmpInstr, FIRST}};
+		vector<pair<int, BranchLabelIndex>> v1 = {{branchInstr, FIRST}, {jmpInstr, FIRST}};
 		buffer.bpatch(v1, label2);
-		vector<pair<int,BranchLabelIndex>> v2 = {{phiInstr, SECOND}, {rightJmpInstr, FIRST}};
+		vector<pair<int, BranchLabelIndex>> v2 = {{phiInstr, SECOND}, {rightJmpInstr, FIRST}};
 		buffer.bpatch(v2, label);
-		vector<pair<int,BranchLabelIndex>> v3 = {{phiInstr, FIRST}};
+		vector<pair<int, BranchLabelIndex>> v3 = {{phiInstr, FIRST}};
 		buffer.bpatch(v3, rightLabel);
-		vector<pair<int,BranchLabelIndex>> v4 = {{branchInstr, SECOND}};
+		vector<pair<int, BranchLabelIndex>> v4 = {{branchInstr, SECOND}};
 		buffer.bpatch(v4, marker->nextInstruction);
 		// update the result value to be the last register
 		this->NodeRegister = resReg;
@@ -689,12 +706,13 @@ exp::exp(Node *id, string type) : Node("exp") {
 		this->expType = "STRING";
 		this->NodeId = id->val; //NodeId will now contain the string value
 		string stringVar = registerManager.createStringConstant();
-		this->NodeRegister = "%"+stringVar;
-		this->NodeStringVar = "@."+stringVar;
+		this->NodeRegister = "%" + stringVar;
+		this->NodeStringVar = "@." + stringVar;
 		this->NodeStringLength = "[" + to_string(id->val.length() - 1) + " x i8]";
-		buffer.emitGlobal(this->NodeStringVar + " = constant " + this->NodeStringLength + "c" + id->val.replace(id->val.length() - 1, 1, "\\00\""));
+		buffer.emitGlobal(this->NodeStringVar + " = constant " + this->NodeStringLength + "c"
+							  + id->val.replace(id->val.length() - 1, 1, "\\00\""));
 	}
-
+	this->isLiteral = true;
 } //ID,STRING
 
 exp::exp(call *call) : Node("exp") {
@@ -712,18 +730,21 @@ exp::exp(Node *val, int dontUseIT, bool isB) : Node("exp") {
 	} else {
 		this->expType = "INT";
 	}
-	this->NodeRegister = val->val; //note, here we assign to NodeRegister a string that represents a number! not a register
+	this->NodeRegister =
+		val->val; //note, here we assign to NodeRegister a string that represents a number! not a register
+	this->isLiteral = true;
 }//INT,BYTE
 
 exp::exp(bool val) : Node("exp") {
 	this->expType = "BOOL";
-	if (val){
+	if (val) {
 		this->NodeRegister = "1";
 		this->trueList.push_back({buffer.nextInstruction(), FIRST});
-	}else{
+	} else {
 		this->NodeRegister = "0";
 		this->falseList.push_back({buffer.nextInstruction(), SECOND});
 	}
+	this->isLiteral = true;
 }//FALSE,TRUE
 
 exp::exp(string op, exp *exp, int lineNum) : Node("exp") {
@@ -740,11 +761,21 @@ exp::exp(string op, exp *exp, int lineNum) : Node("exp") {
 } //NOT EXP
 
 exp::exp(typeAnnotation *typeAnnotation, type *type, exp *exp, int lineNum) : Node("exp") {
+	exp->loadExp();
 	if ((type->typeName != "INT" && type->typeName != "BYTE") || (exp->expType != "INT" && exp->expType != "BYTE")) {
 		output::errorMismatch(lineNum);
 		exit(0);
 	}
 	this->expType = type->typeName;
+	if (type->typeName == exp->expType) {
+		this->NodeRegister = exp->NodeRegister;
+	} else if (type->typeName == "BYTE" && exp->expType == "INT") {
+		this->NodeRegister = registerManager.getNextRegisterName();
+		buffer.emit(this->NodeRegister + "=" + "trunc i32 " + exp->NodeRegister + "to i8");
+	} else if (type->typeName == "INT" && exp->expType == "BYTE") {
+		this->NodeRegister = registerManager.getNextRegisterName();
+		buffer.emit(this->NodeRegister + "=" + "zext i8 " + exp->NodeRegister + "to i32");
+	}
 }
 
 Marker::Marker() {

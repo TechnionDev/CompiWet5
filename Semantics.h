@@ -218,6 +218,7 @@ class typeAnnotation : public Node {
 class exp : public Node {
   public:
 	string expType;
+	bool isLiteral = false;
 	exp();
 	exp(exp *exp);
 	exp(exp *firstExp, string op, exp *secExp, int lineNum);

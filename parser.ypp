@@ -124,8 +124,8 @@ SimpleStatement: LBRACE m_newScope statements RBRACE{$$ = new SimpleStatement(dy
 call: ID LPAREN expList RPAREN{$$ = new call($1, dynamic_cast<expList*>($3));};
 	|ID LPAREN RPAREN{$$ = new call($1);};
 
-expList: exp{$$ = new expList(dynamic_cast<exp*>($1));};
-	|exp COMMA expList{$$ = new expList(dynamic_cast<exp*>($1),dynamic_cast<expList*>($3));};
+expList: exp{$1->loadExp();$$ = new expList(dynamic_cast<exp*>($1));};
+	|exp COMMA expList{$1->loadExp();$$ = new expList(dynamic_cast<exp*>($1),dynamic_cast<expList*>($3));};
 
 type: INT{$$ = new type($1);};
 	|BYTE{$$ = new type($1);};

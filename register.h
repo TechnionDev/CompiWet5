@@ -9,6 +9,7 @@ using namespace std;
 extern CodeBuffer& buffer;
 class Node;
 class exp;
+class type;
 class RegisterManager {
   public:
 	int counter = 0;
@@ -19,12 +20,13 @@ class RegisterManager {
 	string getCurrentRegisterName();
 	string getNextRegisterName();
 	string getVarRegister(string var, string valueNotID);
-	void createRegister(Node *node, string value, string id); //for declaring or reassigning a variable
+	void createRegister(bool isConst, string type, Node *id, exp *exp); //for declaring or reassigning a variable
 	string createArithmeticOp(exp *leftExp, exp *rightExp, string op); // MUL,DIV,PLUS,MINUS
 	string loadVarName(string varName);
-	string storeVar(string var, string varValue);
+	void storeVar(string var, string varValue);
 	string createStringConstant();
-	string commperCodeGen(exp* firstExp, string op, exp* secExp);
+	string compareCodeGen(exp* firstExp, string op, exp* secExp);
+	string functionGetVarReg(string varId);
 };
 
 #endif //COMPIWET5__REGISTER_H_
