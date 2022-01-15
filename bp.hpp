@@ -58,6 +58,12 @@ public:
 	//print the content of the global buffer to stdout
 	void printGlobalBuffer();
 
+	void startProgram();
+	int nextInstruction(){
+		return buffer.size();
+	}
+	string genLabelNextLine();
+
 };
 
 #endif

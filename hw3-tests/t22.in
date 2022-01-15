@@ -1,0 +1,11 @@
+void myFunc(int x, byte y){
+    return x;
+}
+
+void main (){
+    int x = 4;
+    const byte y = 3 b;
+    int z;
+    myFunc(y,y);
+    return;
+}

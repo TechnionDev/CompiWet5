@@ -3,6 +3,8 @@
 
 #include "hw3_output.hpp"
 #include <string.h>
+#include "register.h"
+#include "bp.hpp"
 using namespace std;
 class Node;
 class symbolTable;
@@ -23,18 +25,32 @@ class expList;
 class type;
 class typeAnnotation;
 class exp;
-
+class Marker;
 extern int yylineno;
 class RegisterManager;
 extern RegisterManager registerManager;
+extern CodeBuffer& buffer;
 
 class Node {
   public:
 	string val = "";
 	int lineNum = 0;
+	string NodeType = "";
+	string NodeId = "";
+	int64_t NodeNumericVal = -1;
+	string NodeRegister = "";
+	string NodeStringVar = "";
+	string NodeStringLength = "";
+	vector<pair<int,BranchLabelIndex>> trueList;
+	vector<pair<int,BranchLabelIndex>> falseList;
+	vector<pair<int,BranchLabelIndex>> nextList;
+	vector<pair<int,BranchLabelIndex>> startLoopList;
+	string nextInstruction;
 	Node() = default;
 	Node(string val, int lineNumber = -1) : val(val), lineNum(lineNumber) {};
 	virtual ~Node() = default;
+
+	void loadExp();
 };
 #define YYSTYPE Node*
 class symbolRow {
@@ -202,10 +218,10 @@ class typeAnnotation : public Node {
 class exp : public Node {
   public:
 	string expType;
-	string id;
 	exp();
 	exp(exp *exp);
 	exp(exp *firstExp, string op, exp *secExp, int lineNum);
+	exp(exp *firstExp, string op, exp *secExp, int lineNum, Marker *marker);
 	exp(Node *id, string type);
 	exp(call *call);
 	exp(Node *val, int dontUseIT, bool isB);
@@ -214,4 +230,8 @@ class exp : public Node {
 	exp(typeAnnotation *typeAnnotation, type *type, exp *exp, int lineNum);
 };
 
+class Marker : public Node{
+  public:
+	Marker();
+};
 #endif //COMPIWET3__SEMANTICS_H_

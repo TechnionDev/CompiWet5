@@ -1,0 +1,17 @@
+int first(int x){
+    byte t = 3 b ;
+    if (x>3){
+        const byte z = 4 b;
+        t = z;
+    }else {
+        print("small");
+    }
+}
+
+void main (){
+    const int i = first(4);
+    {
+        int y = main();
+    }
+    return;
+}

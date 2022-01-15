@@ -1,0 +1,14 @@
+int first(int x){
+    while (x >3){
+        x = x-1;
+        printi(x);
+    }
+}
+
+void main (){
+    const int i = first(4);
+    {
+        int y = main();
+    }
+    return;
+}

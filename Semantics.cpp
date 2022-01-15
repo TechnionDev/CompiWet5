@@ -144,6 +144,11 @@ bool isInWhile() {
 }
 //////////////////////////////////////////////////
 
+void Node::loadExp() {
+	if (this->NodeType == "ID"){
+		this->NodeRegister = registerManager.loadVarName(this->NodeId);
+	}
+}
 program::program() : Node("program") {
 	if (!mainExits) {
 		output::errorMainMissing();
@@ -550,12 +555,6 @@ exp::exp(exp *firstExp, string op, exp *secExp, int lineNum) : Node("exp") {
 		} else {
 			this->expType = "BYTE";
 		}
-	} else if (op == "AND" || op == "OR") {
-		if ((firstExp->expType != "BOOL") || (secExp->expType != "BOOL")) {
-			output::errorMismatch(lineNum);
-			exit(0);
-		}
-		this->expType = "BOOL";
 	} else if (op == "RELOPLEFT" || op == "RELOPNONASSOC") {
 		if ((firstExp->expType != "INT" && firstExp->expType != "BYTE")
 			|| (secExp->expType != "INT" && secExp->expType != "BYTE")) {
@@ -563,11 +562,113 @@ exp::exp(exp *firstExp, string op, exp *secExp, int lineNum) : Node("exp") {
 			exit(0);
 		}
 		this->expType = "BOOL";
+		firstExp->loadExp();
+		secExp->loadExp();
+		this->NodeRegister = registerManager.commperCodeGen(firstExp,op, secExp);
 	} else {
 		output::errorSyn(lineNum);
 		exit(0);
 	}
-}//MULT,DIV,PLUS,MINUS,AND,OR
+}//MULT,DIV,PLUS,MINUS, RELOPLEFT, RELOPNONASSOC
+
+exp::exp(exp *firstExp, string op, exp *secExp, int lineNum, Marker *marker) {
+	if ((firstExp->expType != "BOOL") || (secExp->expType != "BOOL")) {
+		output::errorMismatch(lineNum);
+		exit(0);
+	}
+	this->expType = "BOOL";
+	if (op == "AND"){
+		int rightJmpInstr = buffer.emit("br label @");
+		string rightLabel = buffer.genLabel();
+		buffer.bpatch(marker->nextList, rightLabel);
+		buffer.bpatch(firstExp->falseList, rightLabel);
+		this->trueList = secExp->trueList;
+		this->falseList = buffer.merge(firstExp->falseList, secExp->falseList);
+		// short circuit evaluation
+		string compReg1 = registerManager.getNextRegisterName();
+		stringstream code;
+		firstExp->loadExp();
+		code << compReg1 << " = icmp eq i32 " << registerManager.getVarRegister(firstExp->NodeId, firstExp->NodeRegister) << ", 0";
+		buffer.emit(code.str());
+		stringstream code2;
+		code2 << "br i1 " << compReg1 << ", label @, label @";
+		int branchInstr = buffer.emit(code2.str());
+
+		// false label
+		string label = buffer.genLabelNextLine();
+		compReg1 = registerManager.getNextRegisterName();
+		string compReg = registerManager.getNextRegisterName();
+		stringstream code3;
+		secExp->loadExp();
+		code3 << compReg1 << " = icmp ne i32 " << registerManager.getVarRegister(secExp->NodeId, secExp->NodeRegister) << ", 0" << endl;
+		code3 << compReg << " = zext i1 " << compReg1 << " to i32";
+		buffer.emit(code3.str());
+		int jmpInstr = buffer.emit("br label @");
+
+		// end of short circuit evaluation and phi command
+		string label2 = buffer.genLabel();
+		stringstream code4;
+		string resReg = registerManager.getNextRegisterName();
+		code4 << resReg << " = phi i32 [0, @], [" << compReg << ", @]";
+		int phiInstr = buffer.emit(code4.str());
+		//backpatch
+		vector<pair<int,BranchLabelIndex>> v1 = {{branchInstr, FIRST}, {jmpInstr, FIRST}};
+		buffer.bpatch(v1, label2);
+		vector<pair<int,BranchLabelIndex>> v2 = {{phiInstr, SECOND}, {rightJmpInstr, FIRST}};
+		buffer.bpatch(v2, label);
+		vector<pair<int,BranchLabelIndex>> v3 = {{phiInstr, FIRST}};
+		buffer.bpatch(v3, rightLabel);
+		vector<pair<int,BranchLabelIndex>> v4 = {{branchInstr, SECOND}};
+		buffer.bpatch(v4, marker->nextInstruction);
+		// update the result value to be the last register
+		this->NodeRegister = resReg;
+	}else{
+		int rightJmpInstr = buffer.emit("br label @");
+		string rightLabel = buffer.genLabel();
+		buffer.bpatch(marker->nextList, rightLabel);
+		buffer.bpatch(firstExp->falseList, rightLabel);
+		this->trueList = buffer.merge(firstExp->trueList, secExp->trueList);
+		this->falseList = secExp->falseList;
+		//short circuit evaluation
+		string compReg1 = registerManager.getNextRegisterName();
+		stringstream code;
+		firstExp->loadExp();
+		code << compReg1 << " = icmp ne i32 " << registerManager.getVarRegister(firstExp->NodeId, secExp->NodeRegister) << ", 0";
+		buffer.emit(code.str());
+		stringstream code2;
+		code2 << "br i1 " << compReg1 << ", label @, label @";
+		int branchInstr = buffer.emit(code2.str());
+
+		// the false label
+		string label = buffer.genLabelNextLine();
+		compReg1 = registerManager.getNextRegisterName();
+		string compReg = registerManager.getNextRegisterName();
+		stringstream code3;
+		secExp->loadExp();
+		code3 << compReg1 << " = icmp ne i32 " << registerManager.getVarRegister(secExp->NodeId, secExp->NodeRegister) << ", 0" << endl;
+		code3 << compReg << " = zext i1 " << compReg1 << " to i32";
+		buffer.emit(code3.str());
+		int jmpInstr = buffer.emit("br label @");
+
+		// end of short circuit evaluation, and phi command
+		string label2 = buffer.genLabel();
+		stringstream code4;
+		string resReg = registerManager.getNextRegisterName();
+		code4 << resReg << " = phi i32 [1, @], [" << compReg << ", @]";
+		int phiInstr = buffer.emit(code4.str());
+		//backpatch
+		vector<pair<int,BranchLabelIndex>> v1 = {{branchInstr, FIRST}, {jmpInstr, FIRST}};
+		buffer.bpatch(v1, label2);
+		vector<pair<int,BranchLabelIndex>> v2 = {{phiInstr, SECOND}, {rightJmpInstr, FIRST}};
+		buffer.bpatch(v2, label);
+		vector<pair<int,BranchLabelIndex>> v3 = {{phiInstr, FIRST}};
+		buffer.bpatch(v3, rightLabel);
+		vector<pair<int,BranchLabelIndex>> v4 = {{branchInstr, SECOND}};
+		buffer.bpatch(v4, marker->nextInstruction);
+		// update the result value to be the last register
+		this->NodeRegister = resReg;
+	}
+} //AND, OR
 
 exp::exp(Node *id, string type) : Node("exp") {
 	if (type == "ID") {
@@ -582,9 +683,16 @@ exp::exp(Node *id, string type) : Node("exp") {
 			exit(0);
 		}
 		this->expType = res.types[0];
-		this->id = id->val;
+		this->NodeType = "ID";
+		this->NodeId = id->val;
 	} else if (type == "STRING") {
 		this->expType = "STRING";
+		this->NodeId = id->val; //NodeId will now contain the string value
+		string stringVar = registerManager.createStringConstant();
+		this->NodeRegister = "%"+stringVar;
+		this->NodeStringVar = "@."+stringVar;
+		this->NodeStringLength = "[" + to_string(id->val.length() - 1) + " x i8]";
+		buffer.emitGlobal(this->NodeStringVar + " = constant " + this->NodeStringLength + "c" + id->val.replace(id->val.length() - 1, 1, "\\00\""));
 	}
 
 } //ID,STRING
@@ -604,19 +712,32 @@ exp::exp(Node *val, int dontUseIT, bool isB) : Node("exp") {
 	} else {
 		this->expType = "INT";
 	}
+	this->NodeRegister = val->val; //note, here we assign to NodeRegister a string that represents a number! not a register
 }//INT,BYTE
 
 exp::exp(bool val) : Node("exp") {
 	this->expType = "BOOL";
-}
+	if (val){
+		this->NodeRegister = "1";
+		this->trueList.push_back({buffer.nextInstruction(), FIRST});
+	}else{
+		this->NodeRegister = "0";
+		this->falseList.push_back({buffer.nextInstruction(), SECOND});
+	}
+}//FALSE,TRUE
 
 exp::exp(string op, exp *exp, int lineNum) : Node("exp") {
+	exp->loadExp();
 	if (exp->expType != "BOOL") {
 		output::errorMismatch(lineNum);
 		exit(0);
 	}
 	this->expType = "BOOL";
-}
+	this->NodeRegister = registerManager.getNextRegisterName();
+	buffer.emit(this->NodeRegister + " = sub i32 1, " + exp->NodeRegister);
+	this->trueList = exp->falseList;
+	this->falseList = exp->trueList;
+} //NOT EXP
 
 exp::exp(typeAnnotation *typeAnnotation, type *type, exp *exp, int lineNum) : Node("exp") {
 	if ((type->typeName != "INT" && type->typeName != "BYTE") || (exp->expType != "INT" && exp->expType != "BYTE")) {
@@ -624,4 +745,10 @@ exp::exp(typeAnnotation *typeAnnotation, type *type, exp *exp, int lineNum) : No
 		exit(0);
 	}
 	this->expType = type->typeName;
+}
+
+Marker::Marker() {
+	int jmpInstr = buffer.emit("br label @");
+	this->nextInstruction = buffer.genLabel();
+	this->nextList.push_back({jmpInstr, FIRST});
 }

@@ -1,0 +1,11 @@
+int first(int x){
+    return 6;
+}
+
+void main (){
+    const int i = first(4);
+    {
+        int i = non();
+    }
+    return;
+}

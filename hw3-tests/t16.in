@@ -1,0 +1,6 @@
+void main (){
+    int i ;
+    const byte y = 4 b;
+    i = (int)y;
+    return;
+}

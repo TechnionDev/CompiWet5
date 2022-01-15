@@ -1,0 +1,10 @@
+void main (){
+    int i =3;
+    const byte y = 4 b;
+    if (i < y) {
+        if (y > i){
+            printi(y);
+        }
+    }
+    return;
+}

@@ -1,0 +1,12 @@
+void main (){
+    bool i =true;
+    const bool y = false;
+    if (i and y) {
+        if (y or i){
+            while (not i){
+                 i =true;
+            }
+        }
+    }
+    return;
+}

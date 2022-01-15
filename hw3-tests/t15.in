@@ -1,0 +1,6 @@
+void main (){
+    int i = 4;
+    byte y;
+    y = (byte)i;
+    return;
+}
