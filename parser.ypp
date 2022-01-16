@@ -55,10 +55,10 @@ program: m_glob funcs {$$ = new program();};
 funcs: /*epsilon*/{$$ = new funcs();};|
         funcDecl funcs {$$ = new funcs();};
 
-funcDecl: retType ID m_funcNewScope LPAREN formals RPAREN LBRACE statements RBRACE{$$ = new funcDecl(
+funcDecl: retType ID {curFuncName = $2->val} m_funcNewScope LPAREN formals RPAREN LBRACE statements RBRACE{$$ = new funcDecl(
                                                                                     dynamic_cast<retType*>($1),
                                                                                     $2,
-                                                                                    dynamic_cast<formals*>($5),
+                                                                                    dynamic_cast<formals*>($6),
                                                                                     dynamic_cast<statements*>($8));
                                                                                     };
 

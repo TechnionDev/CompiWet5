@@ -162,25 +162,6 @@ funcs::funcs() : Node("funcs") {
 }
 
 funcDecl::funcDecl(retType *retType, Node *id, formals *formals, statements *statements) : Node("funcDecl") {
-	if (id->val == "main") {
-		if (mainExits) {
-			output::errorDef(id->lineNum, id->val);
-			exit(0);
-		}
-		if (retType->typeName != "VOID" || formals->formalsVector.size() != 0) {
-			output::errorMismatch(id->lineNum);
-			exit(0);
-		}
-		mainExits = true;
-	}
-	if (isIdentifierExists(id->val)) {
-		output::errorDef(id->lineNum, id->val);
-		exit(0);
-	}
-	if (formals->hasString && id->val != "print") {
-		output::errorMismatch(id->lineNum);
-		exit(0);
-	}
 	vector<string> funcTypes;
 	vector<bool> funcConstTypes;
 	funcTypes.push_back(retType->typeName);
@@ -209,21 +190,35 @@ retType::retType(Node *typeName) : Node("retType") {
 
 formals::formals() : Node("formals") {
 	this->formalsVector = {};
+	curFuncFormals = {};
 	for (auto it: this->formalsVector) {
 		curFuncFormals.push_back(it.formalType);
 	}
-
+	if (curFuncName == "main" && curFuncRetVal == "VOID" && this->formalsVector.empty()) {
+		if (mainExits) {
+			output::errorDef(yylineno, curFuncName);
+			exit(0);
+		}
+		mainExits = true;
+	}
+	if (isIdentifierExists(curFuncName)) {
+		output::errorDef(yylineno, curFuncName);
+		exit(0);
+	}
+	if (this->hasString &&curFuncName != "print") {
+		output::errorMismatch(yylineno);
+		exit(0);
+	}
 }
 
 formals::formals(formalsList *formals) : Node("formals") {
-	for (auto formal: formals->formalsVector) {
-		for (auto nextFormal: formals->formalsVector) {
-			if ((formal.isConst == nextFormal.isConst) && (formal.id == nextFormal.id)
-				&& (formal.formalType == nextFormal.formalType)) {
+	for (int i = 0; i < formals->formalsVector.size(); i++) {
+		for (int j = 0; j < formals->formalsVector.size(); j++) {
+			if (i==j) {
 				continue;
 			}
-			if (formal.id == nextFormal.id) {
-				output::errorDef(yylineno, formal.id);
+			if (formals->formalsVector[i].id == formals->formalsVector[j].id) {
+				output::errorDef(yylineno, formals->formalsVector[i].id);
 				exit(0);
 			}
 		}
@@ -240,6 +235,21 @@ formals::formals(formalsList *formals) : Node("formals") {
 	this->formalsVector = formals->formalsVector;
 	for (auto it: this->formalsVector) {
 		curFuncFormals.push_back(it.formalType);
+	}
+	if (curFuncName == "main" && curFuncRetVal == "VOID" && this->formalsVector.empty()) {
+		if (mainExits) {
+			output::errorDef(yylineno, curFuncName);
+			exit(0);
+		}
+		mainExits = true;
+	}
+	if (isIdentifierExists(curFuncName)) {
+		output::errorDef(yylineno, curFuncName);
+		exit(0);
+	}
+	if (this->hasString &&curFuncName != "print") {
+		output::errorMismatch(yylineno);
+		exit(0);
 	}
 }
 
@@ -444,7 +454,8 @@ SimpleStatement::SimpleStatement(call *call) : Node("SimpleStatement") {
 
 SimpleStatement::SimpleStatement(Node *node, exp *exp) : Node("SimpleStatement") {
 	string func = getRetTypeFunc();
-	if (func == "" || func != exp->expType) {
+	if(func=="INT" && exp->expType=="BYTE"){}
+	else if (func == "" || func != exp->expType) {
 		output::errorMismatch(node->lineNum);
 		exit(0);
 	}
@@ -456,20 +467,20 @@ SimpleStatement::SimpleStatement(Node *node, exp *exp) : Node("SimpleStatement")
 
 call::call(Node *id, expList *expList) : Node("call") {
 	if (id->val == curFuncName) {
-		if (curFuncFormals.size() != expList->expVector.size() + 1) {
+		if (curFuncFormals.size() != expList->expVector.size()) {
 			output::errorPrototypeMismatch(id->lineNum, id->val, curFuncFormals);
 			exit(0);
 		}
-		for (int i = 1; i < curFuncFormals.size(); i++) {
-			if (curFuncFormals[i] != expList->expVector[i - 1].expType) {
-				if (expList->expVector[i - 1].expType == "BYTE" && curFuncFormals[i] == "INT") {
+		for (int i = 0; i < curFuncFormals.size(); i++) {
+			if (curFuncFormals[i] != expList->expVector[i].expType) {
+				if (expList->expVector[i].expType == "BYTE" && curFuncFormals[i] == "INT") {
 				} else {
 					output::errorPrototypeMismatch(id->lineNum, id->val, curFuncFormals);
 					exit(0);
 				}
 			}
 		}
-		this->rettype = curFuncFormals[0];
+		this->rettype = curFuncRetVal;
 	} else {
 		symbolRow funcId = findSymbolRow(id->val);
 		if (id->val != funcId.name || !funcId.isFunc) {
@@ -477,14 +488,18 @@ call::call(Node *id, expList *expList) : Node("call") {
 			exit(0);
 		}
 		if (funcId.types.size() != expList->expVector.size() + 1) {
-			output::errorPrototypeMismatch(id->lineNum, id->val, funcId.types);
+			vector<string> funcExpectsTypes;
+			funcId.types.size()!=1 ? funcExpectsTypes = {funcId.types.begin() + 1, funcId.types.end()}:funcExpectsTypes = {};
+			output::errorPrototypeMismatch(id->lineNum, id->val, funcExpectsTypes);
 			exit(0);
 		}
 		for (int i = 1; i < funcId.types.size(); i++) {
 			if (funcId.types[i] != expList->expVector[i - 1].expType) {
 				if (expList->expVector[i - 1].expType == "BYTE" && funcId.types[i] == "INT") {
 				} else {
-					output::errorPrototypeMismatch(id->lineNum, id->val, funcId.types);
+					vector<string> funcExpectsTypes;
+					funcId.types.size()!=1 ? funcExpectsTypes = {funcId.types.begin() + 1, funcId.types.end()}:funcExpectsTypes = {};
+					output::errorPrototypeMismatch(id->lineNum, id->val, funcExpectsTypes);
 					exit(0);
 				}
 			}
@@ -495,11 +510,11 @@ call::call(Node *id, expList *expList) : Node("call") {
 
 call::call(Node *id) : Node("call") {
 	if (id->val == curFuncName) {
-		if (curFuncFormals.size() != 1) {
+		if (curFuncFormals.size() != 0) {
 			output::errorPrototypeMismatch(id->lineNum, id->val, curFuncFormals);
 			exit(0);
 		}
-		this->rettype = curFuncFormals[0];
+		this->rettype = curFuncRetVal;
 	} else {
 		symbolRow funcId = findSymbolRow(id->val);
 		if (id->val != funcId.name || !funcId.isFunc) {
@@ -507,12 +522,15 @@ call::call(Node *id) : Node("call") {
 			exit(0);
 		}
 		if (funcId.types.size() != 1) {
-			output::errorPrototypeMismatch(id->lineNum, id->val, funcId.types);
+			vector<string> funcExpectsTypes;
+			funcId.types.size()!=1 ? funcExpectsTypes = {funcId.types.begin() + 1, funcId.types.end()}:funcExpectsTypes = {};
+			output::errorPrototypeMismatch(id->lineNum, id->val, funcExpectsTypes);
 			exit(0);
 		}
 		this->rettype = funcId.types[0];
 	}
 }
+
 
 expList::expList(exp *exp1) : Node("expList") {
 	this->expVector.push_back(exp1);
