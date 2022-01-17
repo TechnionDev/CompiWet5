@@ -142,6 +142,54 @@ bool isInWhile() {
 	}
 	return res;
 }
+string getLlvmType(string type) {
+	string llvmType = type;
+	if (llvmType == "VOID") {
+		llvmType = "void";
+	} else {
+		llvmType = "i32";
+	}
+	return llvmType;
+}
+void createLlvmArguments(int numArguments, stringstream &code, vector<Node *> *expressions = nullptr) {
+	code << "(";
+	for (int i = 0; i < numArguments; i++) {
+		if (i != 0) {
+			code << ", ";
+		}
+		if (expressions && (*expressions)[i]->NodeType == "STRING") {
+			code << "i8*";
+		} else {
+			code << "i32";
+		}
+		if (expressions) {
+			string id = (*expressions)[i]->NodeId;
+			string value = registerManager.getVarRegister(id, (*expressions)[i]->NodeRegister);
+
+			code << " " << value;
+		}
+	}
+	code << ")";
+}
+
+void addFunction(retType *retType, Node *funcName, formals *formals) {
+	stringstream code;
+	code << "define " << getLlvmType(retType->typeName) << " @" << funcName->val;
+	createLlvmArguments(formals->formalsVector.size(), code);
+	code << " {";
+	buffer.emit(code.str());
+	int i = 0;
+	for (auto it = formals->formalsVector.begin(); it != formals->formalsVector.end(); ++it) {
+		stringstream reg;
+		reg << "%" << i;
+		registerManager.varName2Register[it->id] = reg.str();
+		i++;
+	}
+	for (int i = 0; i < 50; i++) {
+		buffer.emit("%s" + to_string(i) + " = alloca i32, i32 0");
+	}
+}
+
 //////////////////////////////////////////////////
 
 void Node::loadExp() {
@@ -208,6 +256,14 @@ funcDecl::funcDecl(retType *retType, Node *id, formals *formals, statements *sta
 	symbolRow symbol_row(id->val, 0, funcTypes, false, funcConstTypes, true);
 	globSymTable[0].SymbolTable.push_back(symbol_row);
 	end_scope();
+	if (retType->typeName == "VOID") {
+		buffer.emit("ret void");
+	} else {
+		buffer.emit("ret i32 0");
+	}
+	registerManager.varName2StackReg.clear();
+	buffer.emit("}\n");
+
 }
 
 retType::retType(type *type) : Node("retType") {
@@ -495,11 +551,14 @@ call::call(Node *id, expList *expList) : Node("call") {
 			output::errorPrototypeMismatch(id->lineNum, id->val, funcExpectsTypes);
 			exit(0);
 		}
+		cout<<to_string(funcId.types.size())<<endl;
 		for (int i = 1; i < funcId.types.size(); i++) {
 			if (funcId.types[i] != expList->expVector[i - 1].expType) {
 				if (expList->expVector[i - 1].expType == "BYTE" && funcId.types[i] == "INT") {
 				} else {
 					vector<string> funcExpectsTypes;
+					cout << "this is the size: " + to_string(expList->expVector.size()) <<endl;
+					cout << "this is the arg type " + expList->expVector[0].expType << endl;
 					funcId.types.size() != 1 ? funcExpectsTypes = {funcId.types.begin() + 1, funcId.types.end()} :
 						funcExpectsTypes = {};
 					output::errorPrototypeMismatch(id->lineNum, id->val, funcExpectsTypes);
@@ -536,6 +595,7 @@ call::call(Node *id) : Node("call") {
 }
 
 expList::expList(exp *exp1) : Node("expList") {
+	cout << exp1->expType<<endl;
 	this->expVector.push_back(exp1);
 }
 
@@ -735,6 +795,7 @@ exp::exp(Node *id, string type) : Node("exp") {
 		this->NodeType = "ID";
 		this->NodeId = id->val;
 	} else if (type == "STRING") {
+		cout << "hi" <<endl;
 		this->expType = "STRING";
 		this->NodeId = id->val; //NodeId will now contain the string value
 		string stringVar = registerManager.createStringConstant();

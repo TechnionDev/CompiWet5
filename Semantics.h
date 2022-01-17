@@ -53,7 +53,7 @@ class Node {
 	void ifCode();
 	void elseCode();
 	void backPatchIf(string falseLabel);
-	void endWhile(string startLabel, exp* exp);
+	void endWhile(string startLabel, exp *exp);
 };
 #define YYSTYPE Node*
 class symbolRow {
@@ -95,6 +95,7 @@ void m_endScope();
 
 void end_scope();
 
+void addFunction(retType *retType, Node *funcName, formals *formals);
 //////////////////////////////////////////////////
 
 class program : public Node {
