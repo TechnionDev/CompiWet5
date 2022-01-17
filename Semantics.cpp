@@ -557,8 +557,6 @@ call::call(Node *id, expList *expList) : Node("call") {
 				if (expList->expVector[i - 1].expType == "BYTE" && funcId.types[i] == "INT") {
 				} else {
 					vector<string> funcExpectsTypes;
-					cout << "this is the size: " + to_string(expList->expVector.size()) <<endl;
-					cout << "this is the arg type " + expList->expVector[0].expType << endl;
 					funcId.types.size() != 1 ? funcExpectsTypes = {funcId.types.begin() + 1, funcId.types.end()} :
 						funcExpectsTypes = {};
 					output::errorPrototypeMismatch(id->lineNum, id->val, funcExpectsTypes);
@@ -795,7 +793,6 @@ exp::exp(Node *id, string type) : Node("exp") {
 		this->NodeType = "ID";
 		this->NodeId = id->val;
 	} else if (type == "STRING") {
-		cout << "hi" <<endl;
 		this->expType = "STRING";
 		this->NodeId = id->val; //NodeId will now contain the string value
 		string stringVar = registerManager.createStringConstant();
