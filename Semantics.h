@@ -19,7 +19,6 @@ class statements;
 class statement;
 class OpenStatement;
 class ClosedStatement;
-class SimpleStatement;
 class call;
 class expList;
 class type;
@@ -29,7 +28,7 @@ class Marker;
 extern int yylineno;
 class RegisterManager;
 extern RegisterManager registerManager;
-extern CodeBuffer& buffer;
+extern CodeBuffer &buffer;
 
 class Node {
   public:
@@ -41,16 +40,20 @@ class Node {
 	string NodeRegister = "";
 	string NodeStringVar = "";
 	string NodeStringLength = "";
-	vector<pair<int,BranchLabelIndex>> trueList;
-	vector<pair<int,BranchLabelIndex>> falseList;
-	vector<pair<int,BranchLabelIndex>> nextList;
-	vector<pair<int,BranchLabelIndex>> startLoopList;
+	vector<pair<int, BranchLabelIndex>> trueList;
+	vector<pair<int, BranchLabelIndex>> falseList;
+	vector<pair<int, BranchLabelIndex>> nextList;
+	vector<pair<int, BranchLabelIndex>> startLoopList;
 	string nextInstruction;
 	Node() = default;
 	Node(string val, int lineNumber = -1) : val(val), lineNum(lineNumber) {};
 	virtual ~Node() = default;
 
 	void loadExp();
+	void ifCode();
+	void elseCode();
+	void backPatchIf(string falseLabel);
+	void endWhile(string startLabel, exp* exp);
 };
 #define YYSTYPE Node*
 class symbolRow {
@@ -149,42 +152,20 @@ class statements : public Node {
 
 class statement : public Node {
   public:
-	statement(OpenStatement *OpenStatement);
-	statement(ClosedStatement *ClosedStatement);
-};
-
-class OpenStatement : public Node {
-  public:
-	OpenStatement(string keyWord, exp *exp, statement *statement, int lineNumber);
-	OpenStatement(string firstKeyWord,
-				  exp *exp,
-				  ClosedStatement *ClosedStatement,
-				  string econdKeyWord,
-				  OpenStatement *OpenStatement,
-				  int lineNumber);
-	OpenStatement(string keyWord, exp *exp, OpenStatement *OpenStatement, int lineNumber);
-};
-
-class ClosedStatement : public Node {
-  public:
-	ClosedStatement(SimpleStatement *SimpleStatement);
-	ClosedStatement(string firstKeyWord,
-					exp *exp,
-					ClosedStatement *closed_Statement,
-					string secondKeyWord,
-					ClosedStatement *closed_Statement2, int lineNumber);
-	ClosedStatement(string keyWord, exp *exp, ClosedStatement *ClosedStatement, int lineNumber);
-};
-
-class SimpleStatement : public Node {
-  public:
-	SimpleStatement(Node *cmd); //return, break, continue
-	SimpleStatement(statements *statements);
-	SimpleStatement(typeAnnotation *typeAnnotation, type *type, Node *id);
-	SimpleStatement(typeAnnotation *typeAnnotation, type *type, Node *id, exp *exp);
-	SimpleStatement(Node *id, string assign, exp *exp);
-	SimpleStatement(call *call);
-	SimpleStatement(Node *node, exp *exp);
+	statement(string keyWord, exp *exp, statement *statement, int lineNumber);//IF,WHILE
+	statement(string firstKeyWord,
+			  exp *exp,
+			  statement *firstStatement,
+			  string secondKeyWord,
+			  statement *secondStatement,
+			  int lineNumber); //IF ELSE
+	statement(Node *cmd); //return, break, continue
+	statement(statements *statements);
+	statement(typeAnnotation *typeAnnotation, type *type, Node *id);
+	statement(typeAnnotation *typeAnnotation, type *type, Node *id, exp *exp);
+	statement(Node *id, string assign, exp *exp);
+	statement(call *call);
+	statement(Node *node, exp *exp);
 
 };
 
@@ -231,7 +212,7 @@ class exp : public Node {
 	exp(typeAnnotation *typeAnnotation, type *type, exp *exp, int lineNum);
 };
 
-class Marker : public Node{
+class Marker : public Node {
   public:
 	Marker();
 };

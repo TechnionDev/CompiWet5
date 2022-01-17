@@ -46,7 +46,7 @@
 %left AND;
 %left OR;
 %right IF;
-%right ELSE;
+%left ELSE;
 %right ASSIGN;
 
 %%
@@ -76,50 +76,41 @@ formalDecl: typeAnnotation type ID{$$ = new formalsDecl(dynamic_cast<typeAnnotat
                                                         $3);};
 
 statements: statement{$$ = new statements(dynamic_cast<statement*>($1));}
-	|statements statement{$$ = new statements(dynamic_cast<statements*>($1), dynamic_cast<statement*>($2));};
+	|statements statement{$$ = new statements(dynamic_cast<statements*>($1), dynamic_cast<statement*>($2))};
 
-statement: OpenStatement {$$ = new statement(dynamic_cast<OpenStatement*>($1));}
-	|ClosedStatement {$$ = new statement(dynamic_cast<ClosedStatement*>($1));};
-
-OpenStatement: IF LPAREN m_newScope exp RPAREN statement{$$ = new OpenStatement("IF",
-                                                                                dynamic_cast<exp*>($4),
-                                                                                dynamic_cast<statement*>($6),
-                                                                                $1->lineNum);}
-		|IF LPAREN m_newScope exp RPAREN ClosedStatement m_endScope ELSE  m_newScope OpenStatement{$$ = new OpenStatement("IF",
-                                                                                                                        dynamic_cast<exp*>($4),
-                                                                                                                        dynamic_cast<ClosedStatement*>($6),
-                                                                                                                        "ELSE",
-                                                                                                                        dynamic_cast<OpenStatement*>($10),
-                                                                                                                        $1->lineNum);}
-		|WHILE m_newScopeWhile LPAREN exp RPAREN OpenStatement{$$ = new OpenStatement("WHILE",
-		                                                                              dynamic_cast<exp*>($4),
-		                                                                              dynamic_cast<OpenStatement*>($6),
-		                                                                              $1->lineNum);};
-
-ClosedStatement:SimpleStatement {$$ = new ClosedStatement(dynamic_cast<SimpleStatement*>($1));}
-		|IF LPAREN m_newScope exp RPAREN ClosedStatement m_endScope ELSE m_newScope ClosedStatement{$$ = new ClosedStatement("IF",
-		                                                                                                          dynamic_cast<exp*>($4),
-		                                                                                                          dynamic_cast<ClosedStatement*>($6),
-		                                                                                                          "ELSE",
-		                                                                                                          dynamic_cast<ClosedStatement*>($9),
-		                                                                                                          $1->lineNum);}
-		|WHILE m_newScopeWhile LPAREN exp RPAREN ClosedStatement{$$ = new ClosedStatement("WHILE",
-                                                                                            dynamic_cast<exp*>($4),
-                                                                                            dynamic_cast<ClosedStatement*>($6),$1->lineNum);};
-
-SimpleStatement: LBRACE m_newScope statements RBRACE{$$ = new SimpleStatement(dynamic_cast<statements*>($3));} //TODO - Maybe we need to perform the m_nesScope() function here
-	|typeAnnotation type ID SC{$$ = new SimpleStatement(dynamic_cast<typeAnnotation*>($1),
+statement: LBRACE m_newScope statements RBRACE{$$ = new statement(dynamic_cast<statements*>($3));} //TODO - Maybe we need to perform the m_nesScope() function here
+	|typeAnnotation type ID SC{$$ = new statement(dynamic_cast<typeAnnotation*>($1),
                                                         dynamic_cast<type*>($2),
                                                         $3);}
-	|typeAnnotation type ID ASSIGN exp SC{$$ = new SimpleStatement(dynamic_cast<typeAnnotation*>($1),
+	|typeAnnotation type ID ASSIGN exp SC{$$ = new statement(dynamic_cast<typeAnnotation*>($1),
                                                                    dynamic_cast<type*>($2),
                                                                    $3,dynamic_cast<exp*>($5));}
-	|ID ASSIGN exp SC{$$ = new SimpleStatement($1, "ASSIGN", dynamic_cast<exp*>($3));}
-	|call SC{$$ = new SimpleStatement(dynamic_cast<call*>($1));}
-	|RETURN SC{$$ = new SimpleStatement($1);}
-	|RETURN exp SC{$$ = new SimpleStatement($1, dynamic_cast<exp*>($2));}
-	|BREAK SC{$$ = new SimpleStatement($1);}
-	|CONTINUE SC{$$ = new SimpleStatement($1);};
+	|ID ASSIGN exp SC{$$ = new statement($1, "ASSIGN", dynamic_cast<exp*>($3));}
+	|call SC{$$ = new statement(dynamic_cast<call*>($1));}
+	|RETURN SC{$$ = new statement($1);}
+	|RETURN exp SC{$$ = new statement($1, dynamic_cast<exp*>($2));}
+	|IF LPAREN m_newScope ifExp RPAREN statement {$$ = new statement("IF",
+                                                                    dynamic_cast<exp*>($4),
+                                                                    dynamic_cast<statement*>($6),
+                                                                    $1->lineNum);}
+	|IF LPAREN m_newScope ifExp RPAREN statement ELSE m_elseEndScope m_newScope statement{$$ = new statement("IF",
+                                                                                                            dynamic_cast<exp*>($4),
+                                                                                                            dynamic_cast<statement*>($6),
+                                                                                                            "ELSE",
+                                                                                                            dynamic_cast<statement*>($10),
+                                                                                                            $1->lineNum);
+                                                                                                            $4->backPatchIf($8->nextInstruction);
+                                                                                                            buffer.bpatch($8->nextList, buffer.genLabelNextLine());
+                                                                                                            }
+    |WHILE m_newScopeWhile LPAREN exp RPAREN statement{$$ = new statement("WHILE",
+                                                                         dynamic_cast<exp*>($4),
+                                                                         dynamic_cast<statement*>($6),
+                                                                         $1->lineNum);
+                                                       $6->endWhile($2->nextInstruction,dynamic_cast<exp*>$4);};
+	|BREAK SC{$$ = new statement($1);}
+	|CONTINUE SC{$$ = new statement($1);};
+
+ifExp: exp {$1->loadExp();$1->ifCode();$1->nextInstruction = buffer.genLabel();$$ = new exp(dynamic_cast<exp*>($1));}
 
 call: ID LPAREN expList RPAREN{$$ = new call($1, dynamic_cast<expList*>($3));};
 	|ID LPAREN RPAREN{$$ = new call($1);};
@@ -162,9 +153,9 @@ m_funcNewScope: /*epsilon*/ {curFuncName = yytext;m_newScope();};
 
 m_newScope: /*epsilon*/ {m_newScope();};
 
-m_newScopeWhile: /*epsilon*/    {m_newScopeWhile();};
+m_newScopeWhile: /*epsilon*/    {m_newScopeWhile();$$ = new Node(); $$->nextInstruction = buffer.genLabelNextLine();};
 
-m_endScope: /*epsilon*/         {m_endScope();};
+m_elseEndScope: /*epsilon*/         {m_endScope();$$ = new Node(); $$->elseCode();};
 %%
 
 void yyerror (const char* err) {
@@ -172,5 +163,9 @@ void yyerror (const char* err) {
     exit(0);
 }
 int main() {
-    return yyparse();
+    buffer.startProgram();
+    yyparse();
+    buffer.printGlobalBuffer();
+    buffer.printCodeBuffer();
+    return 0;
 }

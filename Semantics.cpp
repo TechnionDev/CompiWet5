@@ -149,6 +149,42 @@ void Node::loadExp() {
 		this->NodeRegister = registerManager.loadVarName(this->NodeId);
 	}
 }
+
+void Node::ifCode() {
+	string compareRegister = registerManager.getNextRegisterName();
+	buffer.emit(compareRegister + " = icmp ne i32 0, " + this->NodeRegister);
+	// emit the branch instruction
+	int ifInstr = buffer.emit("br i1 " + compareRegister + ", label @, label @");
+	this->trueList.push_back({ifInstr, FIRST});
+	this->falseList.push_back({ifInstr, SECOND});
+}
+
+void Node::elseCode() {
+	int jmpInstr = buffer.emit("br label @");
+	this->nextInstruction = buffer.genLabelNextLine();
+	this->nextList.push_back({jmpInstr, FIRST});
+}
+
+void Node::backPatchIf(string falseLabel) {
+	buffer.bpatch(this->trueList, this->nextInstruction);
+	this->trueList.clear();
+	buffer.bpatch(this->falseList, falseLabel);
+	this->falseList.clear();
+}
+
+void Node::endWhile(string startLabel, exp *exp) {
+	// backpatch and jump to the start of the loop
+	buffer.bpatch(this->startLoopList, startLabel);
+	stringstream code;
+	code << "br label %" << startLabel;
+	buffer.emit(code.str());
+	// label the loop exit
+	string endLabel = buffer.genLabel();
+	buffer.bpatch(this->nextList, endLabel);
+	buffer.bpatch(exp->falseList, endLabel);
+	buffer.bpatch(exp->trueList, startLabel);
+}
+
 program::program() : Node("program") {
 	if (!mainExits) {
 		output::errorMainMissing();
@@ -205,7 +241,7 @@ formals::formals() : Node("formals") {
 		output::errorDef(yylineno, curFuncName);
 		exit(0);
 	}
-	if (this->hasString &&curFuncName != "print") {
+	if (this->hasString && curFuncName != "print") {
 		output::errorMismatch(yylineno);
 		exit(0);
 	}
@@ -214,7 +250,7 @@ formals::formals() : Node("formals") {
 formals::formals(formalsList *formals) : Node("formals") {
 	for (int i = 0; i < formals->formalsVector.size(); i++) {
 		for (int j = 0; j < formals->formalsVector.size(); j++) {
-			if (i==j) {
+			if (i == j) {
 				continue;
 			}
 			if (formals->formalsVector[i].id == formals->formalsVector[j].id) {
@@ -247,7 +283,7 @@ formals::formals(formalsList *formals) : Node("formals") {
 		output::errorDef(yylineno, curFuncName);
 		exit(0);
 	}
-	if (this->hasString &&curFuncName != "print") {
+	if (this->hasString && curFuncName != "print") {
 		output::errorMismatch(yylineno);
 		exit(0);
 	}
@@ -272,38 +308,44 @@ formalsDecl::formalsDecl(typeAnnotation *typeAnnotation, type *type, Node *id) :
 
 statements::statements(statement *statement) : Node("statements") {
 	this->vecStatements.push_back(*statement);
+	this->nextList = statement->nextList;
+	this->startLoopList = statement->startLoopList;
 }
 
 statements::statements(statements *statements, statement *statement) : Node("statements") {
 	this->vecStatements = statements->vecStatements;
 	this->vecStatements.push_back(*statement);
+	this->nextList = buffer.merge(statements->nextList, statement->nextList);
+	this->startLoopList = buffer.merge(statements->startLoopList, statement->startLoopList);
+
 }
 
-statement::statement(OpenStatement *OpenStatement) : Node("statement") {
-	//todo:: nothing?
-}
-
-statement::statement(ClosedStatement *ClosedStatement) : Node("statement") {
-	//todo:: nothing?
-}
-
-OpenStatement::OpenStatement(string keyWord, exp *exp, statement *statement, int lineNumber) : Node("OpenStatement") {
-	if (keyWord != "IF") {
-		output::errorSyn(lineNumber);
-		exit(0);
-	}
-	if (exp->expType != "BOOL") {
-		output::errorMismatch(lineNumber);
-		exit(0);
+statement::statement(string keyWord, exp *exp, statement *statement, int lineNumber) : Node("statement") {
+	if (keyWord == "IF") {
+		if (exp->expType != "BOOL") {
+			output::errorMismatch(lineNumber);
+			exit(0);
+		}
+	} else if (keyWord == "WHILE") {
+		if (exp->expType != "BOOL") {
+			output::errorMismatch(lineNumber);
+			exit(0);
+		}
 	}
 	end_scope();
-}
+	buffer.bpatch(this->trueList, this->nextInstruction);
+	this->trueList.clear();
+	buffer.bpatch(this->falseList, buffer.genLabelNextLine());
+	this->falseList.clear();
+	this->nextList = statement->nextList;
+	this->startLoopList = statement->startLoopList;
+}//IF, WHILE
 
-OpenStatement::OpenStatement(string firstKeyWord,
-							 exp *exp,
-							 ClosedStatement *ClosedStatement,
-							 string secondKeyWord,
-							 OpenStatement *OpenStatement, int lineNumber) : Node("OpenStatement") {
+statement::statement(string firstKeyWord,
+					 exp *exp,
+					 statement *firstStatement,
+					 string secondKeyWord,
+					 statement *secondStatement, int lineNumber) : Node("statement") {
 	if (firstKeyWord != "IF" || secondKeyWord != "ELSE") {
 		output::errorSyn(lineNumber);
 		exit(0);
@@ -313,53 +355,12 @@ OpenStatement::OpenStatement(string firstKeyWord,
 		exit(0);
 	}
 	end_scope();
-}
+	this->nextList = buffer.merge(firstStatement->nextList, secondStatement->nextList);
+	this->startLoopList = buffer.merge(firstStatement->startLoopList, secondStatement->startLoopList);
 
-OpenStatement::OpenStatement(string keyWord, exp *exp, OpenStatement *OpenStatement, int lineNumber) : Node(
-	"OpenStatement") {
-	if (keyWord != "WHILE") {
-		output::errorSyn(lineNumber);
-		exit(0);
-	}
-	if (exp->expType != "BOOL") {
-		output::errorMismatch(lineNumber);
-		exit(0);
-	}
-	end_scope();
-}
+}//IF ELSE
 
-ClosedStatement::ClosedStatement(SimpleStatement *SimpleStatement) : Node("ClosedStatement") {
-	//todo:: nothing?
-}
-
-ClosedStatement::ClosedStatement(string firstKeyWord, exp *exp, ClosedStatement *closed_Statement,
-								 string secondKeyWord, ClosedStatement *closed_Statement2, int lineNumber) : Node(
-	"ClosedStatement") {
-	if (firstKeyWord != "IF" || secondKeyWord != "ELSE") {
-		output::errorSyn(lineNumber);
-		exit(0);
-	}
-	if (exp->expType != "BOOL") {
-		output::errorMismatch(lineNumber);
-		exit(0);
-	}
-	end_scope();
-}
-
-ClosedStatement::ClosedStatement(string keyWord, exp *exp, ClosedStatement *ClosedStatement, int lineNumber) : Node(
-	"ClosedStatement") {
-	if (keyWord != "WHILE") {
-		output::errorSyn(lineNumber);
-		exit(0);
-	}
-	if (exp->expType != "BOOL") {
-		output::errorMismatch(lineNumber);
-		exit(0);
-	}
-	end_scope();
-}
-
-SimpleStatement::SimpleStatement(Node *cmd) : Node("SimpleStatement") {
+statement::statement(Node *cmd) : Node("statement") {
 	if (cmd->val == "return") {
 		string retFunc = getRetTypeFunc();
 		if (retFunc == "" || retFunc != "VOID") {
@@ -385,11 +386,11 @@ SimpleStatement::SimpleStatement(Node *cmd) : Node("SimpleStatement") {
 }
 //return VOID, break, continue
 
-SimpleStatement::SimpleStatement(statements *statements) : Node("SimpleStatement") {
+statement::statement(statements *statements) : Node("statement") {
 	end_scope();
 }    //LBRACE m_newScope statements RBRACE
 
-SimpleStatement::SimpleStatement(typeAnnotation *typeAnnotation, type *type, Node *id) : Node("SimpleStatement") {
+statement::statement(typeAnnotation *typeAnnotation, type *type, Node *id) : Node("statement") {
 	if (isIdentifierExists(id->val)) {
 		output::errorDef(id->lineNum, id->val);
 		exit(0);
@@ -405,8 +406,8 @@ SimpleStatement::SimpleStatement(typeAnnotation *typeAnnotation, type *type, Nod
 	registerManager.createRegister(typeAnnotation->isConst, type->typeName, id, nullptr);
 } //typeAnnotation type ID SC
 
-SimpleStatement::SimpleStatement(typeAnnotation *typeAnnotation, type *type, Node *id, exp *exp) : Node(
-	"SimpleStatement") {
+statement::statement(typeAnnotation *typeAnnotation, type *type, Node *id, exp *exp) : Node(
+	"statement") {
 	if (isIdentifierExists(id->val)) {
 		output::errorDef(id->lineNum, id->val);
 		exit(0);
@@ -426,7 +427,7 @@ SimpleStatement::SimpleStatement(typeAnnotation *typeAnnotation, type *type, Nod
 	registerManager.createRegister(typeAnnotation->isConst, type->typeName, id, exp);
 }    //typeAnnotation type ID ASSIGN exp SC
 
-SimpleStatement::SimpleStatement(Node *id, string assign, exp *exp) : Node("SimpleStatement") {
+statement::statement(Node *id, string assign, exp *exp) : Node("statement") {
 	if (assign != "ASSIGN") {
 		output::errorSyn(id->lineNum);
 		exit(0);
@@ -448,13 +449,13 @@ SimpleStatement::SimpleStatement(Node *id, string assign, exp *exp) : Node("Simp
 	registerManager.createRegister(isIdentifierConst(id->val), idType[0], id, exp);
 }//ID ASSIGN exp SC
 
-SimpleStatement::SimpleStatement(call *call) : Node("SimpleStatement") {
+statement::statement(call *call) : Node("statement") {
 	//todo:: nothing?
 }
 
-SimpleStatement::SimpleStatement(Node *node, exp *exp) : Node("SimpleStatement") {
+statement::statement(Node *node, exp *exp) : Node("statement") {
 	string func = getRetTypeFunc();
-	if(func=="INT" && exp->expType=="BYTE"){}
+	if (func == "INT" && exp->expType == "BYTE") {}
 	else if (func == "" || func != exp->expType) {
 		output::errorMismatch(node->lineNum);
 		exit(0);
@@ -489,7 +490,8 @@ call::call(Node *id, expList *expList) : Node("call") {
 		}
 		if (funcId.types.size() != expList->expVector.size() + 1) {
 			vector<string> funcExpectsTypes;
-			funcId.types.size()!=1 ? funcExpectsTypes = {funcId.types.begin() + 1, funcId.types.end()}:funcExpectsTypes = {};
+			funcId.types.size() != 1 ? funcExpectsTypes = {funcId.types.begin() + 1, funcId.types.end()} :
+				funcExpectsTypes = {};
 			output::errorPrototypeMismatch(id->lineNum, id->val, funcExpectsTypes);
 			exit(0);
 		}
@@ -498,7 +500,8 @@ call::call(Node *id, expList *expList) : Node("call") {
 				if (expList->expVector[i - 1].expType == "BYTE" && funcId.types[i] == "INT") {
 				} else {
 					vector<string> funcExpectsTypes;
-					funcId.types.size()!=1 ? funcExpectsTypes = {funcId.types.begin() + 1, funcId.types.end()}:funcExpectsTypes = {};
+					funcId.types.size() != 1 ? funcExpectsTypes = {funcId.types.begin() + 1, funcId.types.end()} :
+						funcExpectsTypes = {};
 					output::errorPrototypeMismatch(id->lineNum, id->val, funcExpectsTypes);
 					exit(0);
 				}
@@ -523,14 +526,14 @@ call::call(Node *id) : Node("call") {
 		}
 		if (funcId.types.size() != 1) {
 			vector<string> funcExpectsTypes;
-			funcId.types.size()!=1 ? funcExpectsTypes = {funcId.types.begin() + 1, funcId.types.end()}:funcExpectsTypes = {};
+			funcId.types.size() != 1 ? funcExpectsTypes = {funcId.types.begin() + 1, funcId.types.end()} :
+				funcExpectsTypes = {};
 			output::errorPrototypeMismatch(id->lineNum, id->val, funcExpectsTypes);
 			exit(0);
 		}
 		this->rettype = funcId.types[0];
 	}
 }
-
 
 expList::expList(exp *exp1) : Node("expList") {
 	this->expVector.push_back(exp1);
@@ -570,8 +573,19 @@ exp::exp() : Node("exp") {
 }
 
 exp::exp(exp *exp) : Node("exp") {
-	this->expType = exp->expType;
-	this->isLiteral = exp->isLiteral;
+	this->val = exp->val;
+	this->lineNum = exp->lineNum;
+	this->NodeType = exp->NodeType;
+	this->NodeId = exp->NodeId;
+	this->NodeNumericVal = exp->NodeNumericVal;
+	this->NodeRegister = exp->NodeRegister;
+	this->NodeStringVar = exp->NodeStringVar;
+	this->NodeStringLength = exp->NodeStringLength;
+	this->trueList = exp->trueList;
+	this->falseList = exp->falseList;
+	this->nextList = exp->nextList;
+	this->startLoopList = exp->startLoopList;
+	this->nextInstruction = exp->nextInstruction;
 }
 
 exp::exp(exp *firstExp, string op, exp *secExp, int lineNum) : Node("exp") {
