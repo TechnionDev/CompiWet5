@@ -1,10 +1,11 @@
-#ifndef COMPIWET3__SEMANTICS_H_
-#define COMPIWET3__SEMANTICS_H_
+#ifndef COMPIWET5__SEMANTICS_H_
+#define COMPIWET5__SEMANTICS_H_
 
 #include "hw3_output.hpp"
 #include <string.h>
 #include "register.h"
 #include "bp.hpp"
+#include <iostream>
 using namespace std;
 class Node;
 class symbolTable;
@@ -17,8 +18,6 @@ class formalsList;
 class formalsDecl;
 class statements;
 class statement;
-class OpenStatement;
-class ClosedStatement;
 class call;
 class expList;
 class type;
@@ -40,10 +39,10 @@ class Node {
 	string NodeRegister = "";
 	string NodeStringVar = "";
 	string NodeStringLength = "";
-	vector<pair<int, BranchLabelIndex>> trueList;
-	vector<pair<int, BranchLabelIndex>> falseList;
-	vector<pair<int, BranchLabelIndex>> nextList;
-	vector<pair<int, BranchLabelIndex>> startLoopList;
+	std::vector<pair<int, BranchLabelIndex>> trueList;
+	std::vector<pair<int, BranchLabelIndex>> falseList;
+	std::vector<pair<int, BranchLabelIndex>> nextList;
+	std::vector<pair<int, BranchLabelIndex>> startLoopList;
 	string nextInstruction;
 	Node() = default;
 	Node(string val, int lineNumber = -1) : val(val), lineNum(lineNumber) {};
@@ -60,15 +59,15 @@ class symbolRow {
   public:
 	string name;
 	int pos;
-	vector<string> types;
+	std::vector<string> types;
 	bool is_const;
-	vector<bool> constFormals;
+	std::vector<bool> constFormals;
 	bool isFunc = false;
 	symbolRow(string name,
 			  int pos,
-			  vector<string> types,
+			  std::vector<string> types,
 			  bool is_const,
-			  vector<bool> constFormals,
+			  std::vector<bool> constFormals,
 			  bool isFunc = false);
 	symbolRow() = default;
 	symbolRow(const symbolRow &row);
@@ -78,9 +77,9 @@ class symbolRow {
 class symbolTable {
   public:
 	symbolTable() = default;
-	vector<symbolRow> SymbolTable;
+	std::vector<symbolRow> SymbolTable;
 	bool isWhileScope = false;
-	bool contains(string id, vector<string> type);
+	bool contains(string id, std::vector<string> type);
 };
 
 bool isIdentifierExists(string id);
@@ -123,7 +122,7 @@ class retType : public Node {
 
 class formals : public Node {
   public:
-	vector<formalsDecl> formalsVector;
+	std::vector<formalsDecl> formalsVector;
 	bool hasString = false;
 	formals();
 	formals(formalsList *formalsList);
@@ -131,7 +130,7 @@ class formals : public Node {
 
 class formalsList : public Node {
   public:
-	vector<formalsDecl> formalsVector;
+	std::vector<formalsDecl> formalsVector;
 	formalsList(formalsDecl *formalsDecl);
 	formalsList(formalsDecl *formalsDecl, formalsList *formalsList);
 };
@@ -146,7 +145,7 @@ class formalsDecl : public Node {
 
 class statements : public Node {
   public:
-	vector<statement> vecStatements;
+	std::vector<statement*> vecStatements;
 	statements(statement *statement);
 	statements(statements *statements, statement *statement);
 };
@@ -179,7 +178,7 @@ class call : public Node {
 
 class expList : public Node {
   public:
-	vector<exp> expVector;
+	std::vector<exp*> expVector;
 	expList(exp *exp1);
 	expList(exp *exp1, expList *expList);
 };
@@ -217,4 +216,4 @@ class Marker : public Node {
   public:
 	Marker();
 };
-#endif //COMPIWET3__SEMANTICS_H_
+#endif //COMPIWET5__SEMANTICS_H_

@@ -79,13 +79,13 @@ void end_scope() {
 	for (auto it: table.SymbolTable) {
 		if (!it.isFunc) {
 			//ID
-			output::printID(it.name, it.pos, it.types[0]);
+			//output::printID(it.name, it.pos, it.types[0]);
 		} else {
 			//FUNCTION
 			string retVal = it.types[0];
 			it.types.erase(it.types.begin());
 			string funcType = output::makeFunctionType(retVal, it.types);
-			output::printID(it.name, 0, funcType);
+			//output::printID(it.name, 0, funcType);
 		}
 	}
 }
@@ -183,11 +183,12 @@ void addFunction(retType *retType, Node *funcName, formals *formals) {
 		stringstream reg;
 		reg << "%" << i;
 		registerManager.varName2Register[it->id] = reg.str();
+   //buffer.emit("%s" + to_string(i) + " = alloca i32, i32 0"); //TODO: Only for testing
 		i++;
 	}
 	for (int i = 0; i < 50; i++) {
 		buffer.emit("%s" + to_string(i) + " = alloca i32, i32 0");
-	}
+	} //TODO - This is the original code, in line 186 I tried something else
 }
 
 //////////////////////////////////////////////////
@@ -286,13 +287,16 @@ formals::formals() : Node("formals") {
 	for (auto it: this->formalsVector) {
 		curFuncFormals.push_back(it.formalType);
 	}
-	if (curFuncName == "main" && curFuncRetVal == "VOID" && this->formalsVector.empty()) {
-		if (mainExits) {
-			output::errorDef(yylineno, curFuncName);
-			exit(0);
-		}
-		mainExits = true;
-	}
+    if (curFuncName == "main" && curFuncRetVal != "VOID"){
+        output::errorMismatch(yylineno);
+        exit(0);
+    } else if (curFuncName == "main" && curFuncRetVal == "VOID" && this->formalsVector.empty()) {
+        if (mainExits) {
+            output::errorDef(yylineno, curFuncName);
+            exit(0);
+        }
+        mainExits = true;
+    }
 	if (isIdentifierExists(curFuncName)) {
 		output::errorDef(yylineno, curFuncName);
 		exit(0);
@@ -363,14 +367,14 @@ formalsDecl::formalsDecl(typeAnnotation *typeAnnotation, type *type, Node *id) :
 }
 
 statements::statements(statement *statement) : Node("statements") {
-	this->vecStatements.push_back(*statement);
+	this->vecStatements.push_back(statement);
 	this->nextList = statement->nextList;
 	this->startLoopList = statement->startLoopList;
 }
 
 statements::statements(statements *statements, statement *statement) : Node("statements") {
 	this->vecStatements = statements->vecStatements;
-	this->vecStatements.push_back(*statement);
+	this->vecStatements.push_back(statement);
 	this->nextList = buffer.merge(statements->nextList, statement->nextList);
 	this->startLoopList = buffer.merge(statements->startLoopList, statement->startLoopList);
 
@@ -524,20 +528,20 @@ statement::statement(Node *node, exp *exp) : Node("statement") {
 
 call::call(Node *id, expList *expList) : Node("call") {
 	if (id->val == curFuncName) {
-		if (curFuncFormals.size() != expList->expVector.size()) {
+		if (curFuncFormals.size() != expList->expVector.size() + 1) {
 			output::errorPrototypeMismatch(id->lineNum, id->val, curFuncFormals);
 			exit(0);
 		}
-		for (int i = 0; i < curFuncFormals.size(); i++) {
-			if (curFuncFormals[i] != expList->expVector[i].expType) {
-				if (expList->expVector[i].expType == "BYTE" && curFuncFormals[i] == "INT") {
+		for (int i = 1; i < curFuncFormals.size(); i++) {
+			if (curFuncFormals[i] != expList->expVector[i - 1]->expType) {
+				if (expList->expVector[i]->expType == "BYTE" && curFuncFormals[i] == "INT") {
 				} else {
 					output::errorPrototypeMismatch(id->lineNum, id->val, curFuncFormals);
 					exit(0);
 				}
 			}
 		}
-		this->rettype = curFuncRetVal;
+		this->rettype = curFuncFormals[0];
 	} else {
 		symbolRow funcId = findSymbolRow(id->val);
 		if (id->val != funcId.name || !funcId.isFunc) {
@@ -551,14 +555,11 @@ call::call(Node *id, expList *expList) : Node("call") {
 			output::errorPrototypeMismatch(id->lineNum, id->val, funcExpectsTypes);
 			exit(0);
 		}
-		cout<<to_string(funcId.types.size())<<endl;
 		for (int i = 1; i < funcId.types.size(); i++) {
-			if (funcId.types[i] != expList->expVector[i - 1].expType) {
-				if (expList->expVector[i - 1].expType == "BYTE" && funcId.types[i] == "INT") {
+			if (funcId.types[i] != expList->expVector[i - 1]->expType) {
+				if (expList->expVector[i - 1]->expType == "BYTE" && funcId.types[i] == "INT") {
 				} else {
 					vector<string> funcExpectsTypes;
-					cout << "this is the size: " + to_string(expList->expVector.size()) <<endl;
-					cout << "this is the arg type " + expList->expVector[0].expType << endl;
 					funcId.types.size() != 1 ? funcExpectsTypes = {funcId.types.begin() + 1, funcId.types.end()} :
 						funcExpectsTypes = {};
 					output::errorPrototypeMismatch(id->lineNum, id->val, funcExpectsTypes);
@@ -576,7 +577,7 @@ call::call(Node *id) : Node("call") {
 			output::errorPrototypeMismatch(id->lineNum, id->val, curFuncFormals);
 			exit(0);
 		}
-		this->rettype = curFuncRetVal;
+		this->rettype = curFuncFormals[0];
 	} else {
 		symbolRow funcId = findSymbolRow(id->val);
 		if (id->val != funcId.name || !funcId.isFunc) {
@@ -585,8 +586,7 @@ call::call(Node *id) : Node("call") {
 		}
 		if (funcId.types.size() != 1) {
 			vector<string> funcExpectsTypes;
-			funcId.types.size() != 1 ? funcExpectsTypes = {funcId.types.begin() + 1, funcId.types.end()} :
-				funcExpectsTypes = {};
+			funcExpectsTypes = {funcId.types.begin() + 1, funcId.types.end()};
 			output::errorPrototypeMismatch(id->lineNum, id->val, funcExpectsTypes);
 			exit(0);
 		}
@@ -595,12 +595,11 @@ call::call(Node *id) : Node("call") {
 }
 
 expList::expList(exp *exp1) : Node("expList") {
-	cout << exp1->expType<<endl;
 	this->expVector.push_back(exp1);
 }
 
 expList::expList(exp *exp1, expList *expList) : Node("expList") {
-	this->expVector.push_back(*exp1);
+	this->expVector.push_back(exp1);
 	this->expVector.insert(this->expVector.end(), expList->expVector.begin(), expList->expVector.end());
 }
 
@@ -646,6 +645,7 @@ exp::exp(exp *exp) : Node("exp") {
 	this->nextList = exp->nextList;
 	this->startLoopList = exp->startLoopList;
 	this->nextInstruction = exp->nextInstruction;
+	this->expType = exp->expType;
 }
 
 exp::exp(exp *firstExp, string op, exp *secExp, int lineNum) : Node("exp") {
@@ -795,7 +795,6 @@ exp::exp(Node *id, string type) : Node("exp") {
 		this->NodeType = "ID";
 		this->NodeId = id->val;
 	} else if (type == "STRING") {
-		cout << "hi" <<endl;
 		this->expType = "STRING";
 		this->NodeId = id->val; //NodeId will now contain the string value
 		string stringVar = registerManager.createStringConstant();
@@ -864,10 +863,10 @@ exp::exp(typeAnnotation *typeAnnotation, type *type, exp *exp, int lineNum) : No
 		this->NodeRegister = exp->NodeRegister;
 	} else if (type->typeName == "BYTE" && exp->expType == "INT") {
 		this->NodeRegister = registerManager.getNextRegisterName();
-		buffer.emit(this->NodeRegister + "=" + "trunc i32 " + exp->NodeRegister + "to i8");
+		buffer.emit(this->NodeRegister + "=" + " trunc i32 " + exp->NodeRegister + " to i8");
 	} else if (type->typeName == "INT" && exp->expType == "BYTE") {
 		this->NodeRegister = registerManager.getNextRegisterName();
-		buffer.emit(this->NodeRegister + "=" + "zext i8 " + exp->NodeRegister + "to i32");
+		buffer.emit(this->NodeRegister + "=" + "zext i8 " + exp->NodeRegister + " to i32");
 	}
 }
 
