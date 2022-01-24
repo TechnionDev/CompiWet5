@@ -106,7 +106,7 @@ statement: LBRACE m_newScope statements RBRACE{$$ = new statement(dynamic_cast<s
                                                                          dynamic_cast<exp*>($4),
                                                                          dynamic_cast<statement*>($6),
                                                                          $1->lineNum);
-                                                       $6->endWhile($2->nextInstruction,dynamic_cast<exp*>$4);};
+                                                       $6->endWhile($2->nextInstruction,dynamic_cast<exp*>($4));};
 	|BREAK SC{$$ = new statement($1);}
 	|CONTINUE SC{$$ = new statement($1);};
 
@@ -141,8 +141,8 @@ exp: LPAREN exp RPAREN{$2->loadExp();$$ = new exp(dynamic_cast<exp*>($2));};
 	|NOT exp{$$ = new exp("NOT", dynamic_cast<exp*>($2),$1->lineNum);};
 	|exp AND BoolMarkerM exp{$$ = new exp(dynamic_cast<exp*>($1), "AND", dynamic_cast<exp*>($4),$2->lineNum,dynamic_cast<Marker*>($3));};
 	|exp OR BoolMarkerM exp{$$ = new exp(dynamic_cast<exp*>($1), "OR", dynamic_cast<exp*>($4),$2->lineNum,dynamic_cast<Marker*>($3));};
-	|exp RELOPNONASSOC exp{$$ = new exp(dynamic_cast<exp*>($1), "RELOPNONASSOC", dynamic_cast<exp*>($3),$2->lineNum);};
-	|exp RELOPLEFT exp{$$ = new exp(dynamic_cast<exp*>($1), "RELOPLEFT", dynamic_cast<exp*>($3),$2->lineNum);};
+	|exp RELOPNONASSOC exp{$$ = new exp(dynamic_cast<exp*>($1), $2->val, dynamic_cast<exp*>($3),$2->lineNum);};
+	|exp RELOPLEFT exp{$$ = new exp(dynamic_cast<exp*>($1), $2->val, dynamic_cast<exp*>($3),$2->lineNum);};
 	|LPAREN typeAnnotation type RPAREN exp{$$ = new exp(dynamic_cast<typeAnnotation*>($2), dynamic_cast<type*>($3), dynamic_cast<exp*>($5),$1->lineNum);};
 
 BoolMarkerM: /* epsilon */ {$$ = new Marker();}

@@ -12,7 +12,7 @@ namespace output{
     /* Do not save the string returned from this function in a data structure
         as it is not dynamically allocated and will be destroyed(!) at the end of the calling scope.
     */
-    string makeFunctionType(const string& retType, vector<string>& argTypes);
+    string makeFunctionType(const string& retType, std::vector<string>& argTypes);
 
     void errorLex(int lineno);
     void errorSyn(int lineno);
@@ -20,7 +20,7 @@ namespace output{
     void errorDef(int lineno, const string& id);
     void errorUndefFunc(int lineno, const string& id);
     void errorMismatch(int lineno);
-    void errorPrototypeMismatch(int lineno, const string& id, vector<string>& argTypes);
+    void errorPrototypeMismatch(int lineno, const string& id, std::vector<string>& argTypes);
     void errorUnexpectedBreak(int lineno);
     void errorUnexpectedContinue(int lineno);
     void errorMainMissing();
