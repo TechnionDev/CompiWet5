@@ -151,13 +151,13 @@ string getLlvmType(string type) {
 	}
 	return llvmType;
 }
-void createLlvmArguments(int numArguments, stringstream &code, vector<Node *> *expressions = nullptr) {
+void createLlvmArguments(int numArguments, stringstream &code, std::vector<exp *> *expressions = nullptr) {
 	code << "(";
 	for (int i = 0; i < numArguments; i++) {
 		if (i != 0) {
 			code << ", ";
 		}
-		if (expressions && (*expressions)[i]->NodeType == "STRING") {
+		if (expressions && (*expressions)[i]->expType == "STRING") {
 			code << "i8*";
 		} else {
 			code << "i32";
@@ -183,7 +183,7 @@ void addFunction(retType *retType, Node *funcName, formals *formals) {
 		stringstream reg;
 		reg << "%" << i;
 		registerManager.varName2Register[it->id] = reg.str();
-   //buffer.emit("%s" + to_string(i) + " = alloca i32, i32 0"); //TODO: Only for testing
+		//buffer.emit("%s" + to_string(i) + " = alloca i32, i32 0"); //TODO: Only for testing
 		i++;
 	}
 	for (int i = 0; i < 50; i++) {
@@ -232,6 +232,30 @@ void Node::endWhile(string startLabel, exp *exp) {
 	buffer.bpatch(this->nextList, endLabel);
 	buffer.bpatch(exp->falseList, endLabel);
 	buffer.bpatch(exp->trueList, startLabel);
+}
+
+void Node::emitCallCode(expList *expList) {
+	int size = 0;
+	if (expList) {
+		size = expList->expVector.size();
+	}
+	stringstream code;
+	if (this->val == "print") {
+		code << expList->expVector[0]->NodeRegister << " = getelementptr "
+			 << expList->expVector[0]->NodeStringLength << ", " << expList->expVector[0]->NodeStringLength
+			 << "* " << expList->expVector[0]->NodeStringVar << ", i32 0, i32 0" << endl;
+	}
+	string retType = findSymbolRow(this->val).types[0];
+	string llvmType = getLlvmType(retType);
+	// save the function call result if needed
+	if (retType != "VOID") {
+		string reg = registerManager.getNextRegisterName();
+		code << reg << " = ";
+		this->NodeRegister = reg;
+	}
+	code << "call " << llvmType << " @" << this->val;
+	createLlvmArguments(size, code, &expList->expVector);
+	buffer.emit(code.str());
 }
 
 program::program() : Node("program") {
@@ -287,16 +311,16 @@ formals::formals() : Node("formals") {
 	for (auto it: this->formalsVector) {
 		curFuncFormals.push_back(it.formalType);
 	}
-    if (curFuncName == "main" && curFuncRetVal != "VOID"){
-        output::errorMismatch(yylineno);
-        exit(0);
-    } else if (curFuncName == "main" && curFuncRetVal == "VOID" && this->formalsVector.empty()) {
-        if (mainExits) {
-            output::errorDef(yylineno, curFuncName);
-            exit(0);
-        }
-        mainExits = true;
-    }
+	if (curFuncName == "main" && curFuncRetVal != "VOID") {
+		output::errorMismatch(yylineno);
+		exit(0);
+	} else if (curFuncName == "main" && curFuncRetVal == "VOID" && this->formalsVector.empty()) {
+		if (mainExits) {
+			output::errorDef(yylineno, curFuncName);
+			exit(0);
+		}
+		mainExits = true;
+	}
 	if (isIdentifierExists(curFuncName)) {
 		output::errorDef(yylineno, curFuncName);
 		exit(0);
@@ -393,10 +417,10 @@ statement::statement(string keyWord, exp *exp, statement *statement, int lineNum
 		}
 	}
 	end_scope();
-	buffer.bpatch(this->trueList, this->nextInstruction);
-	this->trueList.clear();
-	buffer.bpatch(this->falseList, buffer.genLabelNextLine());
-	this->falseList.clear();
+	buffer.bpatch(exp->trueList, exp->nextInstruction);
+	exp->trueList.clear();
+	buffer.bpatch(exp->falseList, buffer.genLabelNextLine());
+	exp->falseList.clear();
 	this->nextList = statement->nextList;
 	this->startLoopList = statement->startLoopList;
 }//IF, WHILE
@@ -729,7 +753,8 @@ exp::exp(exp *firstExp, string op, exp *secExp, int lineNum, Marker *marker) {
 		buffer.bpatch(v4, marker->nextInstruction);
 		// update the result value to be the last register
 		this->NodeRegister = resReg;
-	} else {
+	} else {//or
+		cout<<"==start OR=="<<endl;
 		int rightJmpInstr = buffer.emit("br label @");
 		string rightLabel = buffer.genLabel();
 		buffer.bpatch(marker->nextList, rightLabel);
@@ -740,7 +765,7 @@ exp::exp(exp *firstExp, string op, exp *secExp, int lineNum, Marker *marker) {
 		string compReg1 = registerManager.getNextRegisterName();
 		stringstream code;
 		firstExp->loadExp();
-		code << compReg1 << " = icmp ne i32 " << registerManager.getVarRegister(firstExp->NodeId, secExp->NodeRegister)
+		code << compReg1 << " = icmp ne i32 " << registerManager.getVarRegister(firstExp->NodeId, firstExp->NodeRegister)
 			 << ", 0";
 		buffer.emit(code.str());
 		stringstream code2;

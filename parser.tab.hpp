@@ -67,8 +67,8 @@
      MINUS = 283,
      RELOPNONASSOC = 284,
      RELOPLEFT = 285,
-     AND = 286,
-     OR = 287,
+     OR = 286,
+     AND = 287,
      IF = 288,
      ELSE = 289,
      ASSIGN = 290
@@ -103,8 +103,8 @@
 #define MINUS 283
 #define RELOPNONASSOC 284
 #define RELOPLEFT 285
-#define AND 286
-#define OR 287
+#define OR 286
+#define AND 287
 #define IF 288
 #define ELSE 289
 #define ASSIGN 290

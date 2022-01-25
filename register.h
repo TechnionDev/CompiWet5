@@ -6,7 +6,7 @@
 #include "bp.hpp"
 #include <sstream>
 using namespace std;
-extern CodeBuffer& buffer;
+extern CodeBuffer &buffer;
 class Node;
 class exp;
 class type;
@@ -25,7 +25,7 @@ class RegisterManager {
 	string loadVarName(string varName);
 	void storeVar(string var, string varValue);
 	string createStringConstant();
-	string compareCodeGen(exp* firstExp, string op, exp* secExp);
+	string compareCodeGen(exp *firstExp, string op, exp *secExp);
 	string functionGetVarReg(string varId);
 };
 

@@ -43,14 +43,14 @@
 %left MINUS;
 %nonassoc RELOPNONASSOC;
 %left RELOPLEFT;
-%left AND;
 %left OR;
+%left AND;
 %right IF;
 %left ELSE;
 %right ASSIGN;
 
 %%
-program: m_glob funcs {$$ = new program();};
+program: m_glob funcs {$$ = new program();cout<<"==end of program=="<<endl;};
 
 funcs: /*epsilon*/{$$ = new funcs();};|
         funcDecl funcs {$$ = new funcs();};
@@ -60,6 +60,7 @@ funcDecl: retType ID {curFuncName = $2->val;} m_funcNewScope LPAREN formals RPAR
                                                                                     $2,
                                                                                     dynamic_cast<formals*>($6),
                                                                                     dynamic_cast<statements*>($10));
+                                                                                    cout<<"==func decl=="<<endl;
                                                                                     };
 
 retType: type{$$ = new retType(dynamic_cast<type*>($1));};
@@ -89,7 +90,7 @@ statement: LBRACE m_newScope statements RBRACE{$$ = new statement(dynamic_cast<s
 	|call SC{$$ = new statement(dynamic_cast<call*>($1));}
 	|RETURN SC{$$ = new statement($1);}
 	|RETURN exp SC{$$ = new statement($1, dynamic_cast<exp*>($2));}
-	|IF LPAREN m_newScope ifExp RPAREN statement {$$ = new statement("IF",
+	|IF LPAREN m_newScope ifExp RPAREN statement {cout<<"==if statement=="<<endl;$$ = new statement("IF",
                                                                     dynamic_cast<exp*>($4),
                                                                     dynamic_cast<statement*>($6),
                                                                     $1->lineNum);}
@@ -110,10 +111,10 @@ statement: LBRACE m_newScope statements RBRACE{$$ = new statement(dynamic_cast<s
 	|BREAK SC{$$ = new statement($1);}
 	|CONTINUE SC{$$ = new statement($1);};
 
-ifExp: exp {$1->loadExp();$1->ifCode();$1->nextInstruction = buffer.genLabel();$$ = new exp(dynamic_cast<exp*>($1));}
+ifExp: exp {$1->loadExp();$1->ifCode();$$ = new exp(dynamic_cast<exp*>($1));$$->nextInstruction = buffer.genLabel();}
 
-call: ID LPAREN expList RPAREN{$$ = new call($1, dynamic_cast<expList*>($3));};
-	|ID LPAREN RPAREN{$$ = new call($1);};
+call: ID LPAREN expList RPAREN{$$ = new call($1, dynamic_cast<expList*>($3));$1->emitCallCode(dynamic_cast<expList*>$3);$$->NodeRegister = $1->NodeRegister;};
+	|ID LPAREN RPAREN{$$ = new call($1);$1->emitCallCode(nullptr); $$->NodeRegister = $1->NodeRegister;};
 
 expList: exp{$1->loadExp();$$ = new expList(dynamic_cast<exp*>($1));};
 	|exp COMMA expList{$1->loadExp();$$ = new expList(dynamic_cast<exp*>($1),dynamic_cast<expList*>($3));};
@@ -140,7 +141,7 @@ exp: LPAREN exp RPAREN{$2->loadExp();$$ = new exp(dynamic_cast<exp*>($2));};
 	|FALSE{$$ = new exp(false);};
 	|NOT exp{$$ = new exp("NOT", dynamic_cast<exp*>($2),$1->lineNum);};
 	|exp AND BoolMarkerM exp{$$ = new exp(dynamic_cast<exp*>($1), "AND", dynamic_cast<exp*>($4),$2->lineNum,dynamic_cast<Marker*>($3));};
-	|exp OR BoolMarkerM exp{$$ = new exp(dynamic_cast<exp*>($1), "OR", dynamic_cast<exp*>($4),$2->lineNum,dynamic_cast<Marker*>($3));};
+	|exp OR BoolMarkerM exp{cout<<"==OR=="<<endl;$$ = new exp(dynamic_cast<exp*>($1), "OR", dynamic_cast<exp*>($4),$2->lineNum,dynamic_cast<Marker*>($3));cout<<"==end OR=="<<endl;};
 	|exp RELOPNONASSOC exp{$$ = new exp(dynamic_cast<exp*>($1), $2->val, dynamic_cast<exp*>($3),$2->lineNum);};
 	|exp RELOPLEFT exp{$$ = new exp(dynamic_cast<exp*>($1), $2->val, dynamic_cast<exp*>($3),$2->lineNum);};
 	|LPAREN typeAnnotation type RPAREN exp{$$ = new exp(dynamic_cast<typeAnnotation*>($2), dynamic_cast<type*>($3), dynamic_cast<exp*>($5),$1->lineNum);};

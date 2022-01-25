@@ -25,7 +25,7 @@ void RegisterManager::createRegister(bool isConst, string type, Node *id, exp *e
 	string registerName = getNextRegisterName();
 	code << registerName << " = ";
 	if (exp == nullptr) {
-			code << "add i32 0, 0";
+		code << "add i32 0, 0";
 	} else {
 		string value = this->getVarRegister(exp->NodeId, exp->NodeRegister);
 		if (type == "INT") {

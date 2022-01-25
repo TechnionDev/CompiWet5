@@ -53,6 +53,7 @@ class Node {
 	void elseCode();
 	void backPatchIf(string falseLabel);
 	void endWhile(string startLabel, exp *exp);
+	void emitCallCode(expList *expList);
 };
 #define YYSTYPE Node*
 class symbolRow {
@@ -145,7 +146,7 @@ class formalsDecl : public Node {
 
 class statements : public Node {
   public:
-	std::vector<statement*> vecStatements;
+	std::vector<statement *> vecStatements;
 	statements(statement *statement);
 	statements(statements *statements, statement *statement);
 };
@@ -178,7 +179,7 @@ class call : public Node {
 
 class expList : public Node {
   public:
-	std::vector<exp*> expVector;
+	std::vector<exp *> expVector;
 	expList(exp *exp1);
 	expList(exp *exp1, expList *expList);
 };
