@@ -1,0 +1,59 @@
+==RELOPNONASSOC==
+==
+==id==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPNONASSOC==
+==
+==id==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==num==
+==if statement==
+==id==
+==num==
+==minus==
+hiiiiiiiiiiiiii
++++++%t_11+++++
+==call==
+==call EXP==
+==id==
+==mult==
+hiiiiiiiiiiiiii
+==func decl==
+==RELOPNONASSOC==
+==
+==id==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPNONASSOC==
+==
+==id==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==num==
+==if statement==
+==id==
+==num==
+==minus==
+hiiiiiiiiiiiiii
+hear
+line 12: prototype mismatch, function fibo expects arguments (INT,INT)

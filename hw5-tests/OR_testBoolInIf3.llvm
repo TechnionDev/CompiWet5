@@ -1,0 +1,5766 @@
+==true==
+==func decl==
+==false==
+==func decl==
+==true==
+==false==
+==call==
+==call EXP==
+==string==
+++++++++++
+==if statement==
+==true==
+==string==
+++++++++++
+==if statement==
+==id==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+==
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==string==
+++++++++++
+==if statement==
+==false==
+==string==
+++++++++++
+==if statement==
+==id==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==call==
+==call EXP==
+==and==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==false==
+==and==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==id==
+==and==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==true==
+==call==
+==call EXP==
+==and==
+==string==
+++++++++++
+==if statement==
+==true==
+==false==
+==and==
+==string==
+++++++++++
+==if statement==
+==true==
+==id==
+==and==
+==string==
+++++++++++
+==if statement==
+==true==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==true==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==id==
+==call==
+==call EXP==
+==and==
+==string==
+++++++++++
+==if statement==
+==id==
+==false==
+==and==
+==string==
+++++++++++
+==if statement==
+==id==
+==id==
+==and==
+==string==
+++++++++++
+==if statement==
+==id==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==id==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==call==
+==call EXP==
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==false==
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==id==
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+==
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==call==
+==call EXP==
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+==
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==false==
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+==
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==id==
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+==
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+==
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==call==
+==call EXP==
+==and==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==false==
+==and==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==id==
+==and==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==true==
+==call==
+==call EXP==
+==and==
+==string==
+++++++++++
+==if statement==
+==true==
+==false==
+==and==
+==string==
+++++++++++
+==if statement==
+==true==
+==id==
+==and==
+==string==
+++++++++++
+==if statement==
+==true==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==true==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==id==
+==call==
+==call EXP==
+==and==
+==string==
+++++++++++
+==if statement==
+==id==
+==false==
+==and==
+==string==
+++++++++++
+==if statement==
+==id==
+==id==
+==and==
+==string==
+++++++++++
+==if statement==
+==id==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==id==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==call==
+==call EXP==
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==false==
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==id==
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+==
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==call==
+==call EXP==
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+==
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==false==
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+==
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==id==
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+==
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+==
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==call==
+==call EXP==
+==and==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==false==
+==and==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==id==
+==and==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==false==
+==call==
+==call EXP==
+==and==
+==string==
+++++++++++
+==if statement==
+==false==
+==false==
+==and==
+==string==
+++++++++++
+==if statement==
+==false==
+==id==
+==and==
+==string==
+++++++++++
+==if statement==
+==false==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==false==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==id==
+==call==
+==call EXP==
+==and==
+==string==
+++++++++++
+==if statement==
+==id==
+==false==
+==and==
+==string==
+++++++++++
+==if statement==
+==id==
+==id==
+==and==
+==string==
+++++++++++
+==if statement==
+==id==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==id==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==call==
+==call EXP==
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==false==
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==id==
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==call==
+==call EXP==
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==false==
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==id==
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==and==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==call==
+==call EXP==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==false==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==id==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==true==
+==call==
+==call EXP==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==true==
+==false==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==true==
+==id==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==true==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==true==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==id==
+==call==
+==call EXP==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==id==
+==false==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==id==
+==id==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==id==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==id==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==call==
+==call EXP==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==false==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==id==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+==
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==call==
+==call EXP==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+==
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==false==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+==
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==id==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+==
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+==
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==call==
+==call EXP==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==false==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==id==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==false==
+==call==
+==call EXP==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==false==
+==false==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==false==
+==id==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==false==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==false==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==id==
+==call==
+==call EXP==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==id==
+==false==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==id==
+==id==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==id==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==id==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==call==
+==call EXP==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==false==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==id==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==call==
+==call EXP==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==false==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==id==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==call==
+==call EXP==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==false==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==id==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==call==
+==call EXP==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==false==
+==call==
+==call EXP==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==false==
+==false==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==false==
+==id==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==false==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==false==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==id==
+==call==
+==call EXP==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==id==
+==false==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==id==
+==id==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==id==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==id==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==call==
+==call EXP==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==false==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==id==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==call==
+==call EXP==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==false==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==id==
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==string==
+++++++++++
+==if statement==
+==func decl==
+==end of program==
+declare i32 @printf(i8*, ...)
+declare void @exit(i32)
+@.int_specifier = constant [4 x i8] c"%d\0A\00"
+@.str_specifier = constant [4 x i8] c"%s\0A\00"
+@.zerodiverrorstring  = constant [23 x i8] c"Error division by zero\00"
+
+define void @printi(i32) {
+%spec_ptr = getelementptr [4 x i8], [4 x i8]* @.int_specifier, i32 0, i32 0
+call i32 (i8*, ...) @printf(i8* %spec_ptr, i32 %0)
+ret void
+}
+
+define void @print(i8*) {
+%spec_ptr = getelementptr [4 x i8], [4 x i8]* @.str_specifier, i32 0, i32 0
+call i32 (i8*, ...) @printf(i8* %spec_ptr, i8* %0)
+ret void
+}
+
+define void @checkDiv(i32) {
+%divcmp = icmp eq i32 %0, 0
+br i1 %divcmp, label %EqualZero, label %notEqualZero
+EqualZero:
+%div_error_str = getelementptr [23 x i8], [23 x i8]* @.zerodiverrorstring, i32 0, i32 0
+call void @print(i8* %div_error_str)
+call void @exit(i32 -1)
+ret void
+notEqualZero:
+ret void
+}
+
+@.w0 = constant [5 x i8]c"yes1\00"
+@.w1 = constant [5 x i8]c"yes2\00"
+@.w2 = constant [5 x i8]c"yes3\00"
+@.w3 = constant [5 x i8]c"yes4\00"
+@.w4 = constant [5 x i8]c"yes5\00"
+@.w5 = constant [5 x i8]c"yes6\00"
+@.w6 = constant [5 x i8]c"yes7\00"
+@.w7 = constant [5 x i8]c"yes8\00"
+@.w8 = constant [5 x i8]c"yes9\00"
+@.w9 = constant [6 x i8]c"yes10\00"
+@.w10 = constant [6 x i8]c"yes11\00"
+@.w11 = constant [6 x i8]c"yes12\00"
+@.w12 = constant [6 x i8]c"yes13\00"
+@.w13 = constant [6 x i8]c"yes14\00"
+@.w14 = constant [6 x i8]c"yes15\00"
+@.w15 = constant [6 x i8]c"yes16\00"
+@.w16 = constant [6 x i8]c"yes17\00"
+@.w17 = constant [6 x i8]c"yes18\00"
+@.w18 = constant [6 x i8]c"yes19\00"
+@.w19 = constant [6 x i8]c"yes20\00"
+@.w20 = constant [6 x i8]c"yes21\00"
+@.w21 = constant [6 x i8]c"yes22\00"
+@.w22 = constant [6 x i8]c"yes23\00"
+@.w23 = constant [6 x i8]c"yes24\00"
+@.w24 = constant [6 x i8]c"yes25\00"
+@.w25 = constant [6 x i8]c"yes26\00"
+@.w26 = constant [6 x i8]c"yes27\00"
+@.w27 = constant [6 x i8]c"yes28\00"
+@.w28 = constant [6 x i8]c"yes29\00"
+@.w29 = constant [6 x i8]c"yes30\00"
+@.w30 = constant [6 x i8]c"yes31\00"
+@.w31 = constant [6 x i8]c"yes32\00"
+@.w32 = constant [6 x i8]c"yes33\00"
+@.w33 = constant [6 x i8]c"yes34\00"
+@.w34 = constant [6 x i8]c"yes35\00"
+@.w35 = constant [6 x i8]c"yes36\00"
+@.w36 = constant [6 x i8]c"yes37\00"
+@.w37 = constant [6 x i8]c"yes38\00"
+@.w38 = constant [6 x i8]c"yes39\00"
+@.w39 = constant [6 x i8]c"yes40\00"
+@.w40 = constant [6 x i8]c"yes41\00"
+@.w41 = constant [6 x i8]c"yes42\00"
+@.w42 = constant [6 x i8]c"yes43\00"
+@.w43 = constant [6 x i8]c"yes44\00"
+@.w44 = constant [6 x i8]c"yes45\00"
+@.w45 = constant [6 x i8]c"yes46\00"
+@.w46 = constant [6 x i8]c"yes47\00"
+@.w47 = constant [6 x i8]c"yes48\00"
+@.w48 = constant [6 x i8]c"yes49\00"
+@.w49 = constant [6 x i8]c"yes50\00"
+@.w50 = constant [6 x i8]c"yes51\00"
+@.w51 = constant [6 x i8]c"yes52\00"
+@.w52 = constant [6 x i8]c"yes53\00"
+@.w53 = constant [6 x i8]c"yes54\00"
+@.w54 = constant [6 x i8]c"yes55\00"
+@.w55 = constant [6 x i8]c"yes56\00"
+@.w56 = constant [6 x i8]c"yes57\00"
+@.w57 = constant [6 x i8]c"yes58\00"
+@.w58 = constant [6 x i8]c"yes59\00"
+@.w59 = constant [6 x i8]c"yes60\00"
+@.w60 = constant [6 x i8]c"yes61\00"
+@.w61 = constant [6 x i8]c"yes62\00"
+@.w62 = constant [6 x i8]c"yes63\00"
+@.w63 = constant [6 x i8]c"yes64\00"
+@.w64 = constant [6 x i8]c"yes65\00"
+@.w65 = constant [6 x i8]c"yes66\00"
+@.w66 = constant [6 x i8]c"yes67\00"
+@.w67 = constant [6 x i8]c"yes68\00"
+@.w68 = constant [6 x i8]c"yes69\00"
+@.w69 = constant [6 x i8]c"yes70\00"
+@.w70 = constant [6 x i8]c"yes71\00"
+@.w71 = constant [6 x i8]c"yes72\00"
+@.w72 = constant [6 x i8]c"yes73\00"
+@.w73 = constant [6 x i8]c"yes74\00"
+@.w74 = constant [6 x i8]c"yes75\00"
+@.w75 = constant [6 x i8]c"yes76\00"
+@.w76 = constant [6 x i8]c"yes77\00"
+@.w77 = constant [6 x i8]c"yes78\00"
+@.w78 = constant [6 x i8]c"yes79\00"
+@.w79 = constant [6 x i8]c"yes80\00"
+@.w80 = constant [6 x i8]c"yes81\00"
+@.w81 = constant [6 x i8]c"yes82\00"
+@.w82 = constant [6 x i8]c"yes83\00"
+@.w83 = constant [6 x i8]c"yes84\00"
+@.w84 = constant [6 x i8]c"yes85\00"
+@.w85 = constant [6 x i8]c"yes86\00"
+@.w86 = constant [6 x i8]c"yes87\00"
+@.w87 = constant [6 x i8]c"yes88\00"
+@.w88 = constant [6 x i8]c"yes89\00"
+@.w89 = constant [6 x i8]c"yes90\00"
+@.w90 = constant [6 x i8]c"yes91\00"
+@.w91 = constant [6 x i8]c"yes92\00"
+@.w92 = constant [6 x i8]c"yes93\00"
+@.w93 = constant [6 x i8]c"yes94\00"
+@.w94 = constant [6 x i8]c"yes95\00"
+@.w95 = constant [6 x i8]c"yes96\00"
+@.w96 = constant [6 x i8]c"yes97\00"
+@.w97 = constant [6 x i8]c"yes98\00"
+@.w98 = constant [6 x i8]c"yes99\00"
+@.w99 = constant [7 x i8]c"yes100\00"
+@.w100 = constant [7 x i8]c"yes101\00"
+@.w101 = constant [7 x i8]c"yes102\00"
+@.w102 = constant [7 x i8]c"yes103\00"
+@.w103 = constant [7 x i8]c"yes104\00"
+@.w104 = constant [7 x i8]c"yes105\00"
+@.w105 = constant [7 x i8]c"yes106\00"
+@.w106 = constant [7 x i8]c"yes107\00"
+@.w107 = constant [7 x i8]c"yes108\00"
+@.w108 = constant [7 x i8]c"yes109\00"
+@.w109 = constant [7 x i8]c"yes110\00"
+@.w110 = constant [7 x i8]c"yes111\00"
+@.w111 = constant [7 x i8]c"yes112\00"
+@.w112 = constant [7 x i8]c"yes113\00"
+@.w113 = constant [7 x i8]c"yes114\00"
+@.w114 = constant [7 x i8]c"yes115\00"
+@.w115 = constant [7 x i8]c"yes116\00"
+@.w116 = constant [7 x i8]c"yes117\00"
+@.w117 = constant [7 x i8]c"yes118\00"
+@.w118 = constant [7 x i8]c"yes119\00"
+@.w119 = constant [7 x i8]c"yes120\00"
+@.w120 = constant [7 x i8]c"yes121\00"
+@.w121 = constant [7 x i8]c"yes122\00"
+@.w122 = constant [7 x i8]c"yes123\00"
+@.w123 = constant [7 x i8]c"yes124\00"
+@.w124 = constant [7 x i8]c"yes125\00"
+@.w125 = constant [7 x i8]c"yes126\00"
+@.w126 = constant [7 x i8]c"yes127\00"
+@.w127 = constant [7 x i8]c"yes128\00"
+@.w128 = constant [7 x i8]c"yes129\00"
+@.w129 = constant [7 x i8]c"yes130\00"
+@.w130 = constant [7 x i8]c"yes131\00"
+@.w131 = constant [7 x i8]c"yes132\00"
+@.w132 = constant [7 x i8]c"yes133\00"
+@.w133 = constant [7 x i8]c"yes134\00"
+@.w134 = constant [7 x i8]c"yes135\00"
+@.w135 = constant [7 x i8]c"yes136\00"
+@.w136 = constant [7 x i8]c"yes137\00"
+@.w137 = constant [7 x i8]c"yes138\00"
+@.w138 = constant [7 x i8]c"yes139\00"
+@.w139 = constant [7 x i8]c"yes140\00"
+@.w140 = constant [7 x i8]c"yes141\00"
+@.w141 = constant [7 x i8]c"yes142\00"
+@.w142 = constant [7 x i8]c"yes143\00"
+@.w143 = constant [7 x i8]c"yes144\00"
+@.w144 = constant [7 x i8]c"yes145\00"
+@.w145 = constant [7 x i8]c"yes146\00"
+@.w146 = constant [7 x i8]c"yes147\00"
+@.w147 = constant [7 x i8]c"yes148\00"
+@.w148 = constant [7 x i8]c"yes149\00"
+@.w149 = constant [7 x i8]c"yes150\00"
+@.w150 = constant [7 x i8]c"yes151\00"
+@.w151 = constant [7 x i8]c"yes152\00"
+@.w152 = constant [7 x i8]c"yes153\00"
+@.w153 = constant [7 x i8]c"yes154\00"
+@.w154 = constant [7 x i8]c"yes155\00"
+@.w155 = constant [7 x i8]c"yes156\00"
+@.w156 = constant [7 x i8]c"yes157\00"
+@.w157 = constant [7 x i8]c"yes158\00"
+@.w158 = constant [7 x i8]c"yes159\00"
+@.w159 = constant [7 x i8]c"yes160\00"
+define i32 @True() {
+%s0 = alloca i32, i32 0
+%s1 = alloca i32, i32 0
+%s2 = alloca i32, i32 0
+%s3 = alloca i32, i32 0
+%s4 = alloca i32, i32 0
+%s5 = alloca i32, i32 0
+%s6 = alloca i32, i32 0
+%s7 = alloca i32, i32 0
+%s8 = alloca i32, i32 0
+%s9 = alloca i32, i32 0
+%s10 = alloca i32, i32 0
+%s11 = alloca i32, i32 0
+%s12 = alloca i32, i32 0
+%s13 = alloca i32, i32 0
+%s14 = alloca i32, i32 0
+%s15 = alloca i32, i32 0
+%s16 = alloca i32, i32 0
+%s17 = alloca i32, i32 0
+%s18 = alloca i32, i32 0
+%s19 = alloca i32, i32 0
+%s20 = alloca i32, i32 0
+%s21 = alloca i32, i32 0
+%s22 = alloca i32, i32 0
+%s23 = alloca i32, i32 0
+%s24 = alloca i32, i32 0
+%s25 = alloca i32, i32 0
+%s26 = alloca i32, i32 0
+%s27 = alloca i32, i32 0
+%s28 = alloca i32, i32 0
+%s29 = alloca i32, i32 0
+%s30 = alloca i32, i32 0
+%s31 = alloca i32, i32 0
+%s32 = alloca i32, i32 0
+%s33 = alloca i32, i32 0
+%s34 = alloca i32, i32 0
+%s35 = alloca i32, i32 0
+%s36 = alloca i32, i32 0
+%s37 = alloca i32, i32 0
+%s38 = alloca i32, i32 0
+%s39 = alloca i32, i32 0
+%s40 = alloca i32, i32 0
+%s41 = alloca i32, i32 0
+%s42 = alloca i32, i32 0
+%s43 = alloca i32, i32 0
+%s44 = alloca i32, i32 0
+%s45 = alloca i32, i32 0
+%s46 = alloca i32, i32 0
+%s47 = alloca i32, i32 0
+%s48 = alloca i32, i32 0
+%s49 = alloca i32, i32 0
+ret i32 1
+ret i32 0
+}
+
+define i32 @False() {
+%s0 = alloca i32, i32 0
+%s1 = alloca i32, i32 0
+%s2 = alloca i32, i32 0
+%s3 = alloca i32, i32 0
+%s4 = alloca i32, i32 0
+%s5 = alloca i32, i32 0
+%s6 = alloca i32, i32 0
+%s7 = alloca i32, i32 0
+%s8 = alloca i32, i32 0
+%s9 = alloca i32, i32 0
+%s10 = alloca i32, i32 0
+%s11 = alloca i32, i32 0
+%s12 = alloca i32, i32 0
+%s13 = alloca i32, i32 0
+%s14 = alloca i32, i32 0
+%s15 = alloca i32, i32 0
+%s16 = alloca i32, i32 0
+%s17 = alloca i32, i32 0
+%s18 = alloca i32, i32 0
+%s19 = alloca i32, i32 0
+%s20 = alloca i32, i32 0
+%s21 = alloca i32, i32 0
+%s22 = alloca i32, i32 0
+%s23 = alloca i32, i32 0
+%s24 = alloca i32, i32 0
+%s25 = alloca i32, i32 0
+%s26 = alloca i32, i32 0
+%s27 = alloca i32, i32 0
+%s28 = alloca i32, i32 0
+%s29 = alloca i32, i32 0
+%s30 = alloca i32, i32 0
+%s31 = alloca i32, i32 0
+%s32 = alloca i32, i32 0
+%s33 = alloca i32, i32 0
+%s34 = alloca i32, i32 0
+%s35 = alloca i32, i32 0
+%s36 = alloca i32, i32 0
+%s37 = alloca i32, i32 0
+%s38 = alloca i32, i32 0
+%s39 = alloca i32, i32 0
+%s40 = alloca i32, i32 0
+%s41 = alloca i32, i32 0
+%s42 = alloca i32, i32 0
+%s43 = alloca i32, i32 0
+%s44 = alloca i32, i32 0
+%s45 = alloca i32, i32 0
+%s46 = alloca i32, i32 0
+%s47 = alloca i32, i32 0
+%s48 = alloca i32, i32 0
+%s49 = alloca i32, i32 0
+ret i32 0
+ret i32 0
+}
+
+define void @main() {
+%s0 = alloca i32, i32 0
+%s1 = alloca i32, i32 0
+%s2 = alloca i32, i32 0
+%s3 = alloca i32, i32 0
+%s4 = alloca i32, i32 0
+%s5 = alloca i32, i32 0
+%s6 = alloca i32, i32 0
+%s7 = alloca i32, i32 0
+%s8 = alloca i32, i32 0
+%s9 = alloca i32, i32 0
+%s10 = alloca i32, i32 0
+%s11 = alloca i32, i32 0
+%s12 = alloca i32, i32 0
+%s13 = alloca i32, i32 0
+%s14 = alloca i32, i32 0
+%s15 = alloca i32, i32 0
+%s16 = alloca i32, i32 0
+%s17 = alloca i32, i32 0
+%s18 = alloca i32, i32 0
+%s19 = alloca i32, i32 0
+%s20 = alloca i32, i32 0
+%s21 = alloca i32, i32 0
+%s22 = alloca i32, i32 0
+%s23 = alloca i32, i32 0
+%s24 = alloca i32, i32 0
+%s25 = alloca i32, i32 0
+%s26 = alloca i32, i32 0
+%s27 = alloca i32, i32 0
+%s28 = alloca i32, i32 0
+%s29 = alloca i32, i32 0
+%s30 = alloca i32, i32 0
+%s31 = alloca i32, i32 0
+%s32 = alloca i32, i32 0
+%s33 = alloca i32, i32 0
+%s34 = alloca i32, i32 0
+%s35 = alloca i32, i32 0
+%s36 = alloca i32, i32 0
+%s37 = alloca i32, i32 0
+%s38 = alloca i32, i32 0
+%s39 = alloca i32, i32 0
+%s40 = alloca i32, i32 0
+%s41 = alloca i32, i32 0
+%s42 = alloca i32, i32 0
+%s43 = alloca i32, i32 0
+%s44 = alloca i32, i32 0
+%s45 = alloca i32, i32 0
+%s46 = alloca i32, i32 0
+%s47 = alloca i32, i32 0
+%s48 = alloca i32, i32 0
+%s49 = alloca i32, i32 0
+%t_1 = add i32 0, 1
+store i32 %t_1, i32* %s0
+%t_2 = add i32 0, 0
+store i32 %t_2, i32* %s1
+%t_3 = call i32 @True()
+%t_4 = icmp ne i32 0, %t_3
+br i1 %t_4, label %label_166, label %label_169
+label_166:
+%w0 = getelementptr [5 x i8], [5 x i8]* @.w0, i32 0, i32 0
+call void @print(i8* %w0)
+br label %label_169
+label_169:
+%t_5 = icmp ne i32 0, 1
+br i1 %t_5, label %label_172, label %label_175
+label_172:
+%w1 = getelementptr [5 x i8], [5 x i8]* @.w1, i32 0, i32 0
+call void @print(i8* %w1)
+br label %label_175
+label_175:
+%t_6 = load i32, i32* %s0
+%t_7 = icmp ne i32 0, %t_6
+br i1 %t_7, label %label_179, label %label_182
+label_179:
+%w2 = getelementptr [5 x i8], [5 x i8]* @.w2, i32 0, i32 0
+call void @print(i8* %w2)
+br label %label_182
+label_182:
+%t_8 = icmp slt i32 4, 5
+%t_9 = zext i1 %t_8 to i32
+%t_10 = icmp ne i32 0, %t_9
+br i1 %t_10, label %label_186, label %label_189
+label_186:
+%w3 = getelementptr [5 x i8], [5 x i8]* @.w3, i32 0, i32 0
+call void @print(i8* %w3)
+br label %label_189
+label_189:
+%t_11 = icmp eq i32 4, 4
+%t_12 = zext i1 %t_11 to i32
+%t_13 = icmp ne i32 0, %t_12
+br i1 %t_13, label %label_193, label %label_196
+label_193:
+%w4 = getelementptr [5 x i8], [5 x i8]* @.w4, i32 0, i32 0
+call void @print(i8* %w4)
+br label %label_196
+label_196:
+%t_14 = call i32 @False()
+%t_15 = icmp ne i32 0, %t_14
+br i1 %t_15, label %label_200, label %label_203
+label_200:
+%w5 = getelementptr [5 x i8], [5 x i8]* @.w5, i32 0, i32 0
+call void @print(i8* %w5)
+br label %label_203
+label_203:
+%t_16 = icmp ne i32 0, 0
+br i1 %t_16, label %label_206, label %label_209
+label_206:
+%w6 = getelementptr [5 x i8], [5 x i8]* @.w6, i32 0, i32 0
+call void @print(i8* %w6)
+br label %label_209
+label_209:
+%t_17 = load i32, i32* %s1
+%t_18 = icmp ne i32 0, %t_17
+br i1 %t_18, label %label_213, label %label_216
+label_213:
+%w7 = getelementptr [5 x i8], [5 x i8]* @.w7, i32 0, i32 0
+call void @print(i8* %w7)
+br label %label_216
+label_216:
+%t_19 = icmp sgt i32 4, 5
+%t_20 = zext i1 %t_19 to i32
+%t_21 = icmp ne i32 0, %t_20
+br i1 %t_21, label %label_220, label %label_223
+label_220:
+%w8 = getelementptr [5 x i8], [5 x i8]* @.w8, i32 0, i32 0
+call void @print(i8* %w8)
+br label %label_223
+label_223:
+%t_22 = icmp ne i32 4, 4
+%t_23 = zext i1 %t_22 to i32
+%t_24 = icmp ne i32 0, %t_23
+br i1 %t_24, label %label_227, label %label_230
+label_227:
+%w9 = getelementptr [6 x i8], [6 x i8]* @.w9, i32 0, i32 0
+call void @print(i8* %w9)
+br label %label_230
+label_230:
+%t_25 = call i32 @True()
+br label %label_236
+label_233:
+%t_26 = call i32 @False()
+br label %label_240
+label_236:
+%t_27 = icmp eq i32 %t_25, 0
+br i1 %t_27, label %label_243, label %label_233
+br label %label_240
+label_240:
+%t_28 = icmp ne i32 %t_26, 0
+%t_29 = zext i1 %t_28 to i32
+br label %label_243
+label_243:
+%t_30 = phi i32 [0, %label_236], [%t_29, %label_240]
+%t_31 = icmp ne i32 0, %t_30
+br i1 %t_31, label %label_247, label %label_250
+label_247:
+%w10 = getelementptr [6 x i8], [6 x i8]* @.w10, i32 0, i32 0
+call void @print(i8* %w10)
+br label %label_250
+label_250:
+%t_32 = call i32 @True()
+br label %label_255
+label_253:
+br label %label_259
+label_255:
+%t_33 = icmp eq i32 %t_32, 0
+br i1 %t_33, label %label_262, label %label_253
+br label %label_259
+label_259:
+%t_34 = icmp ne i32 0, 0
+%t_35 = zext i1 %t_34 to i32
+br label %label_262
+label_262:
+%t_36 = phi i32 [0, %label_255], [%t_35, %label_259]
+%t_37 = icmp ne i32 0, %t_36
+br i1 %t_37, label %label_266, label %label_269
+label_266:
+%w11 = getelementptr [6 x i8], [6 x i8]* @.w11, i32 0, i32 0
+call void @print(i8* %w11)
+br label %label_269
+label_269:
+%t_38 = call i32 @True()
+br label %label_274
+label_272:
+br label %label_278
+label_274:
+%t_39 = icmp eq i32 %t_38, 0
+br i1 %t_39, label %label_282, label %label_272
+br label %label_278
+label_278:
+%t_42 = load i32, i32* %s1
+%t_40 = icmp ne i32 %t_42, 0
+%t_41 = zext i1 %t_40 to i32
+br label %label_282
+label_282:
+%t_43 = phi i32 [0, %label_274], [%t_41, %label_278]
+%t_44 = icmp ne i32 0, %t_43
+br i1 %t_44, label %label_286, label %label_289
+label_286:
+%w12 = getelementptr [6 x i8], [6 x i8]* @.w12, i32 0, i32 0
+call void @print(i8* %w12)
+br label %label_289
+label_289:
+%t_45 = call i32 @True()
+br label %label_295
+label_292:
+%t_46 = icmp sgt i32 4, 5
+%t_47 = zext i1 %t_46 to i32
+br label %label_299
+label_295:
+%t_48 = icmp eq i32 %t_45, 0
+br i1 %t_48, label %label_302, label %label_292
+br label %label_299
+label_299:
+%t_49 = icmp ne i32 %t_47, 0
+%t_50 = zext i1 %t_49 to i32
+br label %label_302
+label_302:
+%t_51 = phi i32 [0, %label_295], [%t_50, %label_299]
+%t_52 = icmp ne i32 0, %t_51
+br i1 %t_52, label %label_306, label %label_309
+label_306:
+%w13 = getelementptr [6 x i8], [6 x i8]* @.w13, i32 0, i32 0
+call void @print(i8* %w13)
+br label %label_309
+label_309:
+%t_53 = call i32 @True()
+br label %label_315
+label_312:
+%t_54 = icmp ne i32 4, 4
+%t_55 = zext i1 %t_54 to i32
+br label %label_319
+label_315:
+%t_56 = icmp eq i32 %t_53, 0
+br i1 %t_56, label %label_322, label %label_312
+br label %label_319
+label_319:
+%t_57 = icmp ne i32 %t_55, 0
+%t_58 = zext i1 %t_57 to i32
+br label %label_322
+label_322:
+%t_59 = phi i32 [0, %label_315], [%t_58, %label_319]
+%t_60 = icmp ne i32 0, %t_59
+br i1 %t_60, label %label_326, label %label_329
+label_326:
+%w14 = getelementptr [6 x i8], [6 x i8]* @.w14, i32 0, i32 0
+call void @print(i8* %w14)
+br label %label_329
+label_329:
+br label %label_334
+label_331:
+%t_61 = call i32 @False()
+br label %label_338
+label_334:
+%t_62 = icmp eq i32 1, 0
+br i1 %t_62, label %label_341, label %label_331
+br label %label_338
+label_338:
+%t_63 = icmp ne i32 %t_61, 0
+%t_64 = zext i1 %t_63 to i32
+br label %label_341
+label_341:
+%t_65 = phi i32 [0, %label_334], [%t_64, %label_338]
+%t_66 = icmp ne i32 0, %t_65
+br i1 %t_66, label %label_345, label %label_348
+label_345:
+%w15 = getelementptr [6 x i8], [6 x i8]* @.w15, i32 0, i32 0
+call void @print(i8* %w15)
+br label %label_348
+label_348:
+br label %label_352
+label_350:
+br label %label_356
+label_352:
+%t_67 = icmp eq i32 1, 0
+br i1 %t_67, label %label_359, label %label_350
+br label %label_356
+label_356:
+%t_68 = icmp ne i32 0, 0
+%t_69 = zext i1 %t_68 to i32
+br label %label_359
+label_359:
+%t_70 = phi i32 [0, %label_352], [%t_69, %label_356]
+%t_71 = icmp ne i32 0, %t_70
+br i1 %t_71, label %label_363, label %label_366
+label_363:
+%w16 = getelementptr [6 x i8], [6 x i8]* @.w16, i32 0, i32 0
+call void @print(i8* %w16)
+br label %label_366
+label_366:
+br label %label_370
+label_368:
+br label %label_374
+label_370:
+%t_72 = icmp eq i32 1, 0
+br i1 %t_72, label %label_378, label %label_368
+br label %label_374
+label_374:
+%t_75 = load i32, i32* %s1
+%t_73 = icmp ne i32 %t_75, 0
+%t_74 = zext i1 %t_73 to i32
+br label %label_378
+label_378:
+%t_76 = phi i32 [0, %label_370], [%t_74, %label_374]
+%t_77 = icmp ne i32 0, %t_76
+br i1 %t_77, label %label_382, label %label_385
+label_382:
+%w17 = getelementptr [6 x i8], [6 x i8]* @.w17, i32 0, i32 0
+call void @print(i8* %w17)
+br label %label_385
+label_385:
+br label %label_390
+label_387:
+%t_78 = icmp sgt i32 4, 5
+%t_79 = zext i1 %t_78 to i32
+br label %label_394
+label_390:
+%t_80 = icmp eq i32 1, 0
+br i1 %t_80, label %label_397, label %label_387
+br label %label_394
+label_394:
+%t_81 = icmp ne i32 %t_79, 0
+%t_82 = zext i1 %t_81 to i32
+br label %label_397
+label_397:
+%t_83 = phi i32 [0, %label_390], [%t_82, %label_394]
+%t_84 = icmp ne i32 0, %t_83
+br i1 %t_84, label %label_401, label %label_404
+label_401:
+%w18 = getelementptr [6 x i8], [6 x i8]* @.w18, i32 0, i32 0
+call void @print(i8* %w18)
+br label %label_404
+label_404:
+br label %label_409
+label_406:
+%t_85 = icmp ne i32 4, 4
+%t_86 = zext i1 %t_85 to i32
+br label %label_413
+label_409:
+%t_87 = icmp eq i32 1, 0
+br i1 %t_87, label %label_416, label %label_406
+br label %label_413
+label_413:
+%t_88 = icmp ne i32 %t_86, 0
+%t_89 = zext i1 %t_88 to i32
+br label %label_416
+label_416:
+%t_90 = phi i32 [0, %label_409], [%t_89, %label_413]
+%t_91 = icmp ne i32 0, %t_90
+br i1 %t_91, label %label_420, label %label_423
+label_420:
+%w19 = getelementptr [6 x i8], [6 x i8]* @.w19, i32 0, i32 0
+call void @print(i8* %w19)
+br label %label_423
+label_423:
+br label %label_428
+label_425:
+%t_92 = call i32 @False()
+br label %label_433
+label_428:
+%t_94 = load i32, i32* %s0
+%t_93 = icmp eq i32 %t_94, 0
+br i1 %t_93, label %label_436, label %label_425
+br label %label_433
+label_433:
+%t_95 = icmp ne i32 %t_92, 0
+%t_96 = zext i1 %t_95 to i32
+br label %label_436
+label_436:
+%t_97 = phi i32 [0, %label_428], [%t_96, %label_433]
+%t_98 = icmp ne i32 0, %t_97
+br i1 %t_98, label %label_440, label %label_443
+label_440:
+%w20 = getelementptr [6 x i8], [6 x i8]* @.w20, i32 0, i32 0
+call void @print(i8* %w20)
+br label %label_443
+label_443:
+br label %label_447
+label_445:
+br label %label_452
+label_447:
+%t_100 = load i32, i32* %s0
+%t_99 = icmp eq i32 %t_100, 0
+br i1 %t_99, label %label_455, label %label_445
+br label %label_452
+label_452:
+%t_101 = icmp ne i32 0, 0
+%t_102 = zext i1 %t_101 to i32
+br label %label_455
+label_455:
+%t_103 = phi i32 [0, %label_447], [%t_102, %label_452]
+%t_104 = icmp ne i32 0, %t_103
+br i1 %t_104, label %label_459, label %label_462
+label_459:
+%w21 = getelementptr [6 x i8], [6 x i8]* @.w21, i32 0, i32 0
+call void @print(i8* %w21)
+br label %label_462
+label_462:
+br label %label_466
+label_464:
+br label %label_471
+label_466:
+%t_106 = load i32, i32* %s0
+%t_105 = icmp eq i32 %t_106, 0
+br i1 %t_105, label %label_475, label %label_464
+br label %label_471
+label_471:
+%t_109 = load i32, i32* %s1
+%t_107 = icmp ne i32 %t_109, 0
+%t_108 = zext i1 %t_107 to i32
+br label %label_475
+label_475:
+%t_110 = phi i32 [0, %label_466], [%t_108, %label_471]
+%t_111 = icmp ne i32 0, %t_110
+br i1 %t_111, label %label_479, label %label_482
+label_479:
+%w22 = getelementptr [6 x i8], [6 x i8]* @.w22, i32 0, i32 0
+call void @print(i8* %w22)
+br label %label_482
+label_482:
+br label %label_487
+label_484:
+%t_112 = icmp sgt i32 4, 5
+%t_113 = zext i1 %t_112 to i32
+br label %label_492
+label_487:
+%t_115 = load i32, i32* %s0
+%t_114 = icmp eq i32 %t_115, 0
+br i1 %t_114, label %label_495, label %label_484
+br label %label_492
+label_492:
+%t_116 = icmp ne i32 %t_113, 0
+%t_117 = zext i1 %t_116 to i32
+br label %label_495
+label_495:
+%t_118 = phi i32 [0, %label_487], [%t_117, %label_492]
+%t_119 = icmp ne i32 0, %t_118
+br i1 %t_119, label %label_499, label %label_502
+label_499:
+%w23 = getelementptr [6 x i8], [6 x i8]* @.w23, i32 0, i32 0
+call void @print(i8* %w23)
+br label %label_502
+label_502:
+br label %label_507
+label_504:
+%t_120 = icmp ne i32 4, 4
+%t_121 = zext i1 %t_120 to i32
+br label %label_512
+label_507:
+%t_123 = load i32, i32* %s0
+%t_122 = icmp eq i32 %t_123, 0
+br i1 %t_122, label %label_515, label %label_504
+br label %label_512
+label_512:
+%t_124 = icmp ne i32 %t_121, 0
+%t_125 = zext i1 %t_124 to i32
+br label %label_515
+label_515:
+%t_126 = phi i32 [0, %label_507], [%t_125, %label_512]
+%t_127 = icmp ne i32 0, %t_126
+br i1 %t_127, label %label_519, label %label_522
+label_519:
+%w24 = getelementptr [6 x i8], [6 x i8]* @.w24, i32 0, i32 0
+call void @print(i8* %w24)
+br label %label_522
+label_522:
+%t_128 = icmp slt i32 4, 5
+%t_129 = zext i1 %t_128 to i32
+br label %label_528
+label_525:
+%t_130 = call i32 @False()
+br label %label_532
+label_528:
+%t_131 = icmp eq i32 %t_129, 0
+br i1 %t_131, label %label_535, label %label_525
+br label %label_532
+label_532:
+%t_132 = icmp ne i32 %t_130, 0
+%t_133 = zext i1 %t_132 to i32
+br label %label_535
+label_535:
+%t_134 = phi i32 [0, %label_528], [%t_133, %label_532]
+%t_135 = icmp ne i32 0, %t_134
+br i1 %t_135, label %label_539, label %label_542
+label_539:
+%w25 = getelementptr [6 x i8], [6 x i8]* @.w25, i32 0, i32 0
+call void @print(i8* %w25)
+br label %label_542
+label_542:
+%t_136 = icmp slt i32 4, 5
+%t_137 = zext i1 %t_136 to i32
+br label %label_547
+label_545:
+br label %label_551
+label_547:
+%t_138 = icmp eq i32 %t_137, 0
+br i1 %t_138, label %label_554, label %label_545
+br label %label_551
+label_551:
+%t_139 = icmp ne i32 0, 0
+%t_140 = zext i1 %t_139 to i32
+br label %label_554
+label_554:
+%t_141 = phi i32 [0, %label_547], [%t_140, %label_551]
+%t_142 = icmp ne i32 0, %t_141
+br i1 %t_142, label %label_558, label %label_561
+label_558:
+%w26 = getelementptr [6 x i8], [6 x i8]* @.w26, i32 0, i32 0
+call void @print(i8* %w26)
+br label %label_561
+label_561:
+%t_143 = icmp slt i32 4, 5
+%t_144 = zext i1 %t_143 to i32
+br label %label_566
+label_564:
+br label %label_570
+label_566:
+%t_145 = icmp eq i32 %t_144, 0
+br i1 %t_145, label %label_574, label %label_564
+br label %label_570
+label_570:
+%t_148 = load i32, i32* %s1
+%t_146 = icmp ne i32 %t_148, 0
+%t_147 = zext i1 %t_146 to i32
+br label %label_574
+label_574:
+%t_149 = phi i32 [0, %label_566], [%t_147, %label_570]
+%t_150 = icmp ne i32 0, %t_149
+br i1 %t_150, label %label_578, label %label_581
+label_578:
+%w27 = getelementptr [6 x i8], [6 x i8]* @.w27, i32 0, i32 0
+call void @print(i8* %w27)
+br label %label_581
+label_581:
+%t_151 = icmp slt i32 4, 5
+%t_152 = zext i1 %t_151 to i32
+br label %label_587
+label_584:
+%t_153 = icmp sgt i32 4, 5
+%t_154 = zext i1 %t_153 to i32
+br label %label_591
+label_587:
+%t_155 = icmp eq i32 %t_152, 0
+br i1 %t_155, label %label_594, label %label_584
+br label %label_591
+label_591:
+%t_156 = icmp ne i32 %t_154, 0
+%t_157 = zext i1 %t_156 to i32
+br label %label_594
+label_594:
+%t_158 = phi i32 [0, %label_587], [%t_157, %label_591]
+%t_159 = icmp ne i32 0, %t_158
+br i1 %t_159, label %label_598, label %label_601
+label_598:
+%w28 = getelementptr [6 x i8], [6 x i8]* @.w28, i32 0, i32 0
+call void @print(i8* %w28)
+br label %label_601
+label_601:
+%t_160 = icmp slt i32 4, 5
+%t_161 = zext i1 %t_160 to i32
+br label %label_607
+label_604:
+%t_162 = icmp ne i32 4, 4
+%t_163 = zext i1 %t_162 to i32
+br label %label_611
+label_607:
+%t_164 = icmp eq i32 %t_161, 0
+br i1 %t_164, label %label_614, label %label_604
+br label %label_611
+label_611:
+%t_165 = icmp ne i32 %t_163, 0
+%t_166 = zext i1 %t_165 to i32
+br label %label_614
+label_614:
+%t_167 = phi i32 [0, %label_607], [%t_166, %label_611]
+%t_168 = icmp ne i32 0, %t_167
+br i1 %t_168, label %label_618, label %label_621
+label_618:
+%w29 = getelementptr [6 x i8], [6 x i8]* @.w29, i32 0, i32 0
+call void @print(i8* %w29)
+br label %label_621
+label_621:
+%t_169 = icmp eq i32 4, 4
+%t_170 = zext i1 %t_169 to i32
+br label %label_627
+label_624:
+%t_171 = call i32 @False()
+br label %label_631
+label_627:
+%t_172 = icmp eq i32 %t_170, 0
+br i1 %t_172, label %label_634, label %label_624
+br label %label_631
+label_631:
+%t_173 = icmp ne i32 %t_171, 0
+%t_174 = zext i1 %t_173 to i32
+br label %label_634
+label_634:
+%t_175 = phi i32 [0, %label_627], [%t_174, %label_631]
+%t_176 = icmp ne i32 0, %t_175
+br i1 %t_176, label %label_638, label %label_641
+label_638:
+%w30 = getelementptr [6 x i8], [6 x i8]* @.w30, i32 0, i32 0
+call void @print(i8* %w30)
+br label %label_641
+label_641:
+%t_177 = icmp eq i32 4, 4
+%t_178 = zext i1 %t_177 to i32
+br label %label_646
+label_644:
+br label %label_650
+label_646:
+%t_179 = icmp eq i32 %t_178, 0
+br i1 %t_179, label %label_653, label %label_644
+br label %label_650
+label_650:
+%t_180 = icmp ne i32 0, 0
+%t_181 = zext i1 %t_180 to i32
+br label %label_653
+label_653:
+%t_182 = phi i32 [0, %label_646], [%t_181, %label_650]
+%t_183 = icmp ne i32 0, %t_182
+br i1 %t_183, label %label_657, label %label_660
+label_657:
+%w31 = getelementptr [6 x i8], [6 x i8]* @.w31, i32 0, i32 0
+call void @print(i8* %w31)
+br label %label_660
+label_660:
+%t_184 = icmp eq i32 4, 4
+%t_185 = zext i1 %t_184 to i32
+br label %label_665
+label_663:
+br label %label_669
+label_665:
+%t_186 = icmp eq i32 %t_185, 0
+br i1 %t_186, label %label_673, label %label_663
+br label %label_669
+label_669:
+%t_189 = load i32, i32* %s1
+%t_187 = icmp ne i32 %t_189, 0
+%t_188 = zext i1 %t_187 to i32
+br label %label_673
+label_673:
+%t_190 = phi i32 [0, %label_665], [%t_188, %label_669]
+%t_191 = icmp ne i32 0, %t_190
+br i1 %t_191, label %label_677, label %label_680
+label_677:
+%w32 = getelementptr [6 x i8], [6 x i8]* @.w32, i32 0, i32 0
+call void @print(i8* %w32)
+br label %label_680
+label_680:
+%t_192 = icmp eq i32 4, 4
+%t_193 = zext i1 %t_192 to i32
+br label %label_686
+label_683:
+%t_194 = icmp sgt i32 4, 5
+%t_195 = zext i1 %t_194 to i32
+br label %label_690
+label_686:
+%t_196 = icmp eq i32 %t_193, 0
+br i1 %t_196, label %label_693, label %label_683
+br label %label_690
+label_690:
+%t_197 = icmp ne i32 %t_195, 0
+%t_198 = zext i1 %t_197 to i32
+br label %label_693
+label_693:
+%t_199 = phi i32 [0, %label_686], [%t_198, %label_690]
+%t_200 = icmp ne i32 0, %t_199
+br i1 %t_200, label %label_697, label %label_700
+label_697:
+%w33 = getelementptr [6 x i8], [6 x i8]* @.w33, i32 0, i32 0
+call void @print(i8* %w33)
+br label %label_700
+label_700:
+%t_201 = icmp eq i32 4, 4
+%t_202 = zext i1 %t_201 to i32
+br label %label_706
+label_703:
+%t_203 = icmp ne i32 4, 4
+%t_204 = zext i1 %t_203 to i32
+br label %label_710
+label_706:
+%t_205 = icmp eq i32 %t_202, 0
+br i1 %t_205, label %label_713, label %label_703
+br label %label_710
+label_710:
+%t_206 = icmp ne i32 %t_204, 0
+%t_207 = zext i1 %t_206 to i32
+br label %label_713
+label_713:
+%t_208 = phi i32 [0, %label_706], [%t_207, %label_710]
+%t_209 = icmp ne i32 0, %t_208
+br i1 %t_209, label %label_717, label %label_720
+label_717:
+%w34 = getelementptr [6 x i8], [6 x i8]* @.w34, i32 0, i32 0
+call void @print(i8* %w34)
+br label %label_720
+label_720:
+%t_210 = call i32 @True()
+br label %label_726
+label_723:
+%t_211 = call i32 @False()
+br label %label_730
+label_726:
+%t_212 = icmp eq i32 %t_210, 0
+br i1 %t_212, label %label_733, label %label_723
+br label %label_730
+label_730:
+%t_213 = icmp ne i32 %t_211, 0
+%t_214 = zext i1 %t_213 to i32
+br label %label_733
+label_733:
+%t_215 = phi i32 [0, %label_726], [%t_214, %label_730]
+%t_216 = icmp ne i32 0, %t_215
+br i1 %t_216, label %label_737, label %label_740
+label_737:
+%w35 = getelementptr [6 x i8], [6 x i8]* @.w35, i32 0, i32 0
+call void @print(i8* %w35)
+br label %label_740
+label_740:
+%t_217 = call i32 @True()
+br label %label_745
+label_743:
+br label %label_749
+label_745:
+%t_218 = icmp eq i32 %t_217, 0
+br i1 %t_218, label %label_752, label %label_743
+br label %label_749
+label_749:
+%t_219 = icmp ne i32 0, 0
+%t_220 = zext i1 %t_219 to i32
+br label %label_752
+label_752:
+%t_221 = phi i32 [0, %label_745], [%t_220, %label_749]
+%t_222 = icmp ne i32 0, %t_221
+br i1 %t_222, label %label_756, label %label_759
+label_756:
+%w36 = getelementptr [6 x i8], [6 x i8]* @.w36, i32 0, i32 0
+call void @print(i8* %w36)
+br label %label_759
+label_759:
+%t_223 = call i32 @True()
+br label %label_764
+label_762:
+br label %label_768
+label_764:
+%t_224 = icmp eq i32 %t_223, 0
+br i1 %t_224, label %label_772, label %label_762
+br label %label_768
+label_768:
+%t_227 = load i32, i32* %s1
+%t_225 = icmp ne i32 %t_227, 0
+%t_226 = zext i1 %t_225 to i32
+br label %label_772
+label_772:
+%t_228 = phi i32 [0, %label_764], [%t_226, %label_768]
+%t_229 = icmp ne i32 0, %t_228
+br i1 %t_229, label %label_776, label %label_779
+label_776:
+%w37 = getelementptr [6 x i8], [6 x i8]* @.w37, i32 0, i32 0
+call void @print(i8* %w37)
+br label %label_779
+label_779:
+%t_230 = call i32 @True()
+br label %label_785
+label_782:
+%t_231 = icmp sgt i32 4, 5
+%t_232 = zext i1 %t_231 to i32
+br label %label_789
+label_785:
+%t_233 = icmp eq i32 %t_230, 0
+br i1 %t_233, label %label_792, label %label_782
+br label %label_789
+label_789:
+%t_234 = icmp ne i32 %t_232, 0
+%t_235 = zext i1 %t_234 to i32
+br label %label_792
+label_792:
+%t_236 = phi i32 [0, %label_785], [%t_235, %label_789]
+%t_237 = icmp ne i32 0, %t_236
+br i1 %t_237, label %label_796, label %label_799
+label_796:
+%w38 = getelementptr [6 x i8], [6 x i8]* @.w38, i32 0, i32 0
+call void @print(i8* %w38)
+br label %label_799
+label_799:
+%t_238 = call i32 @True()
+br label %label_805
+label_802:
+%t_239 = icmp ne i32 4, 4
+%t_240 = zext i1 %t_239 to i32
+br label %label_809
+label_805:
+%t_241 = icmp eq i32 %t_238, 0
+br i1 %t_241, label %label_812, label %label_802
+br label %label_809
+label_809:
+%t_242 = icmp ne i32 %t_240, 0
+%t_243 = zext i1 %t_242 to i32
+br label %label_812
+label_812:
+%t_244 = phi i32 [0, %label_805], [%t_243, %label_809]
+%t_245 = icmp ne i32 0, %t_244
+br i1 %t_245, label %label_816, label %label_819
+label_816:
+%w39 = getelementptr [6 x i8], [6 x i8]* @.w39, i32 0, i32 0
+call void @print(i8* %w39)
+br label %label_819
+label_819:
+br label %label_824
+label_821:
+%t_246 = call i32 @False()
+br label %label_828
+label_824:
+%t_247 = icmp eq i32 1, 0
+br i1 %t_247, label %label_831, label %label_821
+br label %label_828
+label_828:
+%t_248 = icmp ne i32 %t_246, 0
+%t_249 = zext i1 %t_248 to i32
+br label %label_831
+label_831:
+%t_250 = phi i32 [0, %label_824], [%t_249, %label_828]
+%t_251 = icmp ne i32 0, %t_250
+br i1 %t_251, label %label_835, label %label_838
+label_835:
+%w40 = getelementptr [6 x i8], [6 x i8]* @.w40, i32 0, i32 0
+call void @print(i8* %w40)
+br label %label_838
+label_838:
+br label %label_842
+label_840:
+br label %label_846
+label_842:
+%t_252 = icmp eq i32 1, 0
+br i1 %t_252, label %label_849, label %label_840
+br label %label_846
+label_846:
+%t_253 = icmp ne i32 0, 0
+%t_254 = zext i1 %t_253 to i32
+br label %label_849
+label_849:
+%t_255 = phi i32 [0, %label_842], [%t_254, %label_846]
+%t_256 = icmp ne i32 0, %t_255
+br i1 %t_256, label %label_853, label %label_856
+label_853:
+%w41 = getelementptr [6 x i8], [6 x i8]* @.w41, i32 0, i32 0
+call void @print(i8* %w41)
+br label %label_856
+label_856:
+br label %label_860
+label_858:
+br label %label_864
+label_860:
+%t_257 = icmp eq i32 1, 0
+br i1 %t_257, label %label_868, label %label_858
+br label %label_864
+label_864:
+%t_260 = load i32, i32* %s1
+%t_258 = icmp ne i32 %t_260, 0
+%t_259 = zext i1 %t_258 to i32
+br label %label_868
+label_868:
+%t_261 = phi i32 [0, %label_860], [%t_259, %label_864]
+%t_262 = icmp ne i32 0, %t_261
+br i1 %t_262, label %label_872, label %label_875
+label_872:
+%w42 = getelementptr [6 x i8], [6 x i8]* @.w42, i32 0, i32 0
+call void @print(i8* %w42)
+br label %label_875
+label_875:
+br label %label_880
+label_877:
+%t_263 = icmp sgt i32 4, 5
+%t_264 = zext i1 %t_263 to i32
+br label %label_884
+label_880:
+%t_265 = icmp eq i32 1, 0
+br i1 %t_265, label %label_887, label %label_877
+br label %label_884
+label_884:
+%t_266 = icmp ne i32 %t_264, 0
+%t_267 = zext i1 %t_266 to i32
+br label %label_887
+label_887:
+%t_268 = phi i32 [0, %label_880], [%t_267, %label_884]
+%t_269 = icmp ne i32 0, %t_268
+br i1 %t_269, label %label_891, label %label_894
+label_891:
+%w43 = getelementptr [6 x i8], [6 x i8]* @.w43, i32 0, i32 0
+call void @print(i8* %w43)
+br label %label_894
+label_894:
+br label %label_899
+label_896:
+%t_270 = icmp ne i32 4, 4
+%t_271 = zext i1 %t_270 to i32
+br label %label_903
+label_899:
+%t_272 = icmp eq i32 1, 0
+br i1 %t_272, label %label_906, label %label_896
+br label %label_903
+label_903:
+%t_273 = icmp ne i32 %t_271, 0
+%t_274 = zext i1 %t_273 to i32
+br label %label_906
+label_906:
+%t_275 = phi i32 [0, %label_899], [%t_274, %label_903]
+%t_276 = icmp ne i32 0, %t_275
+br i1 %t_276, label %label_910, label %label_913
+label_910:
+%w44 = getelementptr [6 x i8], [6 x i8]* @.w44, i32 0, i32 0
+call void @print(i8* %w44)
+br label %label_913
+label_913:
+br label %label_918
+label_915:
+%t_277 = call i32 @False()
+br label %label_923
+label_918:
+%t_279 = load i32, i32* %s0
+%t_278 = icmp eq i32 %t_279, 0
+br i1 %t_278, label %label_926, label %label_915
+br label %label_923
+label_923:
+%t_280 = icmp ne i32 %t_277, 0
+%t_281 = zext i1 %t_280 to i32
+br label %label_926
+label_926:
+%t_282 = phi i32 [0, %label_918], [%t_281, %label_923]
+%t_283 = icmp ne i32 0, %t_282
+br i1 %t_283, label %label_930, label %label_933
+label_930:
+%w45 = getelementptr [6 x i8], [6 x i8]* @.w45, i32 0, i32 0
+call void @print(i8* %w45)
+br label %label_933
+label_933:
+br label %label_937
+label_935:
+br label %label_942
+label_937:
+%t_285 = load i32, i32* %s0
+%t_284 = icmp eq i32 %t_285, 0
+br i1 %t_284, label %label_945, label %label_935
+br label %label_942
+label_942:
+%t_286 = icmp ne i32 0, 0
+%t_287 = zext i1 %t_286 to i32
+br label %label_945
+label_945:
+%t_288 = phi i32 [0, %label_937], [%t_287, %label_942]
+%t_289 = icmp ne i32 0, %t_288
+br i1 %t_289, label %label_949, label %label_952
+label_949:
+%w46 = getelementptr [6 x i8], [6 x i8]* @.w46, i32 0, i32 0
+call void @print(i8* %w46)
+br label %label_952
+label_952:
+br label %label_956
+label_954:
+br label %label_961
+label_956:
+%t_291 = load i32, i32* %s0
+%t_290 = icmp eq i32 %t_291, 0
+br i1 %t_290, label %label_965, label %label_954
+br label %label_961
+label_961:
+%t_294 = load i32, i32* %s1
+%t_292 = icmp ne i32 %t_294, 0
+%t_293 = zext i1 %t_292 to i32
+br label %label_965
+label_965:
+%t_295 = phi i32 [0, %label_956], [%t_293, %label_961]
+%t_296 = icmp ne i32 0, %t_295
+br i1 %t_296, label %label_969, label %label_972
+label_969:
+%w47 = getelementptr [6 x i8], [6 x i8]* @.w47, i32 0, i32 0
+call void @print(i8* %w47)
+br label %label_972
+label_972:
+br label %label_977
+label_974:
+%t_297 = icmp sgt i32 4, 5
+%t_298 = zext i1 %t_297 to i32
+br label %label_982
+label_977:
+%t_300 = load i32, i32* %s0
+%t_299 = icmp eq i32 %t_300, 0
+br i1 %t_299, label %label_985, label %label_974
+br label %label_982
+label_982:
+%t_301 = icmp ne i32 %t_298, 0
+%t_302 = zext i1 %t_301 to i32
+br label %label_985
+label_985:
+%t_303 = phi i32 [0, %label_977], [%t_302, %label_982]
+%t_304 = icmp ne i32 0, %t_303
+br i1 %t_304, label %label_989, label %label_992
+label_989:
+%w48 = getelementptr [6 x i8], [6 x i8]* @.w48, i32 0, i32 0
+call void @print(i8* %w48)
+br label %label_992
+label_992:
+br label %label_997
+label_994:
+%t_305 = icmp ne i32 4, 4
+%t_306 = zext i1 %t_305 to i32
+br label %label_1002
+label_997:
+%t_308 = load i32, i32* %s0
+%t_307 = icmp eq i32 %t_308, 0
+br i1 %t_307, label %label_1005, label %label_994
+br label %label_1002
+label_1002:
+%t_309 = icmp ne i32 %t_306, 0
+%t_310 = zext i1 %t_309 to i32
+br label %label_1005
+label_1005:
+%t_311 = phi i32 [0, %label_997], [%t_310, %label_1002]
+%t_312 = icmp ne i32 0, %t_311
+br i1 %t_312, label %label_1009, label %label_1012
+label_1009:
+%w49 = getelementptr [6 x i8], [6 x i8]* @.w49, i32 0, i32 0
+call void @print(i8* %w49)
+br label %label_1012
+label_1012:
+%t_313 = icmp slt i32 4, 5
+%t_314 = zext i1 %t_313 to i32
+br label %label_1018
+label_1015:
+%t_315 = call i32 @False()
+br label %label_1022
+label_1018:
+%t_316 = icmp eq i32 %t_314, 0
+br i1 %t_316, label %label_1025, label %label_1015
+br label %label_1022
+label_1022:
+%t_317 = icmp ne i32 %t_315, 0
+%t_318 = zext i1 %t_317 to i32
+br label %label_1025
+label_1025:
+%t_319 = phi i32 [0, %label_1018], [%t_318, %label_1022]
+%t_320 = icmp ne i32 0, %t_319
+br i1 %t_320, label %label_1029, label %label_1032
+label_1029:
+%w50 = getelementptr [6 x i8], [6 x i8]* @.w50, i32 0, i32 0
+call void @print(i8* %w50)
+br label %label_1032
+label_1032:
+%t_321 = icmp slt i32 4, 5
+%t_322 = zext i1 %t_321 to i32
+br label %label_1037
+label_1035:
+br label %label_1041
+label_1037:
+%t_323 = icmp eq i32 %t_322, 0
+br i1 %t_323, label %label_1044, label %label_1035
+br label %label_1041
+label_1041:
+%t_324 = icmp ne i32 0, 0
+%t_325 = zext i1 %t_324 to i32
+br label %label_1044
+label_1044:
+%t_326 = phi i32 [0, %label_1037], [%t_325, %label_1041]
+%t_327 = icmp ne i32 0, %t_326
+br i1 %t_327, label %label_1048, label %label_1051
+label_1048:
+%w51 = getelementptr [6 x i8], [6 x i8]* @.w51, i32 0, i32 0
+call void @print(i8* %w51)
+br label %label_1051
+label_1051:
+%t_328 = icmp slt i32 4, 5
+%t_329 = zext i1 %t_328 to i32
+br label %label_1056
+label_1054:
+br label %label_1060
+label_1056:
+%t_330 = icmp eq i32 %t_329, 0
+br i1 %t_330, label %label_1064, label %label_1054
+br label %label_1060
+label_1060:
+%t_333 = load i32, i32* %s1
+%t_331 = icmp ne i32 %t_333, 0
+%t_332 = zext i1 %t_331 to i32
+br label %label_1064
+label_1064:
+%t_334 = phi i32 [0, %label_1056], [%t_332, %label_1060]
+%t_335 = icmp ne i32 0, %t_334
+br i1 %t_335, label %label_1068, label %label_1071
+label_1068:
+%w52 = getelementptr [6 x i8], [6 x i8]* @.w52, i32 0, i32 0
+call void @print(i8* %w52)
+br label %label_1071
+label_1071:
+%t_336 = icmp slt i32 4, 5
+%t_337 = zext i1 %t_336 to i32
+br label %label_1077
+label_1074:
+%t_338 = icmp sgt i32 4, 5
+%t_339 = zext i1 %t_338 to i32
+br label %label_1081
+label_1077:
+%t_340 = icmp eq i32 %t_337, 0
+br i1 %t_340, label %label_1084, label %label_1074
+br label %label_1081
+label_1081:
+%t_341 = icmp ne i32 %t_339, 0
+%t_342 = zext i1 %t_341 to i32
+br label %label_1084
+label_1084:
+%t_343 = phi i32 [0, %label_1077], [%t_342, %label_1081]
+%t_344 = icmp ne i32 0, %t_343
+br i1 %t_344, label %label_1088, label %label_1091
+label_1088:
+%w53 = getelementptr [6 x i8], [6 x i8]* @.w53, i32 0, i32 0
+call void @print(i8* %w53)
+br label %label_1091
+label_1091:
+%t_345 = icmp slt i32 4, 5
+%t_346 = zext i1 %t_345 to i32
+br label %label_1097
+label_1094:
+%t_347 = icmp ne i32 4, 4
+%t_348 = zext i1 %t_347 to i32
+br label %label_1101
+label_1097:
+%t_349 = icmp eq i32 %t_346, 0
+br i1 %t_349, label %label_1104, label %label_1094
+br label %label_1101
+label_1101:
+%t_350 = icmp ne i32 %t_348, 0
+%t_351 = zext i1 %t_350 to i32
+br label %label_1104
+label_1104:
+%t_352 = phi i32 [0, %label_1097], [%t_351, %label_1101]
+%t_353 = icmp ne i32 0, %t_352
+br i1 %t_353, label %label_1108, label %label_1111
+label_1108:
+%w54 = getelementptr [6 x i8], [6 x i8]* @.w54, i32 0, i32 0
+call void @print(i8* %w54)
+br label %label_1111
+label_1111:
+%t_354 = icmp eq i32 4, 4
+%t_355 = zext i1 %t_354 to i32
+br label %label_1117
+label_1114:
+%t_356 = call i32 @False()
+br label %label_1121
+label_1117:
+%t_357 = icmp eq i32 %t_355, 0
+br i1 %t_357, label %label_1124, label %label_1114
+br label %label_1121
+label_1121:
+%t_358 = icmp ne i32 %t_356, 0
+%t_359 = zext i1 %t_358 to i32
+br label %label_1124
+label_1124:
+%t_360 = phi i32 [0, %label_1117], [%t_359, %label_1121]
+%t_361 = icmp ne i32 0, %t_360
+br i1 %t_361, label %label_1128, label %label_1131
+label_1128:
+%w55 = getelementptr [6 x i8], [6 x i8]* @.w55, i32 0, i32 0
+call void @print(i8* %w55)
+br label %label_1131
+label_1131:
+%t_362 = icmp eq i32 4, 4
+%t_363 = zext i1 %t_362 to i32
+br label %label_1136
+label_1134:
+br label %label_1140
+label_1136:
+%t_364 = icmp eq i32 %t_363, 0
+br i1 %t_364, label %label_1143, label %label_1134
+br label %label_1140
+label_1140:
+%t_365 = icmp ne i32 0, 0
+%t_366 = zext i1 %t_365 to i32
+br label %label_1143
+label_1143:
+%t_367 = phi i32 [0, %label_1136], [%t_366, %label_1140]
+%t_368 = icmp ne i32 0, %t_367
+br i1 %t_368, label %label_1147, label %label_1150
+label_1147:
+%w56 = getelementptr [6 x i8], [6 x i8]* @.w56, i32 0, i32 0
+call void @print(i8* %w56)
+br label %label_1150
+label_1150:
+%t_369 = icmp eq i32 4, 4
+%t_370 = zext i1 %t_369 to i32
+br label %label_1155
+label_1153:
+br label %label_1159
+label_1155:
+%t_371 = icmp eq i32 %t_370, 0
+br i1 %t_371, label %label_1163, label %label_1153
+br label %label_1159
+label_1159:
+%t_374 = load i32, i32* %s1
+%t_372 = icmp ne i32 %t_374, 0
+%t_373 = zext i1 %t_372 to i32
+br label %label_1163
+label_1163:
+%t_375 = phi i32 [0, %label_1155], [%t_373, %label_1159]
+%t_376 = icmp ne i32 0, %t_375
+br i1 %t_376, label %label_1167, label %label_1170
+label_1167:
+%w57 = getelementptr [6 x i8], [6 x i8]* @.w57, i32 0, i32 0
+call void @print(i8* %w57)
+br label %label_1170
+label_1170:
+%t_377 = icmp eq i32 4, 4
+%t_378 = zext i1 %t_377 to i32
+br label %label_1176
+label_1173:
+%t_379 = icmp sgt i32 4, 5
+%t_380 = zext i1 %t_379 to i32
+br label %label_1180
+label_1176:
+%t_381 = icmp eq i32 %t_378, 0
+br i1 %t_381, label %label_1183, label %label_1173
+br label %label_1180
+label_1180:
+%t_382 = icmp ne i32 %t_380, 0
+%t_383 = zext i1 %t_382 to i32
+br label %label_1183
+label_1183:
+%t_384 = phi i32 [0, %label_1176], [%t_383, %label_1180]
+%t_385 = icmp ne i32 0, %t_384
+br i1 %t_385, label %label_1187, label %label_1190
+label_1187:
+%w58 = getelementptr [6 x i8], [6 x i8]* @.w58, i32 0, i32 0
+call void @print(i8* %w58)
+br label %label_1190
+label_1190:
+%t_386 = icmp eq i32 4, 4
+%t_387 = zext i1 %t_386 to i32
+br label %label_1196
+label_1193:
+%t_388 = icmp ne i32 4, 4
+%t_389 = zext i1 %t_388 to i32
+br label %label_1200
+label_1196:
+%t_390 = icmp eq i32 %t_387, 0
+br i1 %t_390, label %label_1203, label %label_1193
+br label %label_1200
+label_1200:
+%t_391 = icmp ne i32 %t_389, 0
+%t_392 = zext i1 %t_391 to i32
+br label %label_1203
+label_1203:
+%t_393 = phi i32 [0, %label_1196], [%t_392, %label_1200]
+%t_394 = icmp ne i32 0, %t_393
+br i1 %t_394, label %label_1207, label %label_1210
+label_1207:
+%w59 = getelementptr [6 x i8], [6 x i8]* @.w59, i32 0, i32 0
+call void @print(i8* %w59)
+br label %label_1210
+label_1210:
+%t_395 = call i32 @False()
+br label %label_1216
+label_1213:
+%t_396 = call i32 @False()
+br label %label_1220
+label_1216:
+%t_397 = icmp eq i32 %t_395, 0
+br i1 %t_397, label %label_1223, label %label_1213
+br label %label_1220
+label_1220:
+%t_398 = icmp ne i32 %t_396, 0
+%t_399 = zext i1 %t_398 to i32
+br label %label_1223
+label_1223:
+%t_400 = phi i32 [0, %label_1216], [%t_399, %label_1220]
+%t_401 = icmp ne i32 0, %t_400
+br i1 %t_401, label %label_1227, label %label_1230
+label_1227:
+%w60 = getelementptr [6 x i8], [6 x i8]* @.w60, i32 0, i32 0
+call void @print(i8* %w60)
+br label %label_1230
+label_1230:
+%t_402 = call i32 @False()
+br label %label_1235
+label_1233:
+br label %label_1239
+label_1235:
+%t_403 = icmp eq i32 %t_402, 0
+br i1 %t_403, label %label_1242, label %label_1233
+br label %label_1239
+label_1239:
+%t_404 = icmp ne i32 0, 0
+%t_405 = zext i1 %t_404 to i32
+br label %label_1242
+label_1242:
+%t_406 = phi i32 [0, %label_1235], [%t_405, %label_1239]
+%t_407 = icmp ne i32 0, %t_406
+br i1 %t_407, label %label_1246, label %label_1249
+label_1246:
+%w61 = getelementptr [6 x i8], [6 x i8]* @.w61, i32 0, i32 0
+call void @print(i8* %w61)
+br label %label_1249
+label_1249:
+%t_408 = call i32 @False()
+br label %label_1254
+label_1252:
+br label %label_1258
+label_1254:
+%t_409 = icmp eq i32 %t_408, 0
+br i1 %t_409, label %label_1262, label %label_1252
+br label %label_1258
+label_1258:
+%t_412 = load i32, i32* %s1
+%t_410 = icmp ne i32 %t_412, 0
+%t_411 = zext i1 %t_410 to i32
+br label %label_1262
+label_1262:
+%t_413 = phi i32 [0, %label_1254], [%t_411, %label_1258]
+%t_414 = icmp ne i32 0, %t_413
+br i1 %t_414, label %label_1266, label %label_1269
+label_1266:
+%w62 = getelementptr [6 x i8], [6 x i8]* @.w62, i32 0, i32 0
+call void @print(i8* %w62)
+br label %label_1269
+label_1269:
+%t_415 = call i32 @False()
+br label %label_1275
+label_1272:
+%t_416 = icmp sgt i32 4, 5
+%t_417 = zext i1 %t_416 to i32
+br label %label_1279
+label_1275:
+%t_418 = icmp eq i32 %t_415, 0
+br i1 %t_418, label %label_1282, label %label_1272
+br label %label_1279
+label_1279:
+%t_419 = icmp ne i32 %t_417, 0
+%t_420 = zext i1 %t_419 to i32
+br label %label_1282
+label_1282:
+%t_421 = phi i32 [0, %label_1275], [%t_420, %label_1279]
+%t_422 = icmp ne i32 0, %t_421
+br i1 %t_422, label %label_1286, label %label_1289
+label_1286:
+%w63 = getelementptr [6 x i8], [6 x i8]* @.w63, i32 0, i32 0
+call void @print(i8* %w63)
+br label %label_1289
+label_1289:
+%t_423 = call i32 @False()
+br label %label_1295
+label_1292:
+%t_424 = icmp ne i32 4, 4
+%t_425 = zext i1 %t_424 to i32
+br label %label_1299
+label_1295:
+%t_426 = icmp eq i32 %t_423, 0
+br i1 %t_426, label %label_1302, label %label_1292
+br label %label_1299
+label_1299:
+%t_427 = icmp ne i32 %t_425, 0
+%t_428 = zext i1 %t_427 to i32
+br label %label_1302
+label_1302:
+%t_429 = phi i32 [0, %label_1295], [%t_428, %label_1299]
+%t_430 = icmp ne i32 0, %t_429
+br i1 %t_430, label %label_1306, label %label_1309
+label_1306:
+%w64 = getelementptr [6 x i8], [6 x i8]* @.w64, i32 0, i32 0
+call void @print(i8* %w64)
+br label %label_1309
+label_1309:
+br label %label_1314
+label_1311:
+%t_431 = call i32 @False()
+br label %label_1318
+label_1314:
+%t_432 = icmp eq i32 0, 0
+br i1 %t_432, label %label_1321, label %label_1311
+br label %label_1318
+label_1318:
+%t_433 = icmp ne i32 %t_431, 0
+%t_434 = zext i1 %t_433 to i32
+br label %label_1321
+label_1321:
+%t_435 = phi i32 [0, %label_1314], [%t_434, %label_1318]
+%t_436 = icmp ne i32 0, %t_435
+br i1 %t_436, label %label_1325, label %label_1328
+label_1325:
+%w65 = getelementptr [6 x i8], [6 x i8]* @.w65, i32 0, i32 0
+call void @print(i8* %w65)
+br label %label_1328
+label_1328:
+br label %label_1332
+label_1330:
+br label %label_1336
+label_1332:
+%t_437 = icmp eq i32 0, 0
+br i1 %t_437, label %label_1339, label %label_1330
+br label %label_1336
+label_1336:
+%t_438 = icmp ne i32 0, 0
+%t_439 = zext i1 %t_438 to i32
+br label %label_1339
+label_1339:
+%t_440 = phi i32 [0, %label_1332], [%t_439, %label_1336]
+%t_441 = icmp ne i32 0, %t_440
+br i1 %t_441, label %label_1343, label %label_1346
+label_1343:
+%w66 = getelementptr [6 x i8], [6 x i8]* @.w66, i32 0, i32 0
+call void @print(i8* %w66)
+br label %label_1346
+label_1346:
+br label %label_1350
+label_1348:
+br label %label_1354
+label_1350:
+%t_442 = icmp eq i32 0, 0
+br i1 %t_442, label %label_1358, label %label_1348
+br label %label_1354
+label_1354:
+%t_445 = load i32, i32* %s1
+%t_443 = icmp ne i32 %t_445, 0
+%t_444 = zext i1 %t_443 to i32
+br label %label_1358
+label_1358:
+%t_446 = phi i32 [0, %label_1350], [%t_444, %label_1354]
+%t_447 = icmp ne i32 0, %t_446
+br i1 %t_447, label %label_1362, label %label_1365
+label_1362:
+%w67 = getelementptr [6 x i8], [6 x i8]* @.w67, i32 0, i32 0
+call void @print(i8* %w67)
+br label %label_1365
+label_1365:
+br label %label_1370
+label_1367:
+%t_448 = icmp sgt i32 4, 5
+%t_449 = zext i1 %t_448 to i32
+br label %label_1374
+label_1370:
+%t_450 = icmp eq i32 0, 0
+br i1 %t_450, label %label_1377, label %label_1367
+br label %label_1374
+label_1374:
+%t_451 = icmp ne i32 %t_449, 0
+%t_452 = zext i1 %t_451 to i32
+br label %label_1377
+label_1377:
+%t_453 = phi i32 [0, %label_1370], [%t_452, %label_1374]
+%t_454 = icmp ne i32 0, %t_453
+br i1 %t_454, label %label_1381, label %label_1384
+label_1381:
+%w68 = getelementptr [6 x i8], [6 x i8]* @.w68, i32 0, i32 0
+call void @print(i8* %w68)
+br label %label_1384
+label_1384:
+br label %label_1389
+label_1386:
+%t_455 = icmp ne i32 4, 4
+%t_456 = zext i1 %t_455 to i32
+br label %label_1393
+label_1389:
+%t_457 = icmp eq i32 0, 0
+br i1 %t_457, label %label_1396, label %label_1386
+br label %label_1393
+label_1393:
+%t_458 = icmp ne i32 %t_456, 0
+%t_459 = zext i1 %t_458 to i32
+br label %label_1396
+label_1396:
+%t_460 = phi i32 [0, %label_1389], [%t_459, %label_1393]
+%t_461 = icmp ne i32 0, %t_460
+br i1 %t_461, label %label_1400, label %label_1403
+label_1400:
+%w69 = getelementptr [6 x i8], [6 x i8]* @.w69, i32 0, i32 0
+call void @print(i8* %w69)
+br label %label_1403
+label_1403:
+br label %label_1408
+label_1405:
+%t_462 = call i32 @False()
+br label %label_1413
+label_1408:
+%t_464 = load i32, i32* %s1
+%t_463 = icmp eq i32 %t_464, 0
+br i1 %t_463, label %label_1416, label %label_1405
+br label %label_1413
+label_1413:
+%t_465 = icmp ne i32 %t_462, 0
+%t_466 = zext i1 %t_465 to i32
+br label %label_1416
+label_1416:
+%t_467 = phi i32 [0, %label_1408], [%t_466, %label_1413]
+%t_468 = icmp ne i32 0, %t_467
+br i1 %t_468, label %label_1420, label %label_1423
+label_1420:
+%w70 = getelementptr [6 x i8], [6 x i8]* @.w70, i32 0, i32 0
+call void @print(i8* %w70)
+br label %label_1423
+label_1423:
+br label %label_1427
+label_1425:
+br label %label_1432
+label_1427:
+%t_470 = load i32, i32* %s1
+%t_469 = icmp eq i32 %t_470, 0
+br i1 %t_469, label %label_1435, label %label_1425
+br label %label_1432
+label_1432:
+%t_471 = icmp ne i32 0, 0
+%t_472 = zext i1 %t_471 to i32
+br label %label_1435
+label_1435:
+%t_473 = phi i32 [0, %label_1427], [%t_472, %label_1432]
+%t_474 = icmp ne i32 0, %t_473
+br i1 %t_474, label %label_1439, label %label_1442
+label_1439:
+%w71 = getelementptr [6 x i8], [6 x i8]* @.w71, i32 0, i32 0
+call void @print(i8* %w71)
+br label %label_1442
+label_1442:
+br label %label_1446
+label_1444:
+br label %label_1451
+label_1446:
+%t_476 = load i32, i32* %s1
+%t_475 = icmp eq i32 %t_476, 0
+br i1 %t_475, label %label_1455, label %label_1444
+br label %label_1451
+label_1451:
+%t_479 = load i32, i32* %s1
+%t_477 = icmp ne i32 %t_479, 0
+%t_478 = zext i1 %t_477 to i32
+br label %label_1455
+label_1455:
+%t_480 = phi i32 [0, %label_1446], [%t_478, %label_1451]
+%t_481 = icmp ne i32 0, %t_480
+br i1 %t_481, label %label_1459, label %label_1462
+label_1459:
+%w72 = getelementptr [6 x i8], [6 x i8]* @.w72, i32 0, i32 0
+call void @print(i8* %w72)
+br label %label_1462
+label_1462:
+br label %label_1467
+label_1464:
+%t_482 = icmp sgt i32 4, 5
+%t_483 = zext i1 %t_482 to i32
+br label %label_1472
+label_1467:
+%t_485 = load i32, i32* %s1
+%t_484 = icmp eq i32 %t_485, 0
+br i1 %t_484, label %label_1475, label %label_1464
+br label %label_1472
+label_1472:
+%t_486 = icmp ne i32 %t_483, 0
+%t_487 = zext i1 %t_486 to i32
+br label %label_1475
+label_1475:
+%t_488 = phi i32 [0, %label_1467], [%t_487, %label_1472]
+%t_489 = icmp ne i32 0, %t_488
+br i1 %t_489, label %label_1479, label %label_1482
+label_1479:
+%w73 = getelementptr [6 x i8], [6 x i8]* @.w73, i32 0, i32 0
+call void @print(i8* %w73)
+br label %label_1482
+label_1482:
+br label %label_1487
+label_1484:
+%t_490 = icmp ne i32 4, 4
+%t_491 = zext i1 %t_490 to i32
+br label %label_1492
+label_1487:
+%t_493 = load i32, i32* %s1
+%t_492 = icmp eq i32 %t_493, 0
+br i1 %t_492, label %label_1495, label %label_1484
+br label %label_1492
+label_1492:
+%t_494 = icmp ne i32 %t_491, 0
+%t_495 = zext i1 %t_494 to i32
+br label %label_1495
+label_1495:
+%t_496 = phi i32 [0, %label_1487], [%t_495, %label_1492]
+%t_497 = icmp ne i32 0, %t_496
+br i1 %t_497, label %label_1499, label %label_1502
+label_1499:
+%w74 = getelementptr [6 x i8], [6 x i8]* @.w74, i32 0, i32 0
+call void @print(i8* %w74)
+br label %label_1502
+label_1502:
+%t_498 = icmp sgt i32 4, 5
+%t_499 = zext i1 %t_498 to i32
+br label %label_1508
+label_1505:
+%t_500 = call i32 @False()
+br label %label_1512
+label_1508:
+%t_501 = icmp eq i32 %t_499, 0
+br i1 %t_501, label %label_1515, label %label_1505
+br label %label_1512
+label_1512:
+%t_502 = icmp ne i32 %t_500, 0
+%t_503 = zext i1 %t_502 to i32
+br label %label_1515
+label_1515:
+%t_504 = phi i32 [0, %label_1508], [%t_503, %label_1512]
+%t_505 = icmp ne i32 0, %t_504
+br i1 %t_505, label %label_1519, label %label_1522
+label_1519:
+%w75 = getelementptr [6 x i8], [6 x i8]* @.w75, i32 0, i32 0
+call void @print(i8* %w75)
+br label %label_1522
+label_1522:
+%t_506 = icmp sgt i32 4, 5
+%t_507 = zext i1 %t_506 to i32
+br label %label_1527
+label_1525:
+br label %label_1531
+label_1527:
+%t_508 = icmp eq i32 %t_507, 0
+br i1 %t_508, label %label_1534, label %label_1525
+br label %label_1531
+label_1531:
+%t_509 = icmp ne i32 0, 0
+%t_510 = zext i1 %t_509 to i32
+br label %label_1534
+label_1534:
+%t_511 = phi i32 [0, %label_1527], [%t_510, %label_1531]
+%t_512 = icmp ne i32 0, %t_511
+br i1 %t_512, label %label_1538, label %label_1541
+label_1538:
+%w76 = getelementptr [6 x i8], [6 x i8]* @.w76, i32 0, i32 0
+call void @print(i8* %w76)
+br label %label_1541
+label_1541:
+%t_513 = icmp sgt i32 4, 5
+%t_514 = zext i1 %t_513 to i32
+br label %label_1546
+label_1544:
+br label %label_1550
+label_1546:
+%t_515 = icmp eq i32 %t_514, 0
+br i1 %t_515, label %label_1554, label %label_1544
+br label %label_1550
+label_1550:
+%t_518 = load i32, i32* %s1
+%t_516 = icmp ne i32 %t_518, 0
+%t_517 = zext i1 %t_516 to i32
+br label %label_1554
+label_1554:
+%t_519 = phi i32 [0, %label_1546], [%t_517, %label_1550]
+%t_520 = icmp ne i32 0, %t_519
+br i1 %t_520, label %label_1558, label %label_1561
+label_1558:
+%w77 = getelementptr [6 x i8], [6 x i8]* @.w77, i32 0, i32 0
+call void @print(i8* %w77)
+br label %label_1561
+label_1561:
+%t_521 = icmp sgt i32 4, 5
+%t_522 = zext i1 %t_521 to i32
+br label %label_1567
+label_1564:
+%t_523 = icmp sgt i32 4, 5
+%t_524 = zext i1 %t_523 to i32
+br label %label_1571
+label_1567:
+%t_525 = icmp eq i32 %t_522, 0
+br i1 %t_525, label %label_1574, label %label_1564
+br label %label_1571
+label_1571:
+%t_526 = icmp ne i32 %t_524, 0
+%t_527 = zext i1 %t_526 to i32
+br label %label_1574
+label_1574:
+%t_528 = phi i32 [0, %label_1567], [%t_527, %label_1571]
+%t_529 = icmp ne i32 0, %t_528
+br i1 %t_529, label %label_1578, label %label_1581
+label_1578:
+%w78 = getelementptr [6 x i8], [6 x i8]* @.w78, i32 0, i32 0
+call void @print(i8* %w78)
+br label %label_1581
+label_1581:
+%t_530 = icmp sgt i32 4, 5
+%t_531 = zext i1 %t_530 to i32
+br label %label_1587
+label_1584:
+%t_532 = icmp ne i32 4, 4
+%t_533 = zext i1 %t_532 to i32
+br label %label_1591
+label_1587:
+%t_534 = icmp eq i32 %t_531, 0
+br i1 %t_534, label %label_1594, label %label_1584
+br label %label_1591
+label_1591:
+%t_535 = icmp ne i32 %t_533, 0
+%t_536 = zext i1 %t_535 to i32
+br label %label_1594
+label_1594:
+%t_537 = phi i32 [0, %label_1587], [%t_536, %label_1591]
+%t_538 = icmp ne i32 0, %t_537
+br i1 %t_538, label %label_1598, label %label_1601
+label_1598:
+%w79 = getelementptr [6 x i8], [6 x i8]* @.w79, i32 0, i32 0
+call void @print(i8* %w79)
+br label %label_1601
+label_1601:
+%t_539 = icmp ne i32 4, 4
+%t_540 = zext i1 %t_539 to i32
+br label %label_1607
+label_1604:
+%t_541 = call i32 @False()
+br label %label_1611
+label_1607:
+%t_542 = icmp eq i32 %t_540, 0
+br i1 %t_542, label %label_1614, label %label_1604
+br label %label_1611
+label_1611:
+%t_543 = icmp ne i32 %t_541, 0
+%t_544 = zext i1 %t_543 to i32
+br label %label_1614
+label_1614:
+%t_545 = phi i32 [0, %label_1607], [%t_544, %label_1611]
+%t_546 = icmp ne i32 0, %t_545
+br i1 %t_546, label %label_1618, label %label_1621
+label_1618:
+%w80 = getelementptr [6 x i8], [6 x i8]* @.w80, i32 0, i32 0
+call void @print(i8* %w80)
+br label %label_1621
+label_1621:
+%t_547 = icmp ne i32 4, 4
+%t_548 = zext i1 %t_547 to i32
+br label %label_1626
+label_1624:
+br label %label_1630
+label_1626:
+%t_549 = icmp eq i32 %t_548, 0
+br i1 %t_549, label %label_1633, label %label_1624
+br label %label_1630
+label_1630:
+%t_550 = icmp ne i32 0, 0
+%t_551 = zext i1 %t_550 to i32
+br label %label_1633
+label_1633:
+%t_552 = phi i32 [0, %label_1626], [%t_551, %label_1630]
+%t_553 = icmp ne i32 0, %t_552
+br i1 %t_553, label %label_1637, label %label_1640
+label_1637:
+%w81 = getelementptr [6 x i8], [6 x i8]* @.w81, i32 0, i32 0
+call void @print(i8* %w81)
+br label %label_1640
+label_1640:
+%t_554 = icmp ne i32 4, 4
+%t_555 = zext i1 %t_554 to i32
+br label %label_1645
+label_1643:
+br label %label_1649
+label_1645:
+%t_556 = icmp eq i32 %t_555, 0
+br i1 %t_556, label %label_1653, label %label_1643
+br label %label_1649
+label_1649:
+%t_559 = load i32, i32* %s1
+%t_557 = icmp ne i32 %t_559, 0
+%t_558 = zext i1 %t_557 to i32
+br label %label_1653
+label_1653:
+%t_560 = phi i32 [0, %label_1645], [%t_558, %label_1649]
+%t_561 = icmp ne i32 0, %t_560
+br i1 %t_561, label %label_1657, label %label_1660
+label_1657:
+%w82 = getelementptr [6 x i8], [6 x i8]* @.w82, i32 0, i32 0
+call void @print(i8* %w82)
+br label %label_1660
+label_1660:
+%t_562 = icmp ne i32 4, 4
+%t_563 = zext i1 %t_562 to i32
+br label %label_1666
+label_1663:
+%t_564 = icmp sgt i32 4, 5
+%t_565 = zext i1 %t_564 to i32
+br label %label_1670
+label_1666:
+%t_566 = icmp eq i32 %t_563, 0
+br i1 %t_566, label %label_1673, label %label_1663
+br label %label_1670
+label_1670:
+%t_567 = icmp ne i32 %t_565, 0
+%t_568 = zext i1 %t_567 to i32
+br label %label_1673
+label_1673:
+%t_569 = phi i32 [0, %label_1666], [%t_568, %label_1670]
+%t_570 = icmp ne i32 0, %t_569
+br i1 %t_570, label %label_1677, label %label_1680
+label_1677:
+%w83 = getelementptr [6 x i8], [6 x i8]* @.w83, i32 0, i32 0
+call void @print(i8* %w83)
+br label %label_1680
+label_1680:
+%t_571 = icmp ne i32 4, 4
+%t_572 = zext i1 %t_571 to i32
+br label %label_1686
+label_1683:
+%t_573 = icmp ne i32 4, 4
+%t_574 = zext i1 %t_573 to i32
+br label %label_1690
+label_1686:
+%t_575 = icmp eq i32 %t_572, 0
+br i1 %t_575, label %label_1693, label %label_1683
+br label %label_1690
+label_1690:
+%t_576 = icmp ne i32 %t_574, 0
+%t_577 = zext i1 %t_576 to i32
+br label %label_1693
+label_1693:
+%t_578 = phi i32 [0, %label_1686], [%t_577, %label_1690]
+%t_579 = icmp ne i32 0, %t_578
+br i1 %t_579, label %label_1697, label %label_1700
+label_1697:
+%w84 = getelementptr [6 x i8], [6 x i8]* @.w84, i32 0, i32 0
+call void @print(i8* %w84)
+br label %label_1700
+label_1700:
+%t_580 = call i32 @True()
+br label %label_1706
+label_1703:
+%t_581 = call i32 @False()
+br label %label_1710
+label_1706:
+%t_582 = icmp ne i32 %t_580, 0
+br i1 %t_582, label %label_1713, label %label_1703
+br label %label_1710
+label_1710:
+%t_583 = icmp ne i32 %t_581, 0
+%t_584 = zext i1 %t_583 to i32
+br label %label_1713
+label_1713:
+%t_585 = phi i32 [1, %label_1706], [%t_584, %label_1710]
+%t_586 = icmp ne i32 0, %t_585
+br i1 %t_586, label %label_1717, label %label_1720
+label_1717:
+%w85 = getelementptr [6 x i8], [6 x i8]* @.w85, i32 0, i32 0
+call void @print(i8* %w85)
+br label %label_1720
+label_1720:
+%t_587 = call i32 @True()
+br label %label_1725
+label_1723:
+br label %label_1729
+label_1725:
+%t_588 = icmp ne i32 %t_587, 0
+br i1 %t_588, label %label_1732, label %label_1723
+br label %label_1729
+label_1729:
+%t_589 = icmp ne i32 0, 0
+%t_590 = zext i1 %t_589 to i32
+br label %label_1732
+label_1732:
+%t_591 = phi i32 [1, %label_1725], [%t_590, %label_1729]
+%t_592 = icmp ne i32 0, %t_591
+br i1 %t_592, label %label_1736, label %label_1739
+label_1736:
+%w86 = getelementptr [6 x i8], [6 x i8]* @.w86, i32 0, i32 0
+call void @print(i8* %w86)
+br label %label_1739
+label_1739:
+%t_593 = call i32 @True()
+br label %label_1744
+label_1742:
+br label %label_1748
+label_1744:
+%t_594 = icmp ne i32 %t_593, 0
+br i1 %t_594, label %label_1752, label %label_1742
+br label %label_1748
+label_1748:
+%t_597 = load i32, i32* %s1
+%t_595 = icmp ne i32 %t_597, 0
+%t_596 = zext i1 %t_595 to i32
+br label %label_1752
+label_1752:
+%t_598 = phi i32 [1, %label_1744], [%t_596, %label_1748]
+%t_599 = icmp ne i32 0, %t_598
+br i1 %t_599, label %label_1756, label %label_1759
+label_1756:
+%w87 = getelementptr [6 x i8], [6 x i8]* @.w87, i32 0, i32 0
+call void @print(i8* %w87)
+br label %label_1759
+label_1759:
+%t_600 = call i32 @True()
+br label %label_1765
+label_1762:
+%t_601 = icmp sgt i32 4, 5
+%t_602 = zext i1 %t_601 to i32
+br label %label_1769
+label_1765:
+%t_603 = icmp ne i32 %t_600, 0
+br i1 %t_603, label %label_1772, label %label_1762
+br label %label_1769
+label_1769:
+%t_604 = icmp ne i32 %t_602, 0
+%t_605 = zext i1 %t_604 to i32
+br label %label_1772
+label_1772:
+%t_606 = phi i32 [1, %label_1765], [%t_605, %label_1769]
+%t_607 = icmp ne i32 0, %t_606
+br i1 %t_607, label %label_1776, label %label_1779
+label_1776:
+%w88 = getelementptr [6 x i8], [6 x i8]* @.w88, i32 0, i32 0
+call void @print(i8* %w88)
+br label %label_1779
+label_1779:
+%t_608 = call i32 @True()
+br label %label_1785
+label_1782:
+%t_609 = icmp ne i32 4, 4
+%t_610 = zext i1 %t_609 to i32
+br label %label_1789
+label_1785:
+%t_611 = icmp ne i32 %t_608, 0
+br i1 %t_611, label %label_1792, label %label_1782
+br label %label_1789
+label_1789:
+%t_612 = icmp ne i32 %t_610, 0
+%t_613 = zext i1 %t_612 to i32
+br label %label_1792
+label_1792:
+%t_614 = phi i32 [1, %label_1785], [%t_613, %label_1789]
+%t_615 = icmp ne i32 0, %t_614
+br i1 %t_615, label %label_1796, label %label_1799
+label_1796:
+%w89 = getelementptr [6 x i8], [6 x i8]* @.w89, i32 0, i32 0
+call void @print(i8* %w89)
+br label %label_1799
+label_1799:
+br label %label_1804
+label_1801:
+%t_616 = call i32 @False()
+br label %label_1808
+label_1804:
+%t_617 = icmp ne i32 1, 0
+br i1 %t_617, label %label_1811, label %label_1801
+br label %label_1808
+label_1808:
+%t_618 = icmp ne i32 %t_616, 0
+%t_619 = zext i1 %t_618 to i32
+br label %label_1811
+label_1811:
+%t_620 = phi i32 [1, %label_1804], [%t_619, %label_1808]
+%t_621 = icmp ne i32 0, %t_620
+br i1 %t_621, label %label_1815, label %label_1818
+label_1815:
+%w90 = getelementptr [6 x i8], [6 x i8]* @.w90, i32 0, i32 0
+call void @print(i8* %w90)
+br label %label_1818
+label_1818:
+br label %label_1822
+label_1820:
+br label %label_1826
+label_1822:
+%t_622 = icmp ne i32 1, 0
+br i1 %t_622, label %label_1829, label %label_1820
+br label %label_1826
+label_1826:
+%t_623 = icmp ne i32 0, 0
+%t_624 = zext i1 %t_623 to i32
+br label %label_1829
+label_1829:
+%t_625 = phi i32 [1, %label_1822], [%t_624, %label_1826]
+%t_626 = icmp ne i32 0, %t_625
+br i1 %t_626, label %label_1833, label %label_1836
+label_1833:
+%w91 = getelementptr [6 x i8], [6 x i8]* @.w91, i32 0, i32 0
+call void @print(i8* %w91)
+br label %label_1836
+label_1836:
+br label %label_1840
+label_1838:
+br label %label_1844
+label_1840:
+%t_627 = icmp ne i32 1, 0
+br i1 %t_627, label %label_1848, label %label_1838
+br label %label_1844
+label_1844:
+%t_630 = load i32, i32* %s1
+%t_628 = icmp ne i32 %t_630, 0
+%t_629 = zext i1 %t_628 to i32
+br label %label_1848
+label_1848:
+%t_631 = phi i32 [1, %label_1840], [%t_629, %label_1844]
+%t_632 = icmp ne i32 0, %t_631
+br i1 %t_632, label %label_1852, label %label_1855
+label_1852:
+%w92 = getelementptr [6 x i8], [6 x i8]* @.w92, i32 0, i32 0
+call void @print(i8* %w92)
+br label %label_1855
+label_1855:
+br label %label_1860
+label_1857:
+%t_633 = icmp sgt i32 4, 5
+%t_634 = zext i1 %t_633 to i32
+br label %label_1864
+label_1860:
+%t_635 = icmp ne i32 1, 0
+br i1 %t_635, label %label_1867, label %label_1857
+br label %label_1864
+label_1864:
+%t_636 = icmp ne i32 %t_634, 0
+%t_637 = zext i1 %t_636 to i32
+br label %label_1867
+label_1867:
+%t_638 = phi i32 [1, %label_1860], [%t_637, %label_1864]
+%t_639 = icmp ne i32 0, %t_638
+br i1 %t_639, label %label_1871, label %label_1874
+label_1871:
+%w93 = getelementptr [6 x i8], [6 x i8]* @.w93, i32 0, i32 0
+call void @print(i8* %w93)
+br label %label_1874
+label_1874:
+br label %label_1879
+label_1876:
+%t_640 = icmp ne i32 4, 4
+%t_641 = zext i1 %t_640 to i32
+br label %label_1883
+label_1879:
+%t_642 = icmp ne i32 1, 0
+br i1 %t_642, label %label_1886, label %label_1876
+br label %label_1883
+label_1883:
+%t_643 = icmp ne i32 %t_641, 0
+%t_644 = zext i1 %t_643 to i32
+br label %label_1886
+label_1886:
+%t_645 = phi i32 [1, %label_1879], [%t_644, %label_1883]
+%t_646 = icmp ne i32 0, %t_645
+br i1 %t_646, label %label_1890, label %label_1893
+label_1890:
+%w94 = getelementptr [6 x i8], [6 x i8]* @.w94, i32 0, i32 0
+call void @print(i8* %w94)
+br label %label_1893
+label_1893:
+br label %label_1898
+label_1895:
+%t_647 = call i32 @False()
+br label %label_1903
+label_1898:
+%t_649 = load i32, i32* %s0
+%t_648 = icmp ne i32 %t_649, 0
+br i1 %t_648, label %label_1906, label %label_1895
+br label %label_1903
+label_1903:
+%t_650 = icmp ne i32 %t_647, 0
+%t_651 = zext i1 %t_650 to i32
+br label %label_1906
+label_1906:
+%t_652 = phi i32 [1, %label_1898], [%t_651, %label_1903]
+%t_653 = icmp ne i32 0, %t_652
+br i1 %t_653, label %label_1910, label %label_1913
+label_1910:
+%w95 = getelementptr [6 x i8], [6 x i8]* @.w95, i32 0, i32 0
+call void @print(i8* %w95)
+br label %label_1913
+label_1913:
+br label %label_1917
+label_1915:
+br label %label_1922
+label_1917:
+%t_655 = load i32, i32* %s0
+%t_654 = icmp ne i32 %t_655, 0
+br i1 %t_654, label %label_1925, label %label_1915
+br label %label_1922
+label_1922:
+%t_656 = icmp ne i32 0, 0
+%t_657 = zext i1 %t_656 to i32
+br label %label_1925
+label_1925:
+%t_658 = phi i32 [1, %label_1917], [%t_657, %label_1922]
+%t_659 = icmp ne i32 0, %t_658
+br i1 %t_659, label %label_1929, label %label_1932
+label_1929:
+%w96 = getelementptr [6 x i8], [6 x i8]* @.w96, i32 0, i32 0
+call void @print(i8* %w96)
+br label %label_1932
+label_1932:
+br label %label_1936
+label_1934:
+br label %label_1941
+label_1936:
+%t_661 = load i32, i32* %s0
+%t_660 = icmp ne i32 %t_661, 0
+br i1 %t_660, label %label_1945, label %label_1934
+br label %label_1941
+label_1941:
+%t_664 = load i32, i32* %s1
+%t_662 = icmp ne i32 %t_664, 0
+%t_663 = zext i1 %t_662 to i32
+br label %label_1945
+label_1945:
+%t_665 = phi i32 [1, %label_1936], [%t_663, %label_1941]
+%t_666 = icmp ne i32 0, %t_665
+br i1 %t_666, label %label_1949, label %label_1952
+label_1949:
+%w97 = getelementptr [6 x i8], [6 x i8]* @.w97, i32 0, i32 0
+call void @print(i8* %w97)
+br label %label_1952
+label_1952:
+br label %label_1957
+label_1954:
+%t_667 = icmp sgt i32 4, 5
+%t_668 = zext i1 %t_667 to i32
+br label %label_1962
+label_1957:
+%t_670 = load i32, i32* %s0
+%t_669 = icmp ne i32 %t_670, 0
+br i1 %t_669, label %label_1965, label %label_1954
+br label %label_1962
+label_1962:
+%t_671 = icmp ne i32 %t_668, 0
+%t_672 = zext i1 %t_671 to i32
+br label %label_1965
+label_1965:
+%t_673 = phi i32 [1, %label_1957], [%t_672, %label_1962]
+%t_674 = icmp ne i32 0, %t_673
+br i1 %t_674, label %label_1969, label %label_1972
+label_1969:
+%w98 = getelementptr [6 x i8], [6 x i8]* @.w98, i32 0, i32 0
+call void @print(i8* %w98)
+br label %label_1972
+label_1972:
+br label %label_1977
+label_1974:
+%t_675 = icmp ne i32 4, 4
+%t_676 = zext i1 %t_675 to i32
+br label %label_1982
+label_1977:
+%t_678 = load i32, i32* %s0
+%t_677 = icmp ne i32 %t_678, 0
+br i1 %t_677, label %label_1985, label %label_1974
+br label %label_1982
+label_1982:
+%t_679 = icmp ne i32 %t_676, 0
+%t_680 = zext i1 %t_679 to i32
+br label %label_1985
+label_1985:
+%t_681 = phi i32 [1, %label_1977], [%t_680, %label_1982]
+%t_682 = icmp ne i32 0, %t_681
+br i1 %t_682, label %label_1989, label %label_1992
+label_1989:
+%w99 = getelementptr [7 x i8], [7 x i8]* @.w99, i32 0, i32 0
+call void @print(i8* %w99)
+br label %label_1992
+label_1992:
+%t_683 = icmp slt i32 4, 5
+%t_684 = zext i1 %t_683 to i32
+br label %label_1998
+label_1995:
+%t_685 = call i32 @False()
+br label %label_2002
+label_1998:
+%t_686 = icmp ne i32 %t_684, 0
+br i1 %t_686, label %label_2005, label %label_1995
+br label %label_2002
+label_2002:
+%t_687 = icmp ne i32 %t_685, 0
+%t_688 = zext i1 %t_687 to i32
+br label %label_2005
+label_2005:
+%t_689 = phi i32 [1, %label_1998], [%t_688, %label_2002]
+%t_690 = icmp ne i32 0, %t_689
+br i1 %t_690, label %label_2009, label %label_2012
+label_2009:
+%w100 = getelementptr [7 x i8], [7 x i8]* @.w100, i32 0, i32 0
+call void @print(i8* %w100)
+br label %label_2012
+label_2012:
+%t_691 = icmp slt i32 4, 5
+%t_692 = zext i1 %t_691 to i32
+br label %label_2017
+label_2015:
+br label %label_2021
+label_2017:
+%t_693 = icmp ne i32 %t_692, 0
+br i1 %t_693, label %label_2024, label %label_2015
+br label %label_2021
+label_2021:
+%t_694 = icmp ne i32 0, 0
+%t_695 = zext i1 %t_694 to i32
+br label %label_2024
+label_2024:
+%t_696 = phi i32 [1, %label_2017], [%t_695, %label_2021]
+%t_697 = icmp ne i32 0, %t_696
+br i1 %t_697, label %label_2028, label %label_2031
+label_2028:
+%w101 = getelementptr [7 x i8], [7 x i8]* @.w101, i32 0, i32 0
+call void @print(i8* %w101)
+br label %label_2031
+label_2031:
+%t_698 = icmp slt i32 4, 5
+%t_699 = zext i1 %t_698 to i32
+br label %label_2036
+label_2034:
+br label %label_2040
+label_2036:
+%t_700 = icmp ne i32 %t_699, 0
+br i1 %t_700, label %label_2044, label %label_2034
+br label %label_2040
+label_2040:
+%t_703 = load i32, i32* %s1
+%t_701 = icmp ne i32 %t_703, 0
+%t_702 = zext i1 %t_701 to i32
+br label %label_2044
+label_2044:
+%t_704 = phi i32 [1, %label_2036], [%t_702, %label_2040]
+%t_705 = icmp ne i32 0, %t_704
+br i1 %t_705, label %label_2048, label %label_2051
+label_2048:
+%w102 = getelementptr [7 x i8], [7 x i8]* @.w102, i32 0, i32 0
+call void @print(i8* %w102)
+br label %label_2051
+label_2051:
+%t_706 = icmp slt i32 4, 5
+%t_707 = zext i1 %t_706 to i32
+br label %label_2057
+label_2054:
+%t_708 = icmp sgt i32 4, 5
+%t_709 = zext i1 %t_708 to i32
+br label %label_2061
+label_2057:
+%t_710 = icmp ne i32 %t_707, 0
+br i1 %t_710, label %label_2064, label %label_2054
+br label %label_2061
+label_2061:
+%t_711 = icmp ne i32 %t_709, 0
+%t_712 = zext i1 %t_711 to i32
+br label %label_2064
+label_2064:
+%t_713 = phi i32 [1, %label_2057], [%t_712, %label_2061]
+%t_714 = icmp ne i32 0, %t_713
+br i1 %t_714, label %label_2068, label %label_2071
+label_2068:
+%w103 = getelementptr [7 x i8], [7 x i8]* @.w103, i32 0, i32 0
+call void @print(i8* %w103)
+br label %label_2071
+label_2071:
+%t_715 = icmp slt i32 4, 5
+%t_716 = zext i1 %t_715 to i32
+br label %label_2077
+label_2074:
+%t_717 = icmp ne i32 4, 4
+%t_718 = zext i1 %t_717 to i32
+br label %label_2081
+label_2077:
+%t_719 = icmp ne i32 %t_716, 0
+br i1 %t_719, label %label_2084, label %label_2074
+br label %label_2081
+label_2081:
+%t_720 = icmp ne i32 %t_718, 0
+%t_721 = zext i1 %t_720 to i32
+br label %label_2084
+label_2084:
+%t_722 = phi i32 [1, %label_2077], [%t_721, %label_2081]
+%t_723 = icmp ne i32 0, %t_722
+br i1 %t_723, label %label_2088, label %label_2091
+label_2088:
+%w104 = getelementptr [7 x i8], [7 x i8]* @.w104, i32 0, i32 0
+call void @print(i8* %w104)
+br label %label_2091
+label_2091:
+%t_724 = icmp eq i32 4, 4
+%t_725 = zext i1 %t_724 to i32
+br label %label_2097
+label_2094:
+%t_726 = call i32 @False()
+br label %label_2101
+label_2097:
+%t_727 = icmp ne i32 %t_725, 0
+br i1 %t_727, label %label_2104, label %label_2094
+br label %label_2101
+label_2101:
+%t_728 = icmp ne i32 %t_726, 0
+%t_729 = zext i1 %t_728 to i32
+br label %label_2104
+label_2104:
+%t_730 = phi i32 [1, %label_2097], [%t_729, %label_2101]
+%t_731 = icmp ne i32 0, %t_730
+br i1 %t_731, label %label_2108, label %label_2111
+label_2108:
+%w105 = getelementptr [7 x i8], [7 x i8]* @.w105, i32 0, i32 0
+call void @print(i8* %w105)
+br label %label_2111
+label_2111:
+%t_732 = icmp eq i32 4, 4
+%t_733 = zext i1 %t_732 to i32
+br label %label_2116
+label_2114:
+br label %label_2120
+label_2116:
+%t_734 = icmp ne i32 %t_733, 0
+br i1 %t_734, label %label_2123, label %label_2114
+br label %label_2120
+label_2120:
+%t_735 = icmp ne i32 0, 0
+%t_736 = zext i1 %t_735 to i32
+br label %label_2123
+label_2123:
+%t_737 = phi i32 [1, %label_2116], [%t_736, %label_2120]
+%t_738 = icmp ne i32 0, %t_737
+br i1 %t_738, label %label_2127, label %label_2130
+label_2127:
+%w106 = getelementptr [7 x i8], [7 x i8]* @.w106, i32 0, i32 0
+call void @print(i8* %w106)
+br label %label_2130
+label_2130:
+%t_739 = icmp eq i32 4, 4
+%t_740 = zext i1 %t_739 to i32
+br label %label_2135
+label_2133:
+br label %label_2139
+label_2135:
+%t_741 = icmp ne i32 %t_740, 0
+br i1 %t_741, label %label_2143, label %label_2133
+br label %label_2139
+label_2139:
+%t_744 = load i32, i32* %s1
+%t_742 = icmp ne i32 %t_744, 0
+%t_743 = zext i1 %t_742 to i32
+br label %label_2143
+label_2143:
+%t_745 = phi i32 [1, %label_2135], [%t_743, %label_2139]
+%t_746 = icmp ne i32 0, %t_745
+br i1 %t_746, label %label_2147, label %label_2150
+label_2147:
+%w107 = getelementptr [7 x i8], [7 x i8]* @.w107, i32 0, i32 0
+call void @print(i8* %w107)
+br label %label_2150
+label_2150:
+%t_747 = icmp eq i32 4, 4
+%t_748 = zext i1 %t_747 to i32
+br label %label_2156
+label_2153:
+%t_749 = icmp sgt i32 4, 5
+%t_750 = zext i1 %t_749 to i32
+br label %label_2160
+label_2156:
+%t_751 = icmp ne i32 %t_748, 0
+br i1 %t_751, label %label_2163, label %label_2153
+br label %label_2160
+label_2160:
+%t_752 = icmp ne i32 %t_750, 0
+%t_753 = zext i1 %t_752 to i32
+br label %label_2163
+label_2163:
+%t_754 = phi i32 [1, %label_2156], [%t_753, %label_2160]
+%t_755 = icmp ne i32 0, %t_754
+br i1 %t_755, label %label_2167, label %label_2170
+label_2167:
+%w108 = getelementptr [7 x i8], [7 x i8]* @.w108, i32 0, i32 0
+call void @print(i8* %w108)
+br label %label_2170
+label_2170:
+%t_756 = icmp eq i32 4, 4
+%t_757 = zext i1 %t_756 to i32
+br label %label_2176
+label_2173:
+%t_758 = icmp ne i32 4, 4
+%t_759 = zext i1 %t_758 to i32
+br label %label_2180
+label_2176:
+%t_760 = icmp ne i32 %t_757, 0
+br i1 %t_760, label %label_2183, label %label_2173
+br label %label_2180
+label_2180:
+%t_761 = icmp ne i32 %t_759, 0
+%t_762 = zext i1 %t_761 to i32
+br label %label_2183
+label_2183:
+%t_763 = phi i32 [1, %label_2176], [%t_762, %label_2180]
+%t_764 = icmp ne i32 0, %t_763
+br i1 %t_764, label %label_2187, label %label_2190
+label_2187:
+%w109 = getelementptr [7 x i8], [7 x i8]* @.w109, i32 0, i32 0
+call void @print(i8* %w109)
+br label %label_2190
+label_2190:
+%t_765 = call i32 @False()
+br label %label_2196
+label_2193:
+%t_766 = call i32 @False()
+br label %label_2200
+label_2196:
+%t_767 = icmp ne i32 %t_765, 0
+br i1 %t_767, label %label_2203, label %label_2193
+br label %label_2200
+label_2200:
+%t_768 = icmp ne i32 %t_766, 0
+%t_769 = zext i1 %t_768 to i32
+br label %label_2203
+label_2203:
+%t_770 = phi i32 [1, %label_2196], [%t_769, %label_2200]
+%t_771 = icmp ne i32 0, %t_770
+br i1 %t_771, label %label_2207, label %label_2210
+label_2207:
+%w110 = getelementptr [7 x i8], [7 x i8]* @.w110, i32 0, i32 0
+call void @print(i8* %w110)
+br label %label_2210
+label_2210:
+%t_772 = call i32 @False()
+br label %label_2215
+label_2213:
+br label %label_2219
+label_2215:
+%t_773 = icmp ne i32 %t_772, 0
+br i1 %t_773, label %label_2222, label %label_2213
+br label %label_2219
+label_2219:
+%t_774 = icmp ne i32 0, 0
+%t_775 = zext i1 %t_774 to i32
+br label %label_2222
+label_2222:
+%t_776 = phi i32 [1, %label_2215], [%t_775, %label_2219]
+%t_777 = icmp ne i32 0, %t_776
+br i1 %t_777, label %label_2226, label %label_2229
+label_2226:
+%w111 = getelementptr [7 x i8], [7 x i8]* @.w111, i32 0, i32 0
+call void @print(i8* %w111)
+br label %label_2229
+label_2229:
+%t_778 = call i32 @False()
+br label %label_2234
+label_2232:
+br label %label_2238
+label_2234:
+%t_779 = icmp ne i32 %t_778, 0
+br i1 %t_779, label %label_2242, label %label_2232
+br label %label_2238
+label_2238:
+%t_782 = load i32, i32* %s1
+%t_780 = icmp ne i32 %t_782, 0
+%t_781 = zext i1 %t_780 to i32
+br label %label_2242
+label_2242:
+%t_783 = phi i32 [1, %label_2234], [%t_781, %label_2238]
+%t_784 = icmp ne i32 0, %t_783
+br i1 %t_784, label %label_2246, label %label_2249
+label_2246:
+%w112 = getelementptr [7 x i8], [7 x i8]* @.w112, i32 0, i32 0
+call void @print(i8* %w112)
+br label %label_2249
+label_2249:
+%t_785 = call i32 @False()
+br label %label_2255
+label_2252:
+%t_786 = icmp sgt i32 4, 5
+%t_787 = zext i1 %t_786 to i32
+br label %label_2259
+label_2255:
+%t_788 = icmp ne i32 %t_785, 0
+br i1 %t_788, label %label_2262, label %label_2252
+br label %label_2259
+label_2259:
+%t_789 = icmp ne i32 %t_787, 0
+%t_790 = zext i1 %t_789 to i32
+br label %label_2262
+label_2262:
+%t_791 = phi i32 [1, %label_2255], [%t_790, %label_2259]
+%t_792 = icmp ne i32 0, %t_791
+br i1 %t_792, label %label_2266, label %label_2269
+label_2266:
+%w113 = getelementptr [7 x i8], [7 x i8]* @.w113, i32 0, i32 0
+call void @print(i8* %w113)
+br label %label_2269
+label_2269:
+%t_793 = call i32 @False()
+br label %label_2275
+label_2272:
+%t_794 = icmp ne i32 4, 4
+%t_795 = zext i1 %t_794 to i32
+br label %label_2279
+label_2275:
+%t_796 = icmp ne i32 %t_793, 0
+br i1 %t_796, label %label_2282, label %label_2272
+br label %label_2279
+label_2279:
+%t_797 = icmp ne i32 %t_795, 0
+%t_798 = zext i1 %t_797 to i32
+br label %label_2282
+label_2282:
+%t_799 = phi i32 [1, %label_2275], [%t_798, %label_2279]
+%t_800 = icmp ne i32 0, %t_799
+br i1 %t_800, label %label_2286, label %label_2289
+label_2286:
+%w114 = getelementptr [7 x i8], [7 x i8]* @.w114, i32 0, i32 0
+call void @print(i8* %w114)
+br label %label_2289
+label_2289:
+br label %label_2294
+label_2291:
+%t_801 = call i32 @False()
+br label %label_2298
+label_2294:
+%t_802 = icmp ne i32 0, 0
+br i1 %t_802, label %label_2301, label %label_2291
+br label %label_2298
+label_2298:
+%t_803 = icmp ne i32 %t_801, 0
+%t_804 = zext i1 %t_803 to i32
+br label %label_2301
+label_2301:
+%t_805 = phi i32 [1, %label_2294], [%t_804, %label_2298]
+%t_806 = icmp ne i32 0, %t_805
+br i1 %t_806, label %label_2305, label %label_2308
+label_2305:
+%w115 = getelementptr [7 x i8], [7 x i8]* @.w115, i32 0, i32 0
+call void @print(i8* %w115)
+br label %label_2308
+label_2308:
+br label %label_2312
+label_2310:
+br label %label_2316
+label_2312:
+%t_807 = icmp ne i32 0, 0
+br i1 %t_807, label %label_2319, label %label_2310
+br label %label_2316
+label_2316:
+%t_808 = icmp ne i32 0, 0
+%t_809 = zext i1 %t_808 to i32
+br label %label_2319
+label_2319:
+%t_810 = phi i32 [1, %label_2312], [%t_809, %label_2316]
+%t_811 = icmp ne i32 0, %t_810
+br i1 %t_811, label %label_2323, label %label_2326
+label_2323:
+%w116 = getelementptr [7 x i8], [7 x i8]* @.w116, i32 0, i32 0
+call void @print(i8* %w116)
+br label %label_2326
+label_2326:
+br label %label_2330
+label_2328:
+br label %label_2334
+label_2330:
+%t_812 = icmp ne i32 0, 0
+br i1 %t_812, label %label_2338, label %label_2328
+br label %label_2334
+label_2334:
+%t_815 = load i32, i32* %s1
+%t_813 = icmp ne i32 %t_815, 0
+%t_814 = zext i1 %t_813 to i32
+br label %label_2338
+label_2338:
+%t_816 = phi i32 [1, %label_2330], [%t_814, %label_2334]
+%t_817 = icmp ne i32 0, %t_816
+br i1 %t_817, label %label_2342, label %label_2345
+label_2342:
+%w117 = getelementptr [7 x i8], [7 x i8]* @.w117, i32 0, i32 0
+call void @print(i8* %w117)
+br label %label_2345
+label_2345:
+br label %label_2350
+label_2347:
+%t_818 = icmp sgt i32 4, 5
+%t_819 = zext i1 %t_818 to i32
+br label %label_2354
+label_2350:
+%t_820 = icmp ne i32 0, 0
+br i1 %t_820, label %label_2357, label %label_2347
+br label %label_2354
+label_2354:
+%t_821 = icmp ne i32 %t_819, 0
+%t_822 = zext i1 %t_821 to i32
+br label %label_2357
+label_2357:
+%t_823 = phi i32 [1, %label_2350], [%t_822, %label_2354]
+%t_824 = icmp ne i32 0, %t_823
+br i1 %t_824, label %label_2361, label %label_2364
+label_2361:
+%w118 = getelementptr [7 x i8], [7 x i8]* @.w118, i32 0, i32 0
+call void @print(i8* %w118)
+br label %label_2364
+label_2364:
+br label %label_2369
+label_2366:
+%t_825 = icmp ne i32 4, 4
+%t_826 = zext i1 %t_825 to i32
+br label %label_2373
+label_2369:
+%t_827 = icmp ne i32 0, 0
+br i1 %t_827, label %label_2376, label %label_2366
+br label %label_2373
+label_2373:
+%t_828 = icmp ne i32 %t_826, 0
+%t_829 = zext i1 %t_828 to i32
+br label %label_2376
+label_2376:
+%t_830 = phi i32 [1, %label_2369], [%t_829, %label_2373]
+%t_831 = icmp ne i32 0, %t_830
+br i1 %t_831, label %label_2380, label %label_2383
+label_2380:
+%w119 = getelementptr [7 x i8], [7 x i8]* @.w119, i32 0, i32 0
+call void @print(i8* %w119)
+br label %label_2383
+label_2383:
+br label %label_2388
+label_2385:
+%t_832 = call i32 @False()
+br label %label_2393
+label_2388:
+%t_834 = load i32, i32* %s1
+%t_833 = icmp ne i32 %t_834, 0
+br i1 %t_833, label %label_2396, label %label_2385
+br label %label_2393
+label_2393:
+%t_835 = icmp ne i32 %t_832, 0
+%t_836 = zext i1 %t_835 to i32
+br label %label_2396
+label_2396:
+%t_837 = phi i32 [1, %label_2388], [%t_836, %label_2393]
+%t_838 = icmp ne i32 0, %t_837
+br i1 %t_838, label %label_2400, label %label_2403
+label_2400:
+%w120 = getelementptr [7 x i8], [7 x i8]* @.w120, i32 0, i32 0
+call void @print(i8* %w120)
+br label %label_2403
+label_2403:
+br label %label_2407
+label_2405:
+br label %label_2412
+label_2407:
+%t_840 = load i32, i32* %s1
+%t_839 = icmp ne i32 %t_840, 0
+br i1 %t_839, label %label_2415, label %label_2405
+br label %label_2412
+label_2412:
+%t_841 = icmp ne i32 0, 0
+%t_842 = zext i1 %t_841 to i32
+br label %label_2415
+label_2415:
+%t_843 = phi i32 [1, %label_2407], [%t_842, %label_2412]
+%t_844 = icmp ne i32 0, %t_843
+br i1 %t_844, label %label_2419, label %label_2422
+label_2419:
+%w121 = getelementptr [7 x i8], [7 x i8]* @.w121, i32 0, i32 0
+call void @print(i8* %w121)
+br label %label_2422
+label_2422:
+br label %label_2426
+label_2424:
+br label %label_2431
+label_2426:
+%t_846 = load i32, i32* %s1
+%t_845 = icmp ne i32 %t_846, 0
+br i1 %t_845, label %label_2435, label %label_2424
+br label %label_2431
+label_2431:
+%t_849 = load i32, i32* %s1
+%t_847 = icmp ne i32 %t_849, 0
+%t_848 = zext i1 %t_847 to i32
+br label %label_2435
+label_2435:
+%t_850 = phi i32 [1, %label_2426], [%t_848, %label_2431]
+%t_851 = icmp ne i32 0, %t_850
+br i1 %t_851, label %label_2439, label %label_2442
+label_2439:
+%w122 = getelementptr [7 x i8], [7 x i8]* @.w122, i32 0, i32 0
+call void @print(i8* %w122)
+br label %label_2442
+label_2442:
+br label %label_2447
+label_2444:
+%t_852 = icmp sgt i32 4, 5
+%t_853 = zext i1 %t_852 to i32
+br label %label_2452
+label_2447:
+%t_855 = load i32, i32* %s1
+%t_854 = icmp ne i32 %t_855, 0
+br i1 %t_854, label %label_2455, label %label_2444
+br label %label_2452
+label_2452:
+%t_856 = icmp ne i32 %t_853, 0
+%t_857 = zext i1 %t_856 to i32
+br label %label_2455
+label_2455:
+%t_858 = phi i32 [1, %label_2447], [%t_857, %label_2452]
+%t_859 = icmp ne i32 0, %t_858
+br i1 %t_859, label %label_2459, label %label_2462
+label_2459:
+%w123 = getelementptr [7 x i8], [7 x i8]* @.w123, i32 0, i32 0
+call void @print(i8* %w123)
+br label %label_2462
+label_2462:
+br label %label_2467
+label_2464:
+%t_860 = icmp ne i32 4, 4
+%t_861 = zext i1 %t_860 to i32
+br label %label_2472
+label_2467:
+%t_863 = load i32, i32* %s1
+%t_862 = icmp ne i32 %t_863, 0
+br i1 %t_862, label %label_2475, label %label_2464
+br label %label_2472
+label_2472:
+%t_864 = icmp ne i32 %t_861, 0
+%t_865 = zext i1 %t_864 to i32
+br label %label_2475
+label_2475:
+%t_866 = phi i32 [1, %label_2467], [%t_865, %label_2472]
+%t_867 = icmp ne i32 0, %t_866
+br i1 %t_867, label %label_2479, label %label_2482
+label_2479:
+%w124 = getelementptr [7 x i8], [7 x i8]* @.w124, i32 0, i32 0
+call void @print(i8* %w124)
+br label %label_2482
+label_2482:
+%t_868 = icmp sgt i32 4, 5
+%t_869 = zext i1 %t_868 to i32
+br label %label_2488
+label_2485:
+%t_870 = call i32 @False()
+br label %label_2492
+label_2488:
+%t_871 = icmp ne i32 %t_869, 0
+br i1 %t_871, label %label_2495, label %label_2485
+br label %label_2492
+label_2492:
+%t_872 = icmp ne i32 %t_870, 0
+%t_873 = zext i1 %t_872 to i32
+br label %label_2495
+label_2495:
+%t_874 = phi i32 [1, %label_2488], [%t_873, %label_2492]
+%t_875 = icmp ne i32 0, %t_874
+br i1 %t_875, label %label_2499, label %label_2502
+label_2499:
+%w125 = getelementptr [7 x i8], [7 x i8]* @.w125, i32 0, i32 0
+call void @print(i8* %w125)
+br label %label_2502
+label_2502:
+%t_876 = icmp sgt i32 4, 5
+%t_877 = zext i1 %t_876 to i32
+br label %label_2507
+label_2505:
+br label %label_2511
+label_2507:
+%t_878 = icmp ne i32 %t_877, 0
+br i1 %t_878, label %label_2514, label %label_2505
+br label %label_2511
+label_2511:
+%t_879 = icmp ne i32 0, 0
+%t_880 = zext i1 %t_879 to i32
+br label %label_2514
+label_2514:
+%t_881 = phi i32 [1, %label_2507], [%t_880, %label_2511]
+%t_882 = icmp ne i32 0, %t_881
+br i1 %t_882, label %label_2518, label %label_2521
+label_2518:
+%w126 = getelementptr [7 x i8], [7 x i8]* @.w126, i32 0, i32 0
+call void @print(i8* %w126)
+br label %label_2521
+label_2521:
+%t_883 = icmp sgt i32 4, 5
+%t_884 = zext i1 %t_883 to i32
+br label %label_2526
+label_2524:
+br label %label_2530
+label_2526:
+%t_885 = icmp ne i32 %t_884, 0
+br i1 %t_885, label %label_2534, label %label_2524
+br label %label_2530
+label_2530:
+%t_888 = load i32, i32* %s1
+%t_886 = icmp ne i32 %t_888, 0
+%t_887 = zext i1 %t_886 to i32
+br label %label_2534
+label_2534:
+%t_889 = phi i32 [1, %label_2526], [%t_887, %label_2530]
+%t_890 = icmp ne i32 0, %t_889
+br i1 %t_890, label %label_2538, label %label_2541
+label_2538:
+%w127 = getelementptr [7 x i8], [7 x i8]* @.w127, i32 0, i32 0
+call void @print(i8* %w127)
+br label %label_2541
+label_2541:
+%t_891 = icmp sgt i32 4, 5
+%t_892 = zext i1 %t_891 to i32
+br label %label_2547
+label_2544:
+%t_893 = icmp sgt i32 4, 5
+%t_894 = zext i1 %t_893 to i32
+br label %label_2551
+label_2547:
+%t_895 = icmp ne i32 %t_892, 0
+br i1 %t_895, label %label_2554, label %label_2544
+br label %label_2551
+label_2551:
+%t_896 = icmp ne i32 %t_894, 0
+%t_897 = zext i1 %t_896 to i32
+br label %label_2554
+label_2554:
+%t_898 = phi i32 [1, %label_2547], [%t_897, %label_2551]
+%t_899 = icmp ne i32 0, %t_898
+br i1 %t_899, label %label_2558, label %label_2561
+label_2558:
+%w128 = getelementptr [7 x i8], [7 x i8]* @.w128, i32 0, i32 0
+call void @print(i8* %w128)
+br label %label_2561
+label_2561:
+%t_900 = icmp sgt i32 4, 5
+%t_901 = zext i1 %t_900 to i32
+br label %label_2567
+label_2564:
+%t_902 = icmp ne i32 4, 4
+%t_903 = zext i1 %t_902 to i32
+br label %label_2571
+label_2567:
+%t_904 = icmp ne i32 %t_901, 0
+br i1 %t_904, label %label_2574, label %label_2564
+br label %label_2571
+label_2571:
+%t_905 = icmp ne i32 %t_903, 0
+%t_906 = zext i1 %t_905 to i32
+br label %label_2574
+label_2574:
+%t_907 = phi i32 [1, %label_2567], [%t_906, %label_2571]
+%t_908 = icmp ne i32 0, %t_907
+br i1 %t_908, label %label_2578, label %label_2581
+label_2578:
+%w129 = getelementptr [7 x i8], [7 x i8]* @.w129, i32 0, i32 0
+call void @print(i8* %w129)
+br label %label_2581
+label_2581:
+%t_909 = icmp ne i32 4, 4
+%t_910 = zext i1 %t_909 to i32
+br label %label_2587
+label_2584:
+%t_911 = call i32 @False()
+br label %label_2591
+label_2587:
+%t_912 = icmp ne i32 %t_910, 0
+br i1 %t_912, label %label_2594, label %label_2584
+br label %label_2591
+label_2591:
+%t_913 = icmp ne i32 %t_911, 0
+%t_914 = zext i1 %t_913 to i32
+br label %label_2594
+label_2594:
+%t_915 = phi i32 [1, %label_2587], [%t_914, %label_2591]
+%t_916 = icmp ne i32 0, %t_915
+br i1 %t_916, label %label_2598, label %label_2601
+label_2598:
+%w130 = getelementptr [7 x i8], [7 x i8]* @.w130, i32 0, i32 0
+call void @print(i8* %w130)
+br label %label_2601
+label_2601:
+%t_917 = icmp ne i32 4, 4
+%t_918 = zext i1 %t_917 to i32
+br label %label_2606
+label_2604:
+br label %label_2610
+label_2606:
+%t_919 = icmp ne i32 %t_918, 0
+br i1 %t_919, label %label_2613, label %label_2604
+br label %label_2610
+label_2610:
+%t_920 = icmp ne i32 0, 0
+%t_921 = zext i1 %t_920 to i32
+br label %label_2613
+label_2613:
+%t_922 = phi i32 [1, %label_2606], [%t_921, %label_2610]
+%t_923 = icmp ne i32 0, %t_922
+br i1 %t_923, label %label_2617, label %label_2620
+label_2617:
+%w131 = getelementptr [7 x i8], [7 x i8]* @.w131, i32 0, i32 0
+call void @print(i8* %w131)
+br label %label_2620
+label_2620:
+%t_924 = icmp ne i32 4, 4
+%t_925 = zext i1 %t_924 to i32
+br label %label_2625
+label_2623:
+br label %label_2629
+label_2625:
+%t_926 = icmp ne i32 %t_925, 0
+br i1 %t_926, label %label_2633, label %label_2623
+br label %label_2629
+label_2629:
+%t_929 = load i32, i32* %s1
+%t_927 = icmp ne i32 %t_929, 0
+%t_928 = zext i1 %t_927 to i32
+br label %label_2633
+label_2633:
+%t_930 = phi i32 [1, %label_2625], [%t_928, %label_2629]
+%t_931 = icmp ne i32 0, %t_930
+br i1 %t_931, label %label_2637, label %label_2640
+label_2637:
+%w132 = getelementptr [7 x i8], [7 x i8]* @.w132, i32 0, i32 0
+call void @print(i8* %w132)
+br label %label_2640
+label_2640:
+%t_932 = icmp ne i32 4, 4
+%t_933 = zext i1 %t_932 to i32
+br label %label_2646
+label_2643:
+%t_934 = icmp sgt i32 4, 5
+%t_935 = zext i1 %t_934 to i32
+br label %label_2650
+label_2646:
+%t_936 = icmp ne i32 %t_933, 0
+br i1 %t_936, label %label_2653, label %label_2643
+br label %label_2650
+label_2650:
+%t_937 = icmp ne i32 %t_935, 0
+%t_938 = zext i1 %t_937 to i32
+br label %label_2653
+label_2653:
+%t_939 = phi i32 [1, %label_2646], [%t_938, %label_2650]
+%t_940 = icmp ne i32 0, %t_939
+br i1 %t_940, label %label_2657, label %label_2660
+label_2657:
+%w133 = getelementptr [7 x i8], [7 x i8]* @.w133, i32 0, i32 0
+call void @print(i8* %w133)
+br label %label_2660
+label_2660:
+%t_941 = icmp ne i32 4, 4
+%t_942 = zext i1 %t_941 to i32
+br label %label_2666
+label_2663:
+%t_943 = icmp ne i32 4, 4
+%t_944 = zext i1 %t_943 to i32
+br label %label_2670
+label_2666:
+%t_945 = icmp ne i32 %t_942, 0
+br i1 %t_945, label %label_2673, label %label_2663
+br label %label_2670
+label_2670:
+%t_946 = icmp ne i32 %t_944, 0
+%t_947 = zext i1 %t_946 to i32
+br label %label_2673
+label_2673:
+%t_948 = phi i32 [1, %label_2666], [%t_947, %label_2670]
+%t_949 = icmp ne i32 0, %t_948
+br i1 %t_949, label %label_2677, label %label_2680
+label_2677:
+%w134 = getelementptr [7 x i8], [7 x i8]* @.w134, i32 0, i32 0
+call void @print(i8* %w134)
+br label %label_2680
+label_2680:
+%t_950 = call i32 @False()
+br label %label_2686
+label_2683:
+%t_951 = call i32 @False()
+br label %label_2690
+label_2686:
+%t_952 = icmp ne i32 %t_950, 0
+br i1 %t_952, label %label_2693, label %label_2683
+br label %label_2690
+label_2690:
+%t_953 = icmp ne i32 %t_951, 0
+%t_954 = zext i1 %t_953 to i32
+br label %label_2693
+label_2693:
+%t_955 = phi i32 [1, %label_2686], [%t_954, %label_2690]
+%t_956 = icmp ne i32 0, %t_955
+br i1 %t_956, label %label_2697, label %label_2700
+label_2697:
+%w135 = getelementptr [7 x i8], [7 x i8]* @.w135, i32 0, i32 0
+call void @print(i8* %w135)
+br label %label_2700
+label_2700:
+%t_957 = call i32 @False()
+br label %label_2705
+label_2703:
+br label %label_2709
+label_2705:
+%t_958 = icmp ne i32 %t_957, 0
+br i1 %t_958, label %label_2712, label %label_2703
+br label %label_2709
+label_2709:
+%t_959 = icmp ne i32 0, 0
+%t_960 = zext i1 %t_959 to i32
+br label %label_2712
+label_2712:
+%t_961 = phi i32 [1, %label_2705], [%t_960, %label_2709]
+%t_962 = icmp ne i32 0, %t_961
+br i1 %t_962, label %label_2716, label %label_2719
+label_2716:
+%w136 = getelementptr [7 x i8], [7 x i8]* @.w136, i32 0, i32 0
+call void @print(i8* %w136)
+br label %label_2719
+label_2719:
+%t_963 = call i32 @False()
+br label %label_2724
+label_2722:
+br label %label_2728
+label_2724:
+%t_964 = icmp ne i32 %t_963, 0
+br i1 %t_964, label %label_2732, label %label_2722
+br label %label_2728
+label_2728:
+%t_967 = load i32, i32* %s1
+%t_965 = icmp ne i32 %t_967, 0
+%t_966 = zext i1 %t_965 to i32
+br label %label_2732
+label_2732:
+%t_968 = phi i32 [1, %label_2724], [%t_966, %label_2728]
+%t_969 = icmp ne i32 0, %t_968
+br i1 %t_969, label %label_2736, label %label_2739
+label_2736:
+%w137 = getelementptr [7 x i8], [7 x i8]* @.w137, i32 0, i32 0
+call void @print(i8* %w137)
+br label %label_2739
+label_2739:
+%t_970 = call i32 @False()
+br label %label_2745
+label_2742:
+%t_971 = icmp sgt i32 4, 5
+%t_972 = zext i1 %t_971 to i32
+br label %label_2749
+label_2745:
+%t_973 = icmp ne i32 %t_970, 0
+br i1 %t_973, label %label_2752, label %label_2742
+br label %label_2749
+label_2749:
+%t_974 = icmp ne i32 %t_972, 0
+%t_975 = zext i1 %t_974 to i32
+br label %label_2752
+label_2752:
+%t_976 = phi i32 [1, %label_2745], [%t_975, %label_2749]
+%t_977 = icmp ne i32 0, %t_976
+br i1 %t_977, label %label_2756, label %label_2759
+label_2756:
+%w138 = getelementptr [7 x i8], [7 x i8]* @.w138, i32 0, i32 0
+call void @print(i8* %w138)
+br label %label_2759
+label_2759:
+%t_978 = call i32 @False()
+br label %label_2765
+label_2762:
+%t_979 = icmp ne i32 4, 4
+%t_980 = zext i1 %t_979 to i32
+br label %label_2769
+label_2765:
+%t_981 = icmp ne i32 %t_978, 0
+br i1 %t_981, label %label_2772, label %label_2762
+br label %label_2769
+label_2769:
+%t_982 = icmp ne i32 %t_980, 0
+%t_983 = zext i1 %t_982 to i32
+br label %label_2772
+label_2772:
+%t_984 = phi i32 [1, %label_2765], [%t_983, %label_2769]
+%t_985 = icmp ne i32 0, %t_984
+br i1 %t_985, label %label_2776, label %label_2779
+label_2776:
+%w139 = getelementptr [7 x i8], [7 x i8]* @.w139, i32 0, i32 0
+call void @print(i8* %w139)
+br label %label_2779
+label_2779:
+br label %label_2784
+label_2781:
+%t_986 = call i32 @False()
+br label %label_2788
+label_2784:
+%t_987 = icmp ne i32 0, 0
+br i1 %t_987, label %label_2791, label %label_2781
+br label %label_2788
+label_2788:
+%t_988 = icmp ne i32 %t_986, 0
+%t_989 = zext i1 %t_988 to i32
+br label %label_2791
+label_2791:
+%t_990 = phi i32 [1, %label_2784], [%t_989, %label_2788]
+%t_991 = icmp ne i32 0, %t_990
+br i1 %t_991, label %label_2795, label %label_2798
+label_2795:
+%w140 = getelementptr [7 x i8], [7 x i8]* @.w140, i32 0, i32 0
+call void @print(i8* %w140)
+br label %label_2798
+label_2798:
+br label %label_2802
+label_2800:
+br label %label_2806
+label_2802:
+%t_992 = icmp ne i32 0, 0
+br i1 %t_992, label %label_2809, label %label_2800
+br label %label_2806
+label_2806:
+%t_993 = icmp ne i32 0, 0
+%t_994 = zext i1 %t_993 to i32
+br label %label_2809
+label_2809:
+%t_995 = phi i32 [1, %label_2802], [%t_994, %label_2806]
+%t_996 = icmp ne i32 0, %t_995
+br i1 %t_996, label %label_2813, label %label_2816
+label_2813:
+%w141 = getelementptr [7 x i8], [7 x i8]* @.w141, i32 0, i32 0
+call void @print(i8* %w141)
+br label %label_2816
+label_2816:
+br label %label_2820
+label_2818:
+br label %label_2824
+label_2820:
+%t_997 = icmp ne i32 0, 0
+br i1 %t_997, label %label_2828, label %label_2818
+br label %label_2824
+label_2824:
+%t_1000 = load i32, i32* %s1
+%t_998 = icmp ne i32 %t_1000, 0
+%t_999 = zext i1 %t_998 to i32
+br label %label_2828
+label_2828:
+%t_1001 = phi i32 [1, %label_2820], [%t_999, %label_2824]
+%t_1002 = icmp ne i32 0, %t_1001
+br i1 %t_1002, label %label_2832, label %label_2835
+label_2832:
+%w142 = getelementptr [7 x i8], [7 x i8]* @.w142, i32 0, i32 0
+call void @print(i8* %w142)
+br label %label_2835
+label_2835:
+br label %label_2840
+label_2837:
+%t_1003 = icmp sgt i32 4, 5
+%t_1004 = zext i1 %t_1003 to i32
+br label %label_2844
+label_2840:
+%t_1005 = icmp ne i32 0, 0
+br i1 %t_1005, label %label_2847, label %label_2837
+br label %label_2844
+label_2844:
+%t_1006 = icmp ne i32 %t_1004, 0
+%t_1007 = zext i1 %t_1006 to i32
+br label %label_2847
+label_2847:
+%t_1008 = phi i32 [1, %label_2840], [%t_1007, %label_2844]
+%t_1009 = icmp ne i32 0, %t_1008
+br i1 %t_1009, label %label_2851, label %label_2854
+label_2851:
+%w143 = getelementptr [7 x i8], [7 x i8]* @.w143, i32 0, i32 0
+call void @print(i8* %w143)
+br label %label_2854
+label_2854:
+br label %label_2859
+label_2856:
+%t_1010 = icmp ne i32 4, 4
+%t_1011 = zext i1 %t_1010 to i32
+br label %label_2863
+label_2859:
+%t_1012 = icmp ne i32 0, 0
+br i1 %t_1012, label %label_2866, label %label_2856
+br label %label_2863
+label_2863:
+%t_1013 = icmp ne i32 %t_1011, 0
+%t_1014 = zext i1 %t_1013 to i32
+br label %label_2866
+label_2866:
+%t_1015 = phi i32 [1, %label_2859], [%t_1014, %label_2863]
+%t_1016 = icmp ne i32 0, %t_1015
+br i1 %t_1016, label %label_2870, label %label_2873
+label_2870:
+%w144 = getelementptr [7 x i8], [7 x i8]* @.w144, i32 0, i32 0
+call void @print(i8* %w144)
+br label %label_2873
+label_2873:
+br label %label_2878
+label_2875:
+%t_1017 = call i32 @False()
+br label %label_2883
+label_2878:
+%t_1019 = load i32, i32* %s1
+%t_1018 = icmp ne i32 %t_1019, 0
+br i1 %t_1018, label %label_2886, label %label_2875
+br label %label_2883
+label_2883:
+%t_1020 = icmp ne i32 %t_1017, 0
+%t_1021 = zext i1 %t_1020 to i32
+br label %label_2886
+label_2886:
+%t_1022 = phi i32 [1, %label_2878], [%t_1021, %label_2883]
+%t_1023 = icmp ne i32 0, %t_1022
+br i1 %t_1023, label %label_2890, label %label_2893
+label_2890:
+%w145 = getelementptr [7 x i8], [7 x i8]* @.w145, i32 0, i32 0
+call void @print(i8* %w145)
+br label %label_2893
+label_2893:
+br label %label_2897
+label_2895:
+br label %label_2902
+label_2897:
+%t_1025 = load i32, i32* %s1
+%t_1024 = icmp ne i32 %t_1025, 0
+br i1 %t_1024, label %label_2905, label %label_2895
+br label %label_2902
+label_2902:
+%t_1026 = icmp ne i32 0, 0
+%t_1027 = zext i1 %t_1026 to i32
+br label %label_2905
+label_2905:
+%t_1028 = phi i32 [1, %label_2897], [%t_1027, %label_2902]
+%t_1029 = icmp ne i32 0, %t_1028
+br i1 %t_1029, label %label_2909, label %label_2912
+label_2909:
+%w146 = getelementptr [7 x i8], [7 x i8]* @.w146, i32 0, i32 0
+call void @print(i8* %w146)
+br label %label_2912
+label_2912:
+br label %label_2916
+label_2914:
+br label %label_2921
+label_2916:
+%t_1031 = load i32, i32* %s1
+%t_1030 = icmp ne i32 %t_1031, 0
+br i1 %t_1030, label %label_2925, label %label_2914
+br label %label_2921
+label_2921:
+%t_1034 = load i32, i32* %s1
+%t_1032 = icmp ne i32 %t_1034, 0
+%t_1033 = zext i1 %t_1032 to i32
+br label %label_2925
+label_2925:
+%t_1035 = phi i32 [1, %label_2916], [%t_1033, %label_2921]
+%t_1036 = icmp ne i32 0, %t_1035
+br i1 %t_1036, label %label_2929, label %label_2932
+label_2929:
+%w147 = getelementptr [7 x i8], [7 x i8]* @.w147, i32 0, i32 0
+call void @print(i8* %w147)
+br label %label_2932
+label_2932:
+br label %label_2937
+label_2934:
+%t_1037 = icmp sgt i32 4, 5
+%t_1038 = zext i1 %t_1037 to i32
+br label %label_2942
+label_2937:
+%t_1040 = load i32, i32* %s1
+%t_1039 = icmp ne i32 %t_1040, 0
+br i1 %t_1039, label %label_2945, label %label_2934
+br label %label_2942
+label_2942:
+%t_1041 = icmp ne i32 %t_1038, 0
+%t_1042 = zext i1 %t_1041 to i32
+br label %label_2945
+label_2945:
+%t_1043 = phi i32 [1, %label_2937], [%t_1042, %label_2942]
+%t_1044 = icmp ne i32 0, %t_1043
+br i1 %t_1044, label %label_2949, label %label_2952
+label_2949:
+%w148 = getelementptr [7 x i8], [7 x i8]* @.w148, i32 0, i32 0
+call void @print(i8* %w148)
+br label %label_2952
+label_2952:
+br label %label_2957
+label_2954:
+%t_1045 = icmp ne i32 4, 4
+%t_1046 = zext i1 %t_1045 to i32
+br label %label_2962
+label_2957:
+%t_1048 = load i32, i32* %s1
+%t_1047 = icmp ne i32 %t_1048, 0
+br i1 %t_1047, label %label_2965, label %label_2954
+br label %label_2962
+label_2962:
+%t_1049 = icmp ne i32 %t_1046, 0
+%t_1050 = zext i1 %t_1049 to i32
+br label %label_2965
+label_2965:
+%t_1051 = phi i32 [1, %label_2957], [%t_1050, %label_2962]
+%t_1052 = icmp ne i32 0, %t_1051
+br i1 %t_1052, label %label_2969, label %label_2972
+label_2969:
+%w149 = getelementptr [7 x i8], [7 x i8]* @.w149, i32 0, i32 0
+call void @print(i8* %w149)
+br label %label_2972
+label_2972:
+%t_1053 = icmp sgt i32 4, 5
+%t_1054 = zext i1 %t_1053 to i32
+br label %label_2978
+label_2975:
+%t_1055 = call i32 @False()
+br label %label_2982
+label_2978:
+%t_1056 = icmp ne i32 %t_1054, 0
+br i1 %t_1056, label %label_2985, label %label_2975
+br label %label_2982
+label_2982:
+%t_1057 = icmp ne i32 %t_1055, 0
+%t_1058 = zext i1 %t_1057 to i32
+br label %label_2985
+label_2985:
+%t_1059 = phi i32 [1, %label_2978], [%t_1058, %label_2982]
+%t_1060 = icmp ne i32 0, %t_1059
+br i1 %t_1060, label %label_2989, label %label_2992
+label_2989:
+%w150 = getelementptr [7 x i8], [7 x i8]* @.w150, i32 0, i32 0
+call void @print(i8* %w150)
+br label %label_2992
+label_2992:
+%t_1061 = icmp sgt i32 4, 5
+%t_1062 = zext i1 %t_1061 to i32
+br label %label_2997
+label_2995:
+br label %label_3001
+label_2997:
+%t_1063 = icmp ne i32 %t_1062, 0
+br i1 %t_1063, label %label_3004, label %label_2995
+br label %label_3001
+label_3001:
+%t_1064 = icmp ne i32 0, 0
+%t_1065 = zext i1 %t_1064 to i32
+br label %label_3004
+label_3004:
+%t_1066 = phi i32 [1, %label_2997], [%t_1065, %label_3001]
+%t_1067 = icmp ne i32 0, %t_1066
+br i1 %t_1067, label %label_3008, label %label_3011
+label_3008:
+%w151 = getelementptr [7 x i8], [7 x i8]* @.w151, i32 0, i32 0
+call void @print(i8* %w151)
+br label %label_3011
+label_3011:
+%t_1068 = icmp sgt i32 4, 5
+%t_1069 = zext i1 %t_1068 to i32
+br label %label_3016
+label_3014:
+br label %label_3020
+label_3016:
+%t_1070 = icmp ne i32 %t_1069, 0
+br i1 %t_1070, label %label_3024, label %label_3014
+br label %label_3020
+label_3020:
+%t_1073 = load i32, i32* %s1
+%t_1071 = icmp ne i32 %t_1073, 0
+%t_1072 = zext i1 %t_1071 to i32
+br label %label_3024
+label_3024:
+%t_1074 = phi i32 [1, %label_3016], [%t_1072, %label_3020]
+%t_1075 = icmp ne i32 0, %t_1074
+br i1 %t_1075, label %label_3028, label %label_3031
+label_3028:
+%w152 = getelementptr [7 x i8], [7 x i8]* @.w152, i32 0, i32 0
+call void @print(i8* %w152)
+br label %label_3031
+label_3031:
+%t_1076 = icmp sgt i32 4, 5
+%t_1077 = zext i1 %t_1076 to i32
+br label %label_3037
+label_3034:
+%t_1078 = icmp sgt i32 4, 5
+%t_1079 = zext i1 %t_1078 to i32
+br label %label_3041
+label_3037:
+%t_1080 = icmp ne i32 %t_1077, 0
+br i1 %t_1080, label %label_3044, label %label_3034
+br label %label_3041
+label_3041:
+%t_1081 = icmp ne i32 %t_1079, 0
+%t_1082 = zext i1 %t_1081 to i32
+br label %label_3044
+label_3044:
+%t_1083 = phi i32 [1, %label_3037], [%t_1082, %label_3041]
+%t_1084 = icmp ne i32 0, %t_1083
+br i1 %t_1084, label %label_3048, label %label_3051
+label_3048:
+%w153 = getelementptr [7 x i8], [7 x i8]* @.w153, i32 0, i32 0
+call void @print(i8* %w153)
+br label %label_3051
+label_3051:
+%t_1085 = icmp sgt i32 4, 5
+%t_1086 = zext i1 %t_1085 to i32
+br label %label_3057
+label_3054:
+%t_1087 = icmp ne i32 4, 4
+%t_1088 = zext i1 %t_1087 to i32
+br label %label_3061
+label_3057:
+%t_1089 = icmp ne i32 %t_1086, 0
+br i1 %t_1089, label %label_3064, label %label_3054
+br label %label_3061
+label_3061:
+%t_1090 = icmp ne i32 %t_1088, 0
+%t_1091 = zext i1 %t_1090 to i32
+br label %label_3064
+label_3064:
+%t_1092 = phi i32 [1, %label_3057], [%t_1091, %label_3061]
+%t_1093 = icmp ne i32 0, %t_1092
+br i1 %t_1093, label %label_3068, label %label_3071
+label_3068:
+%w154 = getelementptr [7 x i8], [7 x i8]* @.w154, i32 0, i32 0
+call void @print(i8* %w154)
+br label %label_3071
+label_3071:
+%t_1094 = icmp ne i32 4, 4
+%t_1095 = zext i1 %t_1094 to i32
+br label %label_3077
+label_3074:
+%t_1096 = call i32 @False()
+br label %label_3081
+label_3077:
+%t_1097 = icmp ne i32 %t_1095, 0
+br i1 %t_1097, label %label_3084, label %label_3074
+br label %label_3081
+label_3081:
+%t_1098 = icmp ne i32 %t_1096, 0
+%t_1099 = zext i1 %t_1098 to i32
+br label %label_3084
+label_3084:
+%t_1100 = phi i32 [1, %label_3077], [%t_1099, %label_3081]
+%t_1101 = icmp ne i32 0, %t_1100
+br i1 %t_1101, label %label_3088, label %label_3091
+label_3088:
+%w155 = getelementptr [7 x i8], [7 x i8]* @.w155, i32 0, i32 0
+call void @print(i8* %w155)
+br label %label_3091
+label_3091:
+%t_1102 = icmp ne i32 4, 4
+%t_1103 = zext i1 %t_1102 to i32
+br label %label_3096
+label_3094:
+br label %label_3100
+label_3096:
+%t_1104 = icmp ne i32 %t_1103, 0
+br i1 %t_1104, label %label_3103, label %label_3094
+br label %label_3100
+label_3100:
+%t_1105 = icmp ne i32 0, 0
+%t_1106 = zext i1 %t_1105 to i32
+br label %label_3103
+label_3103:
+%t_1107 = phi i32 [1, %label_3096], [%t_1106, %label_3100]
+%t_1108 = icmp ne i32 0, %t_1107
+br i1 %t_1108, label %label_3107, label %label_3110
+label_3107:
+%w156 = getelementptr [7 x i8], [7 x i8]* @.w156, i32 0, i32 0
+call void @print(i8* %w156)
+br label %label_3110
+label_3110:
+%t_1109 = icmp ne i32 4, 4
+%t_1110 = zext i1 %t_1109 to i32
+br label %label_3115
+label_3113:
+br label %label_3119
+label_3115:
+%t_1111 = icmp ne i32 %t_1110, 0
+br i1 %t_1111, label %label_3123, label %label_3113
+br label %label_3119
+label_3119:
+%t_1114 = load i32, i32* %s1
+%t_1112 = icmp ne i32 %t_1114, 0
+%t_1113 = zext i1 %t_1112 to i32
+br label %label_3123
+label_3123:
+%t_1115 = phi i32 [1, %label_3115], [%t_1113, %label_3119]
+%t_1116 = icmp ne i32 0, %t_1115
+br i1 %t_1116, label %label_3127, label %label_3130
+label_3127:
+%w157 = getelementptr [7 x i8], [7 x i8]* @.w157, i32 0, i32 0
+call void @print(i8* %w157)
+br label %label_3130
+label_3130:
+%t_1117 = icmp ne i32 4, 4
+%t_1118 = zext i1 %t_1117 to i32
+br label %label_3136
+label_3133:
+%t_1119 = icmp sgt i32 4, 5
+%t_1120 = zext i1 %t_1119 to i32
+br label %label_3140
+label_3136:
+%t_1121 = icmp ne i32 %t_1118, 0
+br i1 %t_1121, label %label_3143, label %label_3133
+br label %label_3140
+label_3140:
+%t_1122 = icmp ne i32 %t_1120, 0
+%t_1123 = zext i1 %t_1122 to i32
+br label %label_3143
+label_3143:
+%t_1124 = phi i32 [1, %label_3136], [%t_1123, %label_3140]
+%t_1125 = icmp ne i32 0, %t_1124
+br i1 %t_1125, label %label_3147, label %label_3150
+label_3147:
+%w158 = getelementptr [7 x i8], [7 x i8]* @.w158, i32 0, i32 0
+call void @print(i8* %w158)
+br label %label_3150
+label_3150:
+%t_1126 = icmp ne i32 4, 4
+%t_1127 = zext i1 %t_1126 to i32
+br label %label_3156
+label_3153:
+%t_1128 = icmp ne i32 4, 4
+%t_1129 = zext i1 %t_1128 to i32
+br label %label_3160
+label_3156:
+%t_1130 = icmp ne i32 %t_1127, 0
+br i1 %t_1130, label %label_3163, label %label_3153
+br label %label_3160
+label_3160:
+%t_1131 = icmp ne i32 %t_1129, 0
+%t_1132 = zext i1 %t_1131 to i32
+br label %label_3163
+label_3163:
+%t_1133 = phi i32 [1, %label_3156], [%t_1132, %label_3160]
+%t_1134 = icmp ne i32 0, %t_1133
+br i1 %t_1134, label %label_3167, label %label_3170
+label_3167:
+%w159 = getelementptr [7 x i8], [7 x i8]* @.w159, i32 0, i32 0
+call void @print(i8* %w159)
+br label %label_3170
+label_3170:
+ret void
+}
+

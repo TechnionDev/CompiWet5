@@ -1,0 +1,36 @@
+==RELOPNONASSOC==
+==
+==id==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==num==
+==id==
+==id==
+==num==
+==minus==
+hiiiiiiiiiiiiii
++++++%t_5+++++
+==call==
+==call EXP==
+==mult==
+hiiiiiiiiiiiiii
+==func decl==
+==RELOPNONASSOC==
+==
+==id==
+==num b==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: BYTE
+this is second exp type: BYTE
+==num b==
+==id==
+==id==
+==num b==
+==minus==
+hiiiiiiiiiiiiii
+hear
+line 9: prototype mismatch, function bfactorial expects arguments (INT,BYTE)

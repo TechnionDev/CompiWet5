@@ -1,0 +1,855 @@
+==id==
+==string==
+++++++++++
+==string==
+++++++++++
+==func decl==
+==true==
+==func decl==
+==false==
+==func decl==
+==true==
+==false==
+==false==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==not==
+==id==
+++++++++++
+==id==
+==call==
+==call EXP==
+==OR==
+==start OR==
+==end OR==
+==not==
+==id==
+++++++++++
+==id==
+==false==
+==OR==
+==start OR==
+==end OR==
+==not==
+==id==
+++++++++++
+==id==
+==id==
+==OR==
+==start OR==
+==end OR==
+==not==
+==id==
+++++++++++
+==id==
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==not==
+==id==
+++++++++++
+==id==
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==not==
+==id==
+++++++++++
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==call==
+==call EXP==
+==OR==
+==start OR==
+==end OR==
+==not==
+==id==
+++++++++++
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==false==
+==OR==
+==start OR==
+==end OR==
+==not==
+==id==
+++++++++++
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==id==
+==OR==
+==start OR==
+==end OR==
+==not==
+==id==
+++++++++++
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==not==
+==id==
+++++++++++
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==not==
+==id==
+++++++++++
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==call==
+==call EXP==
+==OR==
+==start OR==
+==end OR==
+==not==
+==id==
+++++++++++
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==false==
+==OR==
+==start OR==
+==end OR==
+==not==
+==id==
+++++++++++
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==id==
+==OR==
+==start OR==
+==end OR==
+==not==
+==id==
+++++++++++
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPLEFT==
+==num==
+==num==
+==bondar==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==not==
+==id==
+++++++++++
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==RELOPNONASSOC==
+!=
+==num==
+==num==
+==dani==
+hiiiiiiiiiiiiii
+this is first exp type: INT
+this is second exp type: INT
+==OR==
+==start OR==
+==end OR==
+==not==
+==id==
+++++++++++
+==func decl==
+==end of program==
+declare i32 @printf(i8*, ...)
+declare void @exit(i32)
+@.int_specifier = constant [4 x i8] c"%d\0A\00"
+@.str_specifier = constant [4 x i8] c"%s\0A\00"
+@.zerodiverrorstring  = constant [23 x i8] c"Error division by zero\00"
+
+define void @printi(i32) {
+%spec_ptr = getelementptr [4 x i8], [4 x i8]* @.int_specifier, i32 0, i32 0
+call i32 (i8*, ...) @printf(i8* %spec_ptr, i32 %0)
+ret void
+}
+
+define void @print(i8*) {
+%spec_ptr = getelementptr [4 x i8], [4 x i8]* @.str_specifier, i32 0, i32 0
+call i32 (i8*, ...) @printf(i8* %spec_ptr, i8* %0)
+ret void
+}
+
+define void @checkDiv(i32) {
+%divcmp = icmp eq i32 %0, 0
+br i1 %divcmp, label %EqualZero, label %notEqualZero
+EqualZero:
+%div_error_str = getelementptr [23 x i8], [23 x i8]* @.zerodiverrorstring, i32 0, i32 0
+call void @print(i8* %div_error_str)
+call void @exit(i32 -1)
+ret void
+notEqualZero:
+ret void
+}
+
+@.w0 = constant [5 x i8]c"true\00"
+@.w1 = constant [6 x i8]c"false\00"
+define void @printBool(i32) {
+%s0 = alloca i32, i32 0
+%s1 = alloca i32, i32 0
+%s2 = alloca i32, i32 0
+%s3 = alloca i32, i32 0
+%s4 = alloca i32, i32 0
+%s5 = alloca i32, i32 0
+%s6 = alloca i32, i32 0
+%s7 = alloca i32, i32 0
+%s8 = alloca i32, i32 0
+%s9 = alloca i32, i32 0
+%s10 = alloca i32, i32 0
+%s11 = alloca i32, i32 0
+%s12 = alloca i32, i32 0
+%s13 = alloca i32, i32 0
+%s14 = alloca i32, i32 0
+%s15 = alloca i32, i32 0
+%s16 = alloca i32, i32 0
+%s17 = alloca i32, i32 0
+%s18 = alloca i32, i32 0
+%s19 = alloca i32, i32 0
+%s20 = alloca i32, i32 0
+%s21 = alloca i32, i32 0
+%s22 = alloca i32, i32 0
+%s23 = alloca i32, i32 0
+%s24 = alloca i32, i32 0
+%s25 = alloca i32, i32 0
+%s26 = alloca i32, i32 0
+%s27 = alloca i32, i32 0
+%s28 = alloca i32, i32 0
+%s29 = alloca i32, i32 0
+%s30 = alloca i32, i32 0
+%s31 = alloca i32, i32 0
+%s32 = alloca i32, i32 0
+%s33 = alloca i32, i32 0
+%s34 = alloca i32, i32 0
+%s35 = alloca i32, i32 0
+%s36 = alloca i32, i32 0
+%s37 = alloca i32, i32 0
+%s38 = alloca i32, i32 0
+%s39 = alloca i32, i32 0
+%s40 = alloca i32, i32 0
+%s41 = alloca i32, i32 0
+%s42 = alloca i32, i32 0
+%s43 = alloca i32, i32 0
+%s44 = alloca i32, i32 0
+%s45 = alloca i32, i32 0
+%s46 = alloca i32, i32 0
+%s47 = alloca i32, i32 0
+%s48 = alloca i32, i32 0
+%s49 = alloca i32, i32 0
+%t_1 = icmp ne i32 0, %0
+br i1 %t_1, label %label_53, label %label_57
+label_53:
+%w0 = getelementptr [5 x i8], [5 x i8]* @.w0, i32 0, i32 0
+call void @print(i8* %w0)
+br label %label_60
+br label %label_57
+label_57:
+%w1 = getelementptr [6 x i8], [6 x i8]* @.w1, i32 0, i32 0
+call void @print(i8* %w1)
+br label %label_60
+label_60:
+ret void
+}
+
+define i32 @True() {
+%s0 = alloca i32, i32 0
+%s1 = alloca i32, i32 0
+%s2 = alloca i32, i32 0
+%s3 = alloca i32, i32 0
+%s4 = alloca i32, i32 0
+%s5 = alloca i32, i32 0
+%s6 = alloca i32, i32 0
+%s7 = alloca i32, i32 0
+%s8 = alloca i32, i32 0
+%s9 = alloca i32, i32 0
+%s10 = alloca i32, i32 0
+%s11 = alloca i32, i32 0
+%s12 = alloca i32, i32 0
+%s13 = alloca i32, i32 0
+%s14 = alloca i32, i32 0
+%s15 = alloca i32, i32 0
+%s16 = alloca i32, i32 0
+%s17 = alloca i32, i32 0
+%s18 = alloca i32, i32 0
+%s19 = alloca i32, i32 0
+%s20 = alloca i32, i32 0
+%s21 = alloca i32, i32 0
+%s22 = alloca i32, i32 0
+%s23 = alloca i32, i32 0
+%s24 = alloca i32, i32 0
+%s25 = alloca i32, i32 0
+%s26 = alloca i32, i32 0
+%s27 = alloca i32, i32 0
+%s28 = alloca i32, i32 0
+%s29 = alloca i32, i32 0
+%s30 = alloca i32, i32 0
+%s31 = alloca i32, i32 0
+%s32 = alloca i32, i32 0
+%s33 = alloca i32, i32 0
+%s34 = alloca i32, i32 0
+%s35 = alloca i32, i32 0
+%s36 = alloca i32, i32 0
+%s37 = alloca i32, i32 0
+%s38 = alloca i32, i32 0
+%s39 = alloca i32, i32 0
+%s40 = alloca i32, i32 0
+%s41 = alloca i32, i32 0
+%s42 = alloca i32, i32 0
+%s43 = alloca i32, i32 0
+%s44 = alloca i32, i32 0
+%s45 = alloca i32, i32 0
+%s46 = alloca i32, i32 0
+%s47 = alloca i32, i32 0
+%s48 = alloca i32, i32 0
+%s49 = alloca i32, i32 0
+ret i32 1
+ret i32 0
+}
+
+define i32 @False() {
+%s0 = alloca i32, i32 0
+%s1 = alloca i32, i32 0
+%s2 = alloca i32, i32 0
+%s3 = alloca i32, i32 0
+%s4 = alloca i32, i32 0
+%s5 = alloca i32, i32 0
+%s6 = alloca i32, i32 0
+%s7 = alloca i32, i32 0
+%s8 = alloca i32, i32 0
+%s9 = alloca i32, i32 0
+%s10 = alloca i32, i32 0
+%s11 = alloca i32, i32 0
+%s12 = alloca i32, i32 0
+%s13 = alloca i32, i32 0
+%s14 = alloca i32, i32 0
+%s15 = alloca i32, i32 0
+%s16 = alloca i32, i32 0
+%s17 = alloca i32, i32 0
+%s18 = alloca i32, i32 0
+%s19 = alloca i32, i32 0
+%s20 = alloca i32, i32 0
+%s21 = alloca i32, i32 0
+%s22 = alloca i32, i32 0
+%s23 = alloca i32, i32 0
+%s24 = alloca i32, i32 0
+%s25 = alloca i32, i32 0
+%s26 = alloca i32, i32 0
+%s27 = alloca i32, i32 0
+%s28 = alloca i32, i32 0
+%s29 = alloca i32, i32 0
+%s30 = alloca i32, i32 0
+%s31 = alloca i32, i32 0
+%s32 = alloca i32, i32 0
+%s33 = alloca i32, i32 0
+%s34 = alloca i32, i32 0
+%s35 = alloca i32, i32 0
+%s36 = alloca i32, i32 0
+%s37 = alloca i32, i32 0
+%s38 = alloca i32, i32 0
+%s39 = alloca i32, i32 0
+%s40 = alloca i32, i32 0
+%s41 = alloca i32, i32 0
+%s42 = alloca i32, i32 0
+%s43 = alloca i32, i32 0
+%s44 = alloca i32, i32 0
+%s45 = alloca i32, i32 0
+%s46 = alloca i32, i32 0
+%s47 = alloca i32, i32 0
+%s48 = alloca i32, i32 0
+%s49 = alloca i32, i32 0
+ret i32 0
+ret i32 0
+}
+
+define void @main() {
+%s0 = alloca i32, i32 0
+%s1 = alloca i32, i32 0
+%s2 = alloca i32, i32 0
+%s3 = alloca i32, i32 0
+%s4 = alloca i32, i32 0
+%s5 = alloca i32, i32 0
+%s6 = alloca i32, i32 0
+%s7 = alloca i32, i32 0
+%s8 = alloca i32, i32 0
+%s9 = alloca i32, i32 0
+%s10 = alloca i32, i32 0
+%s11 = alloca i32, i32 0
+%s12 = alloca i32, i32 0
+%s13 = alloca i32, i32 0
+%s14 = alloca i32, i32 0
+%s15 = alloca i32, i32 0
+%s16 = alloca i32, i32 0
+%s17 = alloca i32, i32 0
+%s18 = alloca i32, i32 0
+%s19 = alloca i32, i32 0
+%s20 = alloca i32, i32 0
+%s21 = alloca i32, i32 0
+%s22 = alloca i32, i32 0
+%s23 = alloca i32, i32 0
+%s24 = alloca i32, i32 0
+%s25 = alloca i32, i32 0
+%s26 = alloca i32, i32 0
+%s27 = alloca i32, i32 0
+%s28 = alloca i32, i32 0
+%s29 = alloca i32, i32 0
+%s30 = alloca i32, i32 0
+%s31 = alloca i32, i32 0
+%s32 = alloca i32, i32 0
+%s33 = alloca i32, i32 0
+%s34 = alloca i32, i32 0
+%s35 = alloca i32, i32 0
+%s36 = alloca i32, i32 0
+%s37 = alloca i32, i32 0
+%s38 = alloca i32, i32 0
+%s39 = alloca i32, i32 0
+%s40 = alloca i32, i32 0
+%s41 = alloca i32, i32 0
+%s42 = alloca i32, i32 0
+%s43 = alloca i32, i32 0
+%s44 = alloca i32, i32 0
+%s45 = alloca i32, i32 0
+%s46 = alloca i32, i32 0
+%s47 = alloca i32, i32 0
+%s48 = alloca i32, i32 0
+%s49 = alloca i32, i32 0
+%t_2 = add i32 0, 1
+store i32 %t_2, i32* %s0
+%t_3 = add i32 0, 0
+store i32 %t_3, i32* %s1
+br label %label_230
+label_227:
+%t_4 = icmp ne i32 4, 4
+%t_5 = zext i1 %t_4 to i32
+br label %label_234
+label_230:
+%t_6 = icmp ne i32 0, 0
+br i1 %t_6, label %label_237, label %label_227
+br label %label_234
+label_234:
+%t_7 = icmp ne i32 %t_5, 0
+%t_8 = zext i1 %t_7 to i32
+br label %label_237
+label_237:
+%t_9 = phi i32 [1, %label_230], [%t_8, %label_234]
+%t_10 = sub i32 1, %t_9
+%t_11 = add i32 0, %t_10
+store i32 %t_11, i32* %s2
+%t_12 = load i32, i32* %s2
+call void @printBool(i32 %t_12)
+br label %label_248
+label_245:
+%t_13 = call i32 @False()
+br label %label_253
+label_248:
+%t_15 = load i32, i32* %s1
+%t_14 = icmp ne i32 %t_15, 0
+br i1 %t_14, label %label_256, label %label_245
+br label %label_253
+label_253:
+%t_16 = icmp ne i32 %t_13, 0
+%t_17 = zext i1 %t_16 to i32
+br label %label_256
+label_256:
+%t_18 = phi i32 [1, %label_248], [%t_17, %label_253]
+%t_19 = sub i32 1, %t_18
+%t_20 = add i32 0, %t_19
+store i32 %t_20, i32* %s3
+%t_21 = load i32, i32* %s3
+call void @printBool(i32 %t_21)
+br label %label_266
+label_264:
+br label %label_271
+label_266:
+%t_23 = load i32, i32* %s1
+%t_22 = icmp ne i32 %t_23, 0
+br i1 %t_22, label %label_274, label %label_264
+br label %label_271
+label_271:
+%t_24 = icmp ne i32 0, 0
+%t_25 = zext i1 %t_24 to i32
+br label %label_274
+label_274:
+%t_26 = phi i32 [1, %label_266], [%t_25, %label_271]
+%t_27 = sub i32 1, %t_26
+%t_28 = add i32 0, %t_27
+store i32 %t_28, i32* %s4
+%t_29 = load i32, i32* %s4
+call void @printBool(i32 %t_29)
+br label %label_284
+label_282:
+br label %label_289
+label_284:
+%t_31 = load i32, i32* %s1
+%t_30 = icmp ne i32 %t_31, 0
+br i1 %t_30, label %label_293, label %label_282
+br label %label_289
+label_289:
+%t_34 = load i32, i32* %s1
+%t_32 = icmp ne i32 %t_34, 0
+%t_33 = zext i1 %t_32 to i32
+br label %label_293
+label_293:
+%t_35 = phi i32 [1, %label_284], [%t_33, %label_289]
+%t_36 = sub i32 1, %t_35
+%t_37 = add i32 0, %t_36
+store i32 %t_37, i32* %s5
+%t_38 = load i32, i32* %s5
+call void @printBool(i32 %t_38)
+br label %label_304
+label_301:
+%t_39 = icmp sgt i32 4, 5
+%t_40 = zext i1 %t_39 to i32
+br label %label_309
+label_304:
+%t_42 = load i32, i32* %s1
+%t_41 = icmp ne i32 %t_42, 0
+br i1 %t_41, label %label_312, label %label_301
+br label %label_309
+label_309:
+%t_43 = icmp ne i32 %t_40, 0
+%t_44 = zext i1 %t_43 to i32
+br label %label_312
+label_312:
+%t_45 = phi i32 [1, %label_304], [%t_44, %label_309]
+%t_46 = sub i32 1, %t_45
+%t_47 = add i32 0, %t_46
+store i32 %t_47, i32* %s6
+%t_48 = load i32, i32* %s6
+call void @printBool(i32 %t_48)
+br label %label_323
+label_320:
+%t_49 = icmp ne i32 4, 4
+%t_50 = zext i1 %t_49 to i32
+br label %label_328
+label_323:
+%t_52 = load i32, i32* %s1
+%t_51 = icmp ne i32 %t_52, 0
+br i1 %t_51, label %label_331, label %label_320
+br label %label_328
+label_328:
+%t_53 = icmp ne i32 %t_50, 0
+%t_54 = zext i1 %t_53 to i32
+br label %label_331
+label_331:
+%t_55 = phi i32 [1, %label_323], [%t_54, %label_328]
+%t_56 = sub i32 1, %t_55
+%t_57 = add i32 0, %t_56
+store i32 %t_57, i32* %s7
+%t_58 = load i32, i32* %s7
+call void @printBool(i32 %t_58)
+%t_59 = icmp sgt i32 4, 5
+%t_60 = zext i1 %t_59 to i32
+br label %label_343
+label_340:
+%t_61 = call i32 @False()
+br label %label_347
+label_343:
+%t_62 = icmp ne i32 %t_60, 0
+br i1 %t_62, label %label_350, label %label_340
+br label %label_347
+label_347:
+%t_63 = icmp ne i32 %t_61, 0
+%t_64 = zext i1 %t_63 to i32
+br label %label_350
+label_350:
+%t_65 = phi i32 [1, %label_343], [%t_64, %label_347]
+%t_66 = sub i32 1, %t_65
+%t_67 = add i32 0, %t_66
+store i32 %t_67, i32* %s8
+%t_68 = load i32, i32* %s8
+call void @printBool(i32 %t_68)
+%t_69 = icmp sgt i32 4, 5
+%t_70 = zext i1 %t_69 to i32
+br label %label_361
+label_359:
+br label %label_365
+label_361:
+%t_71 = icmp ne i32 %t_70, 0
+br i1 %t_71, label %label_368, label %label_359
+br label %label_365
+label_365:
+%t_72 = icmp ne i32 0, 0
+%t_73 = zext i1 %t_72 to i32
+br label %label_368
+label_368:
+%t_74 = phi i32 [1, %label_361], [%t_73, %label_365]
+%t_75 = sub i32 1, %t_74
+%t_76 = add i32 0, %t_75
+store i32 %t_76, i32* %s9
+%t_77 = load i32, i32* %s9
+call void @printBool(i32 %t_77)
+%t_78 = icmp sgt i32 4, 5
+%t_79 = zext i1 %t_78 to i32
+br label %label_379
+label_377:
+br label %label_383
+label_379:
+%t_80 = icmp ne i32 %t_79, 0
+br i1 %t_80, label %label_387, label %label_377
+br label %label_383
+label_383:
+%t_83 = load i32, i32* %s1
+%t_81 = icmp ne i32 %t_83, 0
+%t_82 = zext i1 %t_81 to i32
+br label %label_387
+label_387:
+%t_84 = phi i32 [1, %label_379], [%t_82, %label_383]
+%t_85 = sub i32 1, %t_84
+%t_86 = add i32 0, %t_85
+store i32 %t_86, i32* %s10
+%t_87 = load i32, i32* %s10
+call void @printBool(i32 %t_87)
+%t_88 = icmp sgt i32 4, 5
+%t_89 = zext i1 %t_88 to i32
+br label %label_399
+label_396:
+%t_90 = icmp sgt i32 4, 5
+%t_91 = zext i1 %t_90 to i32
+br label %label_403
+label_399:
+%t_92 = icmp ne i32 %t_89, 0
+br i1 %t_92, label %label_406, label %label_396
+br label %label_403
+label_403:
+%t_93 = icmp ne i32 %t_91, 0
+%t_94 = zext i1 %t_93 to i32
+br label %label_406
+label_406:
+%t_95 = phi i32 [1, %label_399], [%t_94, %label_403]
+%t_96 = sub i32 1, %t_95
+%t_97 = add i32 0, %t_96
+store i32 %t_97, i32* %s11
+%t_98 = load i32, i32* %s11
+call void @printBool(i32 %t_98)
+%t_99 = icmp sgt i32 4, 5
+%t_100 = zext i1 %t_99 to i32
+br label %label_418
+label_415:
+%t_101 = icmp ne i32 4, 4
+%t_102 = zext i1 %t_101 to i32
+br label %label_422
+label_418:
+%t_103 = icmp ne i32 %t_100, 0
+br i1 %t_103, label %label_425, label %label_415
+br label %label_422
+label_422:
+%t_104 = icmp ne i32 %t_102, 0
+%t_105 = zext i1 %t_104 to i32
+br label %label_425
+label_425:
+%t_106 = phi i32 [1, %label_418], [%t_105, %label_422]
+%t_107 = sub i32 1, %t_106
+%t_108 = add i32 0, %t_107
+store i32 %t_108, i32* %s12
+%t_109 = load i32, i32* %s12
+call void @printBool(i32 %t_109)
+%t_110 = icmp ne i32 4, 4
+%t_111 = zext i1 %t_110 to i32
+br label %label_437
+label_434:
+%t_112 = call i32 @False()
+br label %label_441
+label_437:
+%t_113 = icmp ne i32 %t_111, 0
+br i1 %t_113, label %label_444, label %label_434
+br label %label_441
+label_441:
+%t_114 = icmp ne i32 %t_112, 0
+%t_115 = zext i1 %t_114 to i32
+br label %label_444
+label_444:
+%t_116 = phi i32 [1, %label_437], [%t_115, %label_441]
+%t_117 = sub i32 1, %t_116
+%t_118 = add i32 0, %t_117
+store i32 %t_118, i32* %s13
+%t_119 = load i32, i32* %s13
+call void @printBool(i32 %t_119)
+%t_120 = icmp ne i32 4, 4
+%t_121 = zext i1 %t_120 to i32
+br label %label_455
+label_453:
+br label %label_459
+label_455:
+%t_122 = icmp ne i32 %t_121, 0
+br i1 %t_122, label %label_462, label %label_453
+br label %label_459
+label_459:
+%t_123 = icmp ne i32 0, 0
+%t_124 = zext i1 %t_123 to i32
+br label %label_462
+label_462:
+%t_125 = phi i32 [1, %label_455], [%t_124, %label_459]
+%t_126 = sub i32 1, %t_125
+%t_127 = add i32 0, %t_126
+store i32 %t_127, i32* %s14
+%t_128 = load i32, i32* %s14
+call void @printBool(i32 %t_128)
+%t_129 = icmp ne i32 4, 4
+%t_130 = zext i1 %t_129 to i32
+br label %label_473
+label_471:
+br label %label_477
+label_473:
+%t_131 = icmp ne i32 %t_130, 0
+br i1 %t_131, label %label_481, label %label_471
+br label %label_477
+label_477:
+%t_134 = load i32, i32* %s1
+%t_132 = icmp ne i32 %t_134, 0
+%t_133 = zext i1 %t_132 to i32
+br label %label_481
+label_481:
+%t_135 = phi i32 [1, %label_473], [%t_133, %label_477]
+%t_136 = sub i32 1, %t_135
+%t_137 = add i32 0, %t_136
+store i32 %t_137, i32* %s15
+%t_138 = load i32, i32* %s15
+call void @printBool(i32 %t_138)
+%t_139 = icmp ne i32 4, 4
+%t_140 = zext i1 %t_139 to i32
+br label %label_493
+label_490:
+%t_141 = icmp sgt i32 4, 5
+%t_142 = zext i1 %t_141 to i32
+br label %label_497
+label_493:
+%t_143 = icmp ne i32 %t_140, 0
+br i1 %t_143, label %label_500, label %label_490
+br label %label_497
+label_497:
+%t_144 = icmp ne i32 %t_142, 0
+%t_145 = zext i1 %t_144 to i32
+br label %label_500
+label_500:
+%t_146 = phi i32 [1, %label_493], [%t_145, %label_497]
+%t_147 = sub i32 1, %t_146
+%t_148 = add i32 0, %t_147
+store i32 %t_148, i32* %s16
+%t_149 = load i32, i32* %s16
+call void @printBool(i32 %t_149)
+%t_150 = icmp ne i32 4, 4
+%t_151 = zext i1 %t_150 to i32
+br label %label_512
+label_509:
+%t_152 = icmp ne i32 4, 4
+%t_153 = zext i1 %t_152 to i32
+br label %label_516
+label_512:
+%t_154 = icmp ne i32 %t_151, 0
+br i1 %t_154, label %label_519, label %label_509
+br label %label_516
+label_516:
+%t_155 = icmp ne i32 %t_153, 0
+%t_156 = zext i1 %t_155 to i32
+br label %label_519
+label_519:
+%t_157 = phi i32 [1, %label_512], [%t_156, %label_516]
+%t_158 = sub i32 1, %t_157
+%t_159 = add i32 0, %t_158
+store i32 %t_159, i32* %s17
+%t_160 = load i32, i32* %s17
+call void @printBool(i32 %t_160)
+ret void
+}
+
