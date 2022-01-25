@@ -258,6 +258,18 @@ void Node::emitCallCode(expList *expList) {
 	buffer.emit(code.str());
 }
 
+void Node::emitWhileExp(string cmpReg) {
+	stringstream code;
+	string whileExpReg = registerManager.getNextRegisterName();
+	code << whileExpReg << " = " << "trunc i32 " << cmpReg << " to i1" << endl;
+	code << "br i1 " << whileExpReg << ", label @, label @";
+	int cmpAddress = buffer.emit(code.str());
+	string whileStartCodeLabel = buffer.genLabel();
+	vector<pair<int, BranchLabelIndex>> v1 = {{cmpAddress, FIRST}};
+	buffer.bpatch(v1, whileStartCodeLabel);
+	this->falseList.push_back({cmpAddress, SECOND});
+}
+
 program::program() : Node("program") {
 	if (!mainExits) {
 		output::errorMainMissing();
@@ -410,6 +422,10 @@ statement::statement(string keyWord, exp *exp, statement *statement, int lineNum
 			output::errorMismatch(lineNumber);
 			exit(0);
 		}
+		buffer.bpatch(exp->trueList, exp->nextInstruction);
+		exp->trueList.clear();
+		buffer.bpatch(exp->falseList, buffer.genLabelNextLine());
+		exp->falseList.clear();
 	} else if (keyWord == "WHILE") {
 		if (exp->expType != "BOOL") {
 			output::errorMismatch(lineNumber);
@@ -417,10 +433,6 @@ statement::statement(string keyWord, exp *exp, statement *statement, int lineNum
 		}
 	}
 	end_scope();
-	buffer.bpatch(exp->trueList, exp->nextInstruction);
-	exp->trueList.clear();
-	buffer.bpatch(exp->falseList, buffer.genLabelNextLine());
-	exp->falseList.clear();
 	this->nextList = statement->nextList;
 	this->startLoopList = statement->startLoopList;
 }//IF, WHILE
@@ -472,6 +484,10 @@ statement::statement(Node *cmd) : Node("statement") {
 
 statement::statement(statements *statements) : Node("statement") {
 	end_scope();
+	this->startLoopList = statements->startLoopList;
+	this->nextList = statements->nextList;
+	this->falseList = statements->falseList;
+	this->trueList = statements->trueList;
 }    //LBRACE m_newScope statements RBRACE
 
 statement::statement(typeAnnotation *typeAnnotation, type *type, Node *id) : Node("statement") {
@@ -546,18 +562,19 @@ statement::statement(Node *node, exp *exp) : Node("statement") {
 	}
 	exp->loadExp();
 	stringstream code;
-	code << "ret i32 " << registerManager.getVarRegister(this->NodeId, this->NodeRegister);
+	code << "ret i32 " << registerManager.getVarRegister(exp->NodeId, exp->NodeRegister);
 	buffer.emit(code.str());
 }//RETURN exp SC
 
 call::call(Node *id, expList *expList) : Node("call") {
 	if (id->val == curFuncName) {
-		if (curFuncFormals.size() != expList->expVector.size() + 1) {
+		if (curFuncFormals.size() != expList->expVector.size()) {
+			cout << "hear" << endl;
 			output::errorPrototypeMismatch(id->lineNum, id->val, curFuncFormals);
 			exit(0);
 		}
-		for (int i = 1; i < curFuncFormals.size(); i++) {
-			if (curFuncFormals[i] != expList->expVector[i - 1]->expType) {
+		for (int i = 0; i < curFuncFormals.size(); i++) {
+			if (curFuncFormals[i] != expList->expVector[i]->expType) {
 				if (expList->expVector[i]->expType == "BYTE" && curFuncFormals[i] == "INT") {
 				} else {
 					output::errorPrototypeMismatch(id->lineNum, id->val, curFuncFormals);
@@ -565,7 +582,7 @@ call::call(Node *id, expList *expList) : Node("call") {
 				}
 			}
 		}
-		this->rettype = curFuncFormals[0];
+		this->rettype = curFuncRetVal;
 	} else {
 		symbolRow funcId = findSymbolRow(id->val);
 		if (id->val != funcId.name || !funcId.isFunc) {
@@ -601,7 +618,7 @@ call::call(Node *id) : Node("call") {
 			output::errorPrototypeMismatch(id->lineNum, id->val, curFuncFormals);
 			exit(0);
 		}
-		this->rettype = curFuncFormals[0];
+		this->rettype = curFuncRetVal;
 	} else {
 		symbolRow funcId = findSymbolRow(id->val);
 		if (id->val != funcId.name || !funcId.isFunc) {
@@ -673,6 +690,7 @@ exp::exp(exp *exp) : Node("exp") {
 }
 
 exp::exp(exp *firstExp, string op, exp *secExp, int lineNum) : Node("exp") {
+	cout << "hiiiiiiiiiiiiii" << endl;
 	if (op == "MULT" || op == "DIV" || op == "PLUS" || op == "MINUS") {
 		if ((firstExp->expType != "INT" && firstExp->expType != "BYTE")
 			|| (secExp->expType != "INT" && secExp->expType != "BYTE")) {
@@ -684,7 +702,9 @@ exp::exp(exp *firstExp, string op, exp *secExp, int lineNum) : Node("exp") {
 		} else {
 			this->expType = "BYTE";
 		}
-	} else if (op == "RELOPLEFT" || op == "RELOPNONASSOC") {
+	} else if (op == "==" || op == "!=" || op == ">=" || op == "<=" || op == "<" || op == ">") {
+		cout << "this is first exp type: " + firstExp->expType << endl;
+		cout << "this is second exp type: " + secExp->expType << endl;
 		if ((firstExp->expType != "INT" && firstExp->expType != "BYTE")
 			|| (secExp->expType != "INT" && secExp->expType != "BYTE")) {
 			output::errorMismatch(lineNum);
@@ -702,6 +722,8 @@ exp::exp(exp *firstExp, string op, exp *secExp, int lineNum) : Node("exp") {
 
 exp::exp(exp *firstExp, string op, exp *secExp, int lineNum, Marker *marker) {
 	if ((firstExp->expType != "BOOL") || (secExp->expType != "BOOL")) {
+		cout << firstExp->expType << endl;
+		cout << secExp->expType << endl;
 		output::errorMismatch(lineNum);
 		exit(0);
 	}
@@ -754,7 +776,7 @@ exp::exp(exp *firstExp, string op, exp *secExp, int lineNum, Marker *marker) {
 		// update the result value to be the last register
 		this->NodeRegister = resReg;
 	} else {//or
-		cout<<"==start OR=="<<endl;
+		cout << "==start OR==" << endl;
 		int rightJmpInstr = buffer.emit("br label @");
 		string rightLabel = buffer.genLabel();
 		buffer.bpatch(marker->nextList, rightLabel);
@@ -765,7 +787,8 @@ exp::exp(exp *firstExp, string op, exp *secExp, int lineNum, Marker *marker) {
 		string compReg1 = registerManager.getNextRegisterName();
 		stringstream code;
 		firstExp->loadExp();
-		code << compReg1 << " = icmp ne i32 " << registerManager.getVarRegister(firstExp->NodeId, firstExp->NodeRegister)
+		code << compReg1 << " = icmp ne i32 "
+			 << registerManager.getVarRegister(firstExp->NodeId, firstExp->NodeRegister)
 			 << ", 0";
 		buffer.emit(code.str());
 		stringstream code2;
@@ -833,7 +856,9 @@ exp::exp(Node *id, string type) : Node("exp") {
 } //ID,STRING
 
 exp::exp(call *call) : Node("exp") {
+	cout << "==call EXP==" << endl;
 	this->expType = call->rettype;
+	this->NodeRegister = call->NodeRegister;
 }//call
 
 exp::exp(Node *val, int dontUseIT, bool isB) : Node("exp") {
@@ -888,10 +913,10 @@ exp::exp(typeAnnotation *typeAnnotation, type *type, exp *exp, int lineNum) : No
 		this->NodeRegister = exp->NodeRegister;
 	} else if (type->typeName == "BYTE" && exp->expType == "INT") {
 		this->NodeRegister = registerManager.getNextRegisterName();
-		buffer.emit(this->NodeRegister + "=" + " trunc i32 " + exp->NodeRegister + " to i8");
+		buffer.emit(this->NodeRegister + " =" + " trunc i32 " + exp->NodeRegister + " to i8");
 	} else if (type->typeName == "INT" && exp->expType == "BYTE") {
 		this->NodeRegister = registerManager.getNextRegisterName();
-		buffer.emit(this->NodeRegister + "=" + "zext i8 " + exp->NodeRegister + " to i32");
+		buffer.emit(this->NodeRegister + " =" + " zext i8 " + exp->NodeRegister + " to i32");
 	}
 }
 

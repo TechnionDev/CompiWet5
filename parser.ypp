@@ -37,14 +37,12 @@
 %left LPAREN;
 %left RPAREN;
 %right NOT;
-%left MULT;
-%left DIV;
-%left PLUS;
-%left MINUS;
-%nonassoc RELOPNONASSOC;
-%left RELOPLEFT;
 %left OR;
 %left AND;
+%left RELOPLEFT;
+%nonassoc RELOPNONASSOC;
+%left PLUS MINUS
+%left MULT DIV
 %right IF;
 %left ELSE;
 %right ASSIGN;
@@ -103,17 +101,17 @@ statement: LBRACE m_newScope statements RBRACE{$$ = new statement(dynamic_cast<s
                                                                                                             $4->backPatchIf($8->nextInstruction);
                                                                                                             buffer.bpatch($8->nextList, buffer.genLabelNextLine());
                                                                                                             }
-    |WHILE m_newScopeWhile LPAREN exp RPAREN statement{$$ = new statement("WHILE",
-                                                                         dynamic_cast<exp*>($4),
-                                                                         dynamic_cast<statement*>($6),
-                                                                         $1->lineNum);
-                                                       $6->endWhile($2->nextInstruction,dynamic_cast<exp*>($4));};
+    |WHILE m_newScopeWhile LPAREN exp {$4->loadExp(); $4->emitWhileExp($4->NodeRegister);} RPAREN statement{$$ = new statement("WHILE",
+                                                                                                             dynamic_cast<exp*>($4),
+                                                                                                             dynamic_cast<statement*>($7),
+                                                                                                             $1->lineNum);
+                                                                        $7->endWhile($2->nextInstruction,dynamic_cast<exp*>($4));cout<<"!!!!!"+$2->nextInstruction+"!!!!!"<<endl;};
 	|BREAK SC{$$ = new statement($1);}
 	|CONTINUE SC{$$ = new statement($1);};
 
 ifExp: exp {$1->loadExp();$1->ifCode();$$ = new exp(dynamic_cast<exp*>($1));$$->nextInstruction = buffer.genLabel();}
 
-call: ID LPAREN expList RPAREN{$$ = new call($1, dynamic_cast<expList*>($3));$1->emitCallCode(dynamic_cast<expList*>$3);$$->NodeRegister = $1->NodeRegister;};
+call: ID LPAREN expList RPAREN{$$ = new call($1, dynamic_cast<expList*>($3));$1->emitCallCode(dynamic_cast<expList*>$3);$$->NodeRegister = $1->NodeRegister; cout<<"+++++" + $$->NodeRegister + "+++++"<<endl;};
 	|ID LPAREN RPAREN{$$ = new call($1);$1->emitCallCode(nullptr); $$->NodeRegister = $1->NodeRegister;};
 
 expList: exp{$1->loadExp();$$ = new expList(dynamic_cast<exp*>($1));};
@@ -128,22 +126,22 @@ typeAnnotation: /*epsilon*/{$$ = new typeAnnotation();};
 
 
 exp: LPAREN exp RPAREN{$2->loadExp();$$ = new exp(dynamic_cast<exp*>($2));};
-	|exp MULT exp{buffer.emit(registerManager.createArithmeticOp(dynamic_cast<exp*>($1), dynamic_cast<exp*>($3), "MULT"));$$ = new exp(dynamic_cast<exp*>($1), "MULT", dynamic_cast<exp*>($3),$2->lineNum);$$->NodeRegister = registerManager.getCurrentRegisterName();};
-	|exp DIV exp{buffer.emit(registerManager.createArithmeticOp(dynamic_cast<exp*>($1), dynamic_cast<exp*>($3), "DIV"));$$ = new exp(dynamic_cast<exp*>($1), "DIV", dynamic_cast<exp*>($3),$2->lineNum);$$->NodeRegister = registerManager.getCurrentRegisterName();};
-	|exp PLUS exp{buffer.emit(registerManager.createArithmeticOp(dynamic_cast<exp*>($1), dynamic_cast<exp*>($3), "PLUS"));$$ = new exp(dynamic_cast<exp*>($1), "PLUS", dynamic_cast<exp*>($3),$2->lineNum);$$->NodeRegister = registerManager.getCurrentRegisterName();};
-	|exp MINUS exp{buffer.emit(registerManager.createArithmeticOp(dynamic_cast<exp*>($1), dynamic_cast<exp*>($3), "MINUS"));$$ = new exp(dynamic_cast<exp*>($1), "MINUS", dynamic_cast<exp*>($3),$2->lineNum);$$->NodeRegister = registerManager.getCurrentRegisterName();};
-	|ID{$$ = new exp($1,"ID");$$->NodeRegister = registerManager.getVarRegister($$->NodeId, $$->NodeRegister);};
-	|call{$$ = new exp(dynamic_cast<call*>($1));};
-	|NUM{$$ = new exp($1, 0, false);};
-	|NUM B{$$ = new exp($1, 0, true);};
-	|STRING{$$ = new exp($1,"STRING");};
-	|TRUE{$$ = new exp(true);};
-	|FALSE{$$ = new exp(false);};
-	|NOT exp{$$ = new exp("NOT", dynamic_cast<exp*>($2),$1->lineNum);};
-	|exp AND BoolMarkerM exp{$$ = new exp(dynamic_cast<exp*>($1), "AND", dynamic_cast<exp*>($4),$2->lineNum,dynamic_cast<Marker*>($3));};
+	|exp MULT exp{cout<<"==mult=="<<endl;buffer.emit(registerManager.createArithmeticOp(dynamic_cast<exp*>($1), dynamic_cast<exp*>($3), "mul"));$$ = new exp(dynamic_cast<exp*>($1), "MULT", dynamic_cast<exp*>($3),$2->lineNum);$$->NodeRegister = registerManager.getCurrentRegisterName();};
+	|exp DIV exp{cout<<"==div=="<<endl;buffer.emit(registerManager.createArithmeticOp(dynamic_cast<exp*>($1), dynamic_cast<exp*>($3), "sdiv"));$$ = new exp(dynamic_cast<exp*>($1), "DIV", dynamic_cast<exp*>($3),$2->lineNum);$$->NodeRegister = registerManager.getCurrentRegisterName();};
+	|exp PLUS exp{cout<<"==plus=="<<endl;buffer.emit(registerManager.createArithmeticOp(dynamic_cast<exp*>($1), dynamic_cast<exp*>($3), "add"));$$ = new exp(dynamic_cast<exp*>($1), "PLUS", dynamic_cast<exp*>($3),$2->lineNum);$$->NodeRegister = registerManager.getCurrentRegisterName();};
+	|exp MINUS exp{cout<<"==minus=="<<endl;buffer.emit(registerManager.createArithmeticOp(dynamic_cast<exp*>($1), dynamic_cast<exp*>($3), "sub"));$$ = new exp(dynamic_cast<exp*>($1), "MINUS", dynamic_cast<exp*>($3),$2->lineNum);$$->NodeRegister = registerManager.getCurrentRegisterName();};
+	|ID{cout<<"==id=="<<endl;$$ = new exp($1,"ID");$$->NodeRegister = registerManager.getVarRegister($$->NodeId, $$->NodeRegister);};
+	|call{cout<<"==call=="<<endl;$$ = new exp(dynamic_cast<call*>($1));};
+	|NUM{cout<<"==num=="<<endl;$$ = new exp($1, 0, false);};
+	|NUM B{cout<<"==num b=="<<endl;$$ = new exp($1, 0, true);};
+	|STRING{cout<<"==string=="<<endl;$$ = new exp($1,"STRING");};
+	|TRUE{cout<<"==true=="<<endl;$$ = new exp(true);};
+	|FALSE{cout<<"==false=="<<endl;$$ = new exp(false);};
+	|NOT exp{cout<<"==not=="<<endl;$$ = new exp("NOT", dynamic_cast<exp*>($2),$1->lineNum);};
+	|exp AND BoolMarkerM exp{cout<<"==and=="<<endl;$$ = new exp(dynamic_cast<exp*>($1), "AND", dynamic_cast<exp*>($4),$2->lineNum,dynamic_cast<Marker*>($3));};
 	|exp OR BoolMarkerM exp{cout<<"==OR=="<<endl;$$ = new exp(dynamic_cast<exp*>($1), "OR", dynamic_cast<exp*>($4),$2->lineNum,dynamic_cast<Marker*>($3));cout<<"==end OR=="<<endl;};
-	|exp RELOPNONASSOC exp{$$ = new exp(dynamic_cast<exp*>($1), $2->val, dynamic_cast<exp*>($3),$2->lineNum);};
-	|exp RELOPLEFT exp{$$ = new exp(dynamic_cast<exp*>($1), $2->val, dynamic_cast<exp*>($3),$2->lineNum);};
+	|exp RELOPNONASSOC exp{cout<<"==dani=="<<endl;$$ = new exp(dynamic_cast<exp*>($1), $2->val, dynamic_cast<exp*>($3),$2->lineNum);};
+	|exp RELOPLEFT exp{cout<<"==bondar=="<<endl;$$ = new exp(dynamic_cast<exp*>($1), $2->val, dynamic_cast<exp*>($3),$2->lineNum);};
 	|LPAREN typeAnnotation type RPAREN exp{$$ = new exp(dynamic_cast<typeAnnotation*>($2), dynamic_cast<type*>($3), dynamic_cast<exp*>($5),$1->lineNum);};
 
 BoolMarkerM: /* epsilon */ {$$ = new Marker();}

@@ -31,7 +31,7 @@ void RegisterManager::createRegister(bool isConst, string type, Node *id, exp *e
 		if (type == "INT") {
 			code << "add i32 " << value << ", 0";
 		} else if (type == "BYTE") {
-			code << " trunc i32 " << value << " to i8" << endl;
+			code << "trunc i32 " << value << " to i8" << endl;
 			string curr_reg = this->getCurrentRegisterName();
 			registerName = this->getNextRegisterName();
 			code << registerName << " = " << "zext i8 " << curr_reg << " to i32";
@@ -65,15 +65,15 @@ string RegisterManager::createArithmeticOp(exp *firstExp, exp *secondExp, string
 		secondReg = secondExp->NodeRegister;
 		//TODO::DO WE REALLY NEED THIS ELSE?
 	}
-	if (op == "DIV") {
+	if (op == "sdiv") {
 		code << "call void @checkDiv(i32 " << secondReg << ")" << endl;
 	}
-	code << this->getNextRegisterName() << " = " << op << " i32 " << firstReg << " , " << secondReg << endl;
+	code << this->getNextRegisterName() << " = " << op << " i32 " << firstReg << ", " << secondReg << endl;
 	if (firstExp->expType == "BYTE" && secondExp->expType == "BYTE") {
 		string currReg = this->getCurrentRegisterName();
-		code << this->getNextRegisterName() << "=" << " trunc i32 " << currReg << " to i8" << endl;
+		code << this->getNextRegisterName() << " =" << " trunc i32 " << currReg << " to i8" << endl;
 		currReg = this->getCurrentRegisterName();
-		code << this->getNextRegisterName() << "=" << "zext i8 " << currReg << "to i32" << endl;
+		code << this->getNextRegisterName() << " =" << " zext i8 " << currReg << " to i32";
 	}
 	return code.str();
 }

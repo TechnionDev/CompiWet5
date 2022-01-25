@@ -54,6 +54,7 @@ class Node {
 	void backPatchIf(string falseLabel);
 	void endWhile(string startLabel, exp *exp);
 	void emitCallCode(expList *expList);
+	void emitWhileExp(string cmpReg);
 };
 #define YYSTYPE Node*
 class symbolRow {

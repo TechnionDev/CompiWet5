@@ -61,14 +61,14 @@
      LPAREN = 277,
      RPAREN = 278,
      NOT = 279,
-     MULT = 280,
-     DIV = 281,
-     PLUS = 282,
-     MINUS = 283,
-     RELOPNONASSOC = 284,
-     RELOPLEFT = 285,
-     OR = 286,
-     AND = 287,
+     OR = 280,
+     AND = 281,
+     RELOPLEFT = 282,
+     RELOPNONASSOC = 283,
+     MINUS = 284,
+     PLUS = 285,
+     DIV = 286,
+     MULT = 287,
      IF = 288,
      ELSE = 289,
      ASSIGN = 290
@@ -97,14 +97,14 @@
 #define LPAREN 277
 #define RPAREN 278
 #define NOT 279
-#define MULT 280
-#define DIV 281
-#define PLUS 282
-#define MINUS 283
-#define RELOPNONASSOC 284
-#define RELOPLEFT 285
-#define OR 286
-#define AND 287
+#define OR 280
+#define AND 281
+#define RELOPLEFT 282
+#define RELOPNONASSOC 283
+#define MINUS 284
+#define PLUS 285
+#define DIV 286
+#define MULT 287
 #define IF 288
 #define ELSE 289
 #define ASSIGN 290
