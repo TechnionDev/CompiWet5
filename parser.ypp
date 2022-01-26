@@ -110,7 +110,7 @@ statement: LBRACE m_newScope statements RBRACE{$$ = new statement(dynamic_cast<s
 
 ifExp: exp {$1->loadExp();$1->ifCode();$$ = new exp(dynamic_cast<exp*>($1));$$->nextInstruction = buffer.genLabel();}
 
-call: ID LPAREN expList RPAREN{$$ = new call($1, dynamic_cast<expList*>($3));$1->emitCallCode(dynamic_cast<expList*>$3);$$->NodeRegister = $1->NodeRegister; };
+call: ID LPAREN expList RPAREN{$$ = new call($1, dynamic_cast<expList*>($3));$1->emitCallCode(dynamic_cast<expList*>($3));$$->NodeRegister = $1->NodeRegister; };
 	|ID LPAREN RPAREN{$$ = new call($1);$1->emitCallCode(nullptr); $$->NodeRegister = $1->NodeRegister;};
 
 expList: exp{$1->loadExp();$$ = new expList(dynamic_cast<exp*>($1));};

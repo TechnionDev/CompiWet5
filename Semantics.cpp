@@ -364,6 +364,7 @@ formals::formals(formalsList *formals) : Node("formals") {
 		i--;
 	}
 	this->formalsVector = formals->formalsVector;
+  curFuncFormals = {};
 	for (auto it: this->formalsVector) {
 		curFuncFormals.push_back(it.formalType);
 	}
@@ -537,8 +538,11 @@ statement::statement(Node *id, string assign, exp *exp) : Node("statement") {
 	}
 	vector<string> idType = findIdentifierType(id->val);
 	if (idType.size() != 1 || idType[0] != exp->expType) {
+    if(idType[0] == "INT" && exp->expType == "BYTE"){
+    } else {
 		output::errorMismatch(id->lineNum);
 		exit(0);
+    }
 	}
 	if (isIdentifierConst(id->val)) {
 		output::errorConstMismatch(id->lineNum);
