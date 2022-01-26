@@ -58,7 +58,6 @@ funcDecl: retType ID {curFuncName = $2->val;} m_funcNewScope LPAREN formals RPAR
                                                                                     $2,
                                                                                     dynamic_cast<formals*>($6),
                                                                                     dynamic_cast<statements*>($10));
-
                                                                                     };
 
 retType: type{$$ = new retType(dynamic_cast<type*>($1));};
@@ -142,7 +141,7 @@ exp: LPAREN exp RPAREN{$2->loadExp();$$ = new exp(dynamic_cast<exp*>($2));};
 	|exp OR BoolMarkerM exp{$$ = new exp(dynamic_cast<exp*>($1), "OR", dynamic_cast<exp*>($4),$2->lineNum,dynamic_cast<Marker*>($3));};
 	|exp RELOPNONASSOC exp{$$ = new exp(dynamic_cast<exp*>($1), $2->val, dynamic_cast<exp*>($3),$2->lineNum);};
 	|exp RELOPLEFT exp{$$ = new exp(dynamic_cast<exp*>($1), $2->val, dynamic_cast<exp*>($3),$2->lineNum);};
-	|LPAREN typeAnnotation type RPAREN exp{$$ = new exp(dynamic_cast<typeAnnotation*>($2), dynamic_cast<type*>($3), dynamic_cast<exp*>($5),$1->lineNum);};
+	|LPAREN type RPAREN exp{$$ = new exp(dynamic_cast<type*>($2), dynamic_cast<exp*>($4),$1->lineNum);};
 
 BoolMarkerM: /* epsilon */ {$$ = new Marker();}
 

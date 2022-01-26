@@ -721,8 +721,6 @@ exp::exp(exp *firstExp, string op, exp *secExp, int lineNum) : Node("exp") {
 
 exp::exp(exp *firstExp, string op, exp *secExp, int lineNum, Marker *marker) {
 	if ((firstExp->expType != "BOOL") || (secExp->expType != "BOOL")) {
-		cout << firstExp->expType << endl;
-		cout << secExp->expType << endl;
 		output::errorMismatch(lineNum);
 		exit(0);
 	}
@@ -841,6 +839,7 @@ exp::exp(Node *id, string type) : Node("exp") {
 		this->NodeType = "ID";
 		this->NodeId = id->val;
 	} else if (type == "STRING") {
+		this->isLiteral = true;
 		this->expType = "STRING";
 		this->NodeId = id->val; //NodeId will now contain the string value
 		string stringVar = registerManager.createStringConstant();
@@ -850,7 +849,7 @@ exp::exp(Node *id, string type) : Node("exp") {
 		buffer.emitGlobal(this->NodeStringVar + " = constant " + this->NodeStringLength + "c"
 							  + id->val.replace(id->val.length() - 1, 1, "\\00\""));
 	}
-	this->isLiteral = true;
+
 } //ID,STRING
 
 exp::exp(call *call) : Node("exp") {
@@ -899,7 +898,7 @@ exp::exp(string op, exp *exp, int lineNum) : Node("exp") {
 	this->falseList = exp->trueList;
 } //NOT EXP
 
-exp::exp(typeAnnotation *typeAnnotation, type *type, exp *exp, int lineNum) : Node("exp") {
+exp::exp(type *type, exp *exp, int lineNum) : Node("exp") {
 	exp->loadExp();
 	if ((type->typeName != "INT" && type->typeName != "BYTE") || (exp->expType != "INT" && exp->expType != "BYTE")) {
 		output::errorMismatch(lineNum);
@@ -909,11 +908,18 @@ exp::exp(typeAnnotation *typeAnnotation, type *type, exp *exp, int lineNum) : No
 	if (type->typeName == exp->expType) {
 		this->NodeRegister = exp->NodeRegister;
 	} else if (type->typeName == "BYTE" && exp->expType == "INT") {
-		this->NodeRegister = registerManager.getNextRegisterName();
-		buffer.emit(this->NodeRegister + " =" + " trunc i32 " + exp->NodeRegister + " to i8");
+		stringstream code;
+		string registerName = registerManager.getNextRegisterName();
+		code << registerName << " = " << "trunc i32 " << exp->NodeRegister << " to i8" << endl;
+		string curr_reg = registerManager.getCurrentRegisterName();
+		registerName = registerManager.getNextRegisterName();
+		code << registerName << " = " << "zext i8 " << curr_reg << " to i32";
+		buffer.emit(code.str());
+		this->NodeRegister = registerName;
 	} else if (type->typeName == "INT" && exp->expType == "BYTE") {
-		this->NodeRegister = registerManager.getNextRegisterName();
-		buffer.emit(this->NodeRegister + " =" + " zext i8 " + exp->NodeRegister + " to i32");
+		this->NodeRegister = exp->NodeRegister;
+		//this->NodeRegister = registerManager.getNextRegisterName();
+		//buffer.emit(this->NodeRegister + " =" + " zext i8 " + exp->NodeRegister + " to i32");
 	}
 }
 
