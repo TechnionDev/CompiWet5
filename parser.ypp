@@ -142,7 +142,7 @@ exp: LPAREN exp RPAREN{$2->loadExp();$$ = new exp(dynamic_cast<exp*>($2));};
 	|exp OR BoolMarkerM exp{cout<<"==OR=="<<endl;$$ = new exp(dynamic_cast<exp*>($1), "OR", dynamic_cast<exp*>($4),$2->lineNum,dynamic_cast<Marker*>($3));cout<<"==end OR=="<<endl;};
 	|exp RELOPNONASSOC exp{cout<<"==dani=="<<endl;$$ = new exp(dynamic_cast<exp*>($1), $2->val, dynamic_cast<exp*>($3),$2->lineNum);};
 	|exp RELOPLEFT exp{cout<<"==bondar=="<<endl;$$ = new exp(dynamic_cast<exp*>($1), $2->val, dynamic_cast<exp*>($3),$2->lineNum);};
-	|LPAREN typeAnnotation type RPAREN exp{$$ = new exp(dynamic_cast<typeAnnotation*>($2), dynamic_cast<type*>($3), dynamic_cast<exp*>($5),$1->lineNum);};
+	|LPAREN type RPAREN exp{$$ = new exp(dynamic_cast<type*>($2), dynamic_cast<exp*>($4),$1->lineNum);};
 
 BoolMarkerM: /* epsilon */ {$$ = new Marker();}
 

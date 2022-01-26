@@ -211,7 +211,7 @@ class exp : public Node {
 	exp(Node *val, int dontUseIT, bool isB);
 	exp(bool val);
 	exp(string op, exp *exp, int lineNum);
-	exp(typeAnnotation *typeAnnotation, type *type, exp *exp, int lineNum);
+	exp(type *type, exp *exp, int lineNum);
 };
 
 class Marker : public Node {
