@@ -183,12 +183,11 @@ void addFunction(retType *retType, Node *funcName, formals *formals) {
 		stringstream reg;
 		reg << "%" << i;
 		registerManager.varName2Register[it->id] = reg.str();
-		//buffer.emit("%s" + to_string(i) + " = alloca i32, i32 0"); //TODO: Only for testing
 		i++;
 	}
 	for (int i = 0; i < 50; i++) {
 		buffer.emit("%s" + to_string(i) + " = alloca i32, i32 0");
-	} //TODO - This is the original code, in line 186 I tried something else
+	}
 }
 
 //////////////////////////////////////////////////
@@ -365,6 +364,7 @@ formals::formals(formalsList *formals) : Node("formals") {
 		i--;
 	}
 	this->formalsVector = formals->formalsVector;
+  curFuncFormals = {};
 	for (auto it: this->formalsVector) {
 		curFuncFormals.push_back(it.formalType);
 	}
@@ -538,8 +538,11 @@ statement::statement(Node *id, string assign, exp *exp) : Node("statement") {
 	}
 	vector<string> idType = findIdentifierType(id->val);
 	if (idType.size() != 1 || idType[0] != exp->expType) {
+    if(idType[0] == "INT" && exp->expType == "BYTE"){
+    } else {
 		output::errorMismatch(id->lineNum);
 		exit(0);
+    }
 	}
 	if (isIdentifierConst(id->val)) {
 		output::errorConstMismatch(id->lineNum);
@@ -569,7 +572,6 @@ statement::statement(Node *node, exp *exp) : Node("statement") {
 call::call(Node *id, expList *expList) : Node("call") {
 	if (id->val == curFuncName) {
 		if (curFuncFormals.size() != expList->expVector.size()) {
-			cout << "hear" << endl;
 			output::errorPrototypeMismatch(id->lineNum, id->val, curFuncFormals);
 			exit(0);
 		}
@@ -690,7 +692,6 @@ exp::exp(exp *exp) : Node("exp") {
 }
 
 exp::exp(exp *firstExp, string op, exp *secExp, int lineNum) : Node("exp") {
-	cout << "hiiiiiiiiiiiiii" << endl;
 	if (op == "MULT" || op == "DIV" || op == "PLUS" || op == "MINUS") {
 		if ((firstExp->expType != "INT" && firstExp->expType != "BYTE")
 			|| (secExp->expType != "INT" && secExp->expType != "BYTE")) {
@@ -703,8 +704,6 @@ exp::exp(exp *firstExp, string op, exp *secExp, int lineNum) : Node("exp") {
 			this->expType = "BYTE";
 		}
 	} else if (op == "==" || op == "!=" || op == ">=" || op == "<=" || op == "<" || op == ">") {
-		cout << "this is first exp type: " + firstExp->expType << endl;
-		cout << "this is second exp type: " + secExp->expType << endl;
 		if ((firstExp->expType != "INT" && firstExp->expType != "BYTE")
 			|| (secExp->expType != "INT" && secExp->expType != "BYTE")) {
 			output::errorMismatch(lineNum);
@@ -776,7 +775,6 @@ exp::exp(exp *firstExp, string op, exp *secExp, int lineNum, Marker *marker) {
 		// update the result value to be the last register
 		this->NodeRegister = resReg;
 	} else {//or
-		cout << "==start OR==" << endl;
 		int rightJmpInstr = buffer.emit("br label @");
 		string rightLabel = buffer.genLabel();
 		buffer.bpatch(marker->nextList, rightLabel);
@@ -856,7 +854,6 @@ exp::exp(Node *id, string type) : Node("exp") {
 } //ID,STRING
 
 exp::exp(call *call) : Node("exp") {
-	cout << "==call EXP==" << endl;
 	this->expType = call->rettype;
 	this->NodeRegister = call->NodeRegister;
 }//call
