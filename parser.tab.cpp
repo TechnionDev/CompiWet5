@@ -500,13 +500,13 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    51,    51,    53,    54,    56,    56,    56,    64,    65,
-      67,    68,    70,    71,    73,    77,    78,    80,    81,    84,
-      87,    88,    89,    90,    91,    95,   104,   104,   109,   110,
-     112,   114,   115,   117,   118,   120,   121,   122,   124,   125,
-     128,   129,   130,   131,   132,   133,   134,   135,   136,   137,
-     138,   139,   140,   141,   142,   143,   144,   145,   147,   149,
-     151,   153,   155,   157
+       0,    51,    51,    53,    54,    56,    56,    56,    63,    64,
+      66,    67,    69,    70,    72,    76,    77,    79,    80,    83,
+      86,    87,    88,    89,    90,    94,   103,   103,   108,   109,
+     111,   113,   114,   116,   117,   119,   120,   121,   123,   124,
+     127,   128,   129,   130,   131,   132,   133,   134,   135,   136,
+     137,   138,   139,   140,   141,   142,   143,   144,   146,   148,
+     150,   152,   154,   156
 };
 #endif
 
@@ -1505,7 +1505,7 @@ yyreduce:
     {
         case 2:
 #line 51 "parser.ypp"
-    {(yyval) = new program();cout<<"==end of program=="<<endl;;}
+    {(yyval) = new program();;}
     break;
 
   case 3:
@@ -1535,106 +1535,105 @@ yyreduce:
                                                                                     (yyvsp[(2) - (11)]),
                                                                                     dynamic_cast<formals*>((yyvsp[(6) - (11)])),
                                                                                     dynamic_cast<statements*>((yyvsp[(10) - (11)])));
-                                                                                    cout<<"==func decl=="<<endl;
                                                                                     ;}
     break;
 
   case 8:
-#line 64 "parser.ypp"
+#line 63 "parser.ypp"
     {(yyval) = new retType(dynamic_cast<type*>((yyvsp[(1) - (1)])));;}
     break;
 
   case 9:
-#line 65 "parser.ypp"
+#line 64 "parser.ypp"
     {(yyval) = new retType((yyvsp[(1) - (1)]));;}
     break;
 
   case 10:
-#line 67 "parser.ypp"
+#line 66 "parser.ypp"
     {(yyval) = new formals();;}
     break;
 
   case 11:
-#line 68 "parser.ypp"
+#line 67 "parser.ypp"
     {(yyval) = new formals(dynamic_cast<formalsList*>((yyvsp[(1) - (1)])));;}
     break;
 
   case 12:
-#line 70 "parser.ypp"
+#line 69 "parser.ypp"
     {(yyval) = new formalsList(dynamic_cast<formalsDecl*>((yyvsp[(1) - (1)])));;}
     break;
 
   case 13:
-#line 71 "parser.ypp"
+#line 70 "parser.ypp"
     {(yyval) = new formalsList(dynamic_cast<formalsDecl*>((yyvsp[(1) - (3)])), dynamic_cast<formalsList*>((yyvsp[(3) - (3)])));;}
     break;
 
   case 14:
-#line 73 "parser.ypp"
+#line 72 "parser.ypp"
     {(yyval) = new formalsDecl(dynamic_cast<typeAnnotation*>((yyvsp[(1) - (3)]))
                                                         ,dynamic_cast<type*>((yyvsp[(2) - (3)])),
                                                         (yyvsp[(3) - (3)]));;}
     break;
 
   case 15:
-#line 77 "parser.ypp"
+#line 76 "parser.ypp"
     {(yyval) = new statements(dynamic_cast<statement*>((yyvsp[(1) - (1)])));;}
     break;
 
   case 16:
-#line 78 "parser.ypp"
+#line 77 "parser.ypp"
     {(yyval) = new statements(dynamic_cast<statements*>((yyvsp[(1) - (2)])), dynamic_cast<statement*>((yyvsp[(2) - (2)])));;}
     break;
 
   case 17:
-#line 80 "parser.ypp"
+#line 79 "parser.ypp"
     {(yyval) = new statement(dynamic_cast<statements*>((yyvsp[(3) - (4)])));;}
     break;
 
   case 18:
-#line 81 "parser.ypp"
+#line 80 "parser.ypp"
     {(yyval) = new statement(dynamic_cast<typeAnnotation*>((yyvsp[(1) - (4)])),
                                                         dynamic_cast<type*>((yyvsp[(2) - (4)])),
                                                         (yyvsp[(3) - (4)]));;}
     break;
 
   case 19:
-#line 84 "parser.ypp"
+#line 83 "parser.ypp"
     {(yyval) = new statement(dynamic_cast<typeAnnotation*>((yyvsp[(1) - (6)])),
                                                                    dynamic_cast<type*>((yyvsp[(2) - (6)])),
                                                                    (yyvsp[(3) - (6)]),dynamic_cast<exp*>((yyvsp[(5) - (6)])));;}
     break;
 
   case 20:
-#line 87 "parser.ypp"
+#line 86 "parser.ypp"
     {(yyval) = new statement((yyvsp[(1) - (4)]), "ASSIGN", dynamic_cast<exp*>((yyvsp[(3) - (4)])));;}
     break;
 
   case 21:
-#line 88 "parser.ypp"
+#line 87 "parser.ypp"
     {(yyval) = new statement(dynamic_cast<call*>((yyvsp[(1) - (2)])));;}
     break;
 
   case 22:
-#line 89 "parser.ypp"
+#line 88 "parser.ypp"
     {(yyval) = new statement((yyvsp[(1) - (2)]));;}
     break;
 
   case 23:
-#line 90 "parser.ypp"
+#line 89 "parser.ypp"
     {(yyval) = new statement((yyvsp[(1) - (3)]), dynamic_cast<exp*>((yyvsp[(2) - (3)])));;}
     break;
 
   case 24:
-#line 91 "parser.ypp"
-    {cout<<"==if statement=="<<endl;(yyval) = new statement("IF",
+#line 90 "parser.ypp"
+    {(yyval) = new statement("IF",
                                                                     dynamic_cast<exp*>((yyvsp[(4) - (6)])),
                                                                     dynamic_cast<statement*>((yyvsp[(6) - (6)])),
                                                                     (yyvsp[(1) - (6)])->lineNum);;}
     break;
 
   case 25:
-#line 95 "parser.ypp"
+#line 94 "parser.ypp"
     {(yyval) = new statement("IF",
                                                                                                             dynamic_cast<exp*>((yyvsp[(4) - (10)])),
                                                                                                             dynamic_cast<statement*>((yyvsp[(6) - (10)])),
@@ -1647,202 +1646,202 @@ yyreduce:
     break;
 
   case 26:
-#line 104 "parser.ypp"
+#line 103 "parser.ypp"
     {(yyvsp[(4) - (4)])->loadExp(); (yyvsp[(4) - (4)])->emitWhileExp((yyvsp[(4) - (4)])->NodeRegister);;}
     break;
 
   case 27:
-#line 104 "parser.ypp"
+#line 103 "parser.ypp"
     {(yyval) = new statement("WHILE",
                                                                                                              dynamic_cast<exp*>((yyvsp[(4) - (7)])),
                                                                                                              dynamic_cast<statement*>((yyvsp[(7) - (7)])),
                                                                                                              (yyvsp[(1) - (7)])->lineNum);
-                                                                        (yyvsp[(7) - (7)])->endWhile((yyvsp[(2) - (7)])->nextInstruction,dynamic_cast<exp*>((yyvsp[(4) - (7)])));cout<<"!!!!!"+(yyvsp[(2) - (7)])->nextInstruction+"!!!!!"<<endl;;}
+                                                                        (yyvsp[(7) - (7)])->endWhile((yyvsp[(2) - (7)])->nextInstruction,dynamic_cast<exp*>((yyvsp[(4) - (7)])));;}
     break;
 
   case 28:
-#line 109 "parser.ypp"
+#line 108 "parser.ypp"
     {(yyval) = new statement((yyvsp[(1) - (2)]));;}
     break;
 
   case 29:
-#line 110 "parser.ypp"
+#line 109 "parser.ypp"
     {(yyval) = new statement((yyvsp[(1) - (2)]));;}
     break;
 
   case 30:
-#line 112 "parser.ypp"
+#line 111 "parser.ypp"
     {(yyvsp[(1) - (1)])->loadExp();(yyvsp[(1) - (1)])->ifCode();(yyval) = new exp(dynamic_cast<exp*>((yyvsp[(1) - (1)])));(yyval)->nextInstruction = buffer.genLabel();;}
     break;
 
   case 31:
-#line 114 "parser.ypp"
-    {(yyval) = new call((yyvsp[(1) - (4)]), dynamic_cast<expList*>((yyvsp[(3) - (4)])));(yyvsp[(1) - (4)])->emitCallCode(dynamic_cast<expList*>(yyvsp[(3) - (4)]));(yyval)->NodeRegister = (yyvsp[(1) - (4)])->NodeRegister; cout<<"+++++" + (yyval)->NodeRegister + "+++++"<<endl;;}
+#line 113 "parser.ypp"
+    {(yyval) = new call((yyvsp[(1) - (4)]), dynamic_cast<expList*>((yyvsp[(3) - (4)])));(yyvsp[(1) - (4)])->emitCallCode(dynamic_cast<expList*>(yyvsp[(3) - (4)]));(yyval)->NodeRegister = (yyvsp[(1) - (4)])->NodeRegister; ;}
     break;
 
   case 32:
-#line 115 "parser.ypp"
+#line 114 "parser.ypp"
     {(yyval) = new call((yyvsp[(1) - (3)]));(yyvsp[(1) - (3)])->emitCallCode(nullptr); (yyval)->NodeRegister = (yyvsp[(1) - (3)])->NodeRegister;;}
     break;
 
   case 33:
-#line 117 "parser.ypp"
+#line 116 "parser.ypp"
     {(yyvsp[(1) - (1)])->loadExp();(yyval) = new expList(dynamic_cast<exp*>((yyvsp[(1) - (1)])));;}
     break;
 
   case 34:
-#line 118 "parser.ypp"
+#line 117 "parser.ypp"
     {(yyvsp[(1) - (3)])->loadExp();(yyval) = new expList(dynamic_cast<exp*>((yyvsp[(1) - (3)])),dynamic_cast<expList*>((yyvsp[(3) - (3)])));;}
     break;
 
   case 35:
-#line 120 "parser.ypp"
+#line 119 "parser.ypp"
     {(yyval) = new type((yyvsp[(1) - (1)]));;}
     break;
 
   case 36:
-#line 121 "parser.ypp"
+#line 120 "parser.ypp"
     {(yyval) = new type((yyvsp[(1) - (1)]));;}
     break;
 
   case 37:
-#line 122 "parser.ypp"
+#line 121 "parser.ypp"
     {(yyval) = new type((yyvsp[(1) - (1)]));;}
     break;
 
   case 38:
-#line 124 "parser.ypp"
+#line 123 "parser.ypp"
     {(yyval) = new typeAnnotation();;}
     break;
 
   case 39:
-#line 125 "parser.ypp"
+#line 124 "parser.ypp"
     {(yyval) = new typeAnnotation((yyvsp[(1) - (1)]));;}
     break;
 
   case 40:
-#line 128 "parser.ypp"
+#line 127 "parser.ypp"
     {(yyvsp[(2) - (3)])->loadExp();(yyval) = new exp(dynamic_cast<exp*>((yyvsp[(2) - (3)])));;}
     break;
 
   case 41:
-#line 129 "parser.ypp"
-    {cout<<"==mult=="<<endl;buffer.emit(registerManager.createArithmeticOp(dynamic_cast<exp*>((yyvsp[(1) - (3)])), dynamic_cast<exp*>((yyvsp[(3) - (3)])), "mul"));(yyval) = new exp(dynamic_cast<exp*>((yyvsp[(1) - (3)])), "MULT", dynamic_cast<exp*>((yyvsp[(3) - (3)])),(yyvsp[(2) - (3)])->lineNum);(yyval)->NodeRegister = registerManager.getCurrentRegisterName();;}
+#line 128 "parser.ypp"
+    {buffer.emit(registerManager.createArithmeticOp(dynamic_cast<exp*>((yyvsp[(1) - (3)])), dynamic_cast<exp*>((yyvsp[(3) - (3)])), "mul"));(yyval) = new exp(dynamic_cast<exp*>((yyvsp[(1) - (3)])), "MULT", dynamic_cast<exp*>((yyvsp[(3) - (3)])),(yyvsp[(2) - (3)])->lineNum);(yyval)->NodeRegister = registerManager.getCurrentRegisterName();;}
     break;
 
   case 42:
-#line 130 "parser.ypp"
-    {cout<<"==div=="<<endl;buffer.emit(registerManager.createArithmeticOp(dynamic_cast<exp*>((yyvsp[(1) - (3)])), dynamic_cast<exp*>((yyvsp[(3) - (3)])), "sdiv"));(yyval) = new exp(dynamic_cast<exp*>((yyvsp[(1) - (3)])), "DIV", dynamic_cast<exp*>((yyvsp[(3) - (3)])),(yyvsp[(2) - (3)])->lineNum);(yyval)->NodeRegister = registerManager.getCurrentRegisterName();;}
+#line 129 "parser.ypp"
+    {buffer.emit(registerManager.createArithmeticOp(dynamic_cast<exp*>((yyvsp[(1) - (3)])), dynamic_cast<exp*>((yyvsp[(3) - (3)])), "sdiv"));(yyval) = new exp(dynamic_cast<exp*>((yyvsp[(1) - (3)])), "DIV", dynamic_cast<exp*>((yyvsp[(3) - (3)])),(yyvsp[(2) - (3)])->lineNum);(yyval)->NodeRegister = registerManager.getCurrentRegisterName();;}
     break;
 
   case 43:
-#line 131 "parser.ypp"
-    {cout<<"==plus=="<<endl;buffer.emit(registerManager.createArithmeticOp(dynamic_cast<exp*>((yyvsp[(1) - (3)])), dynamic_cast<exp*>((yyvsp[(3) - (3)])), "add"));(yyval) = new exp(dynamic_cast<exp*>((yyvsp[(1) - (3)])), "PLUS", dynamic_cast<exp*>((yyvsp[(3) - (3)])),(yyvsp[(2) - (3)])->lineNum);(yyval)->NodeRegister = registerManager.getCurrentRegisterName();;}
+#line 130 "parser.ypp"
+    {buffer.emit(registerManager.createArithmeticOp(dynamic_cast<exp*>((yyvsp[(1) - (3)])), dynamic_cast<exp*>((yyvsp[(3) - (3)])), "add"));(yyval) = new exp(dynamic_cast<exp*>((yyvsp[(1) - (3)])), "PLUS", dynamic_cast<exp*>((yyvsp[(3) - (3)])),(yyvsp[(2) - (3)])->lineNum);(yyval)->NodeRegister = registerManager.getCurrentRegisterName();;}
     break;
 
   case 44:
-#line 132 "parser.ypp"
-    {cout<<"==minus=="<<endl;buffer.emit(registerManager.createArithmeticOp(dynamic_cast<exp*>((yyvsp[(1) - (3)])), dynamic_cast<exp*>((yyvsp[(3) - (3)])), "sub"));(yyval) = new exp(dynamic_cast<exp*>((yyvsp[(1) - (3)])), "MINUS", dynamic_cast<exp*>((yyvsp[(3) - (3)])),(yyvsp[(2) - (3)])->lineNum);(yyval)->NodeRegister = registerManager.getCurrentRegisterName();;}
+#line 131 "parser.ypp"
+    {buffer.emit(registerManager.createArithmeticOp(dynamic_cast<exp*>((yyvsp[(1) - (3)])), dynamic_cast<exp*>((yyvsp[(3) - (3)])), "sub"));(yyval) = new exp(dynamic_cast<exp*>((yyvsp[(1) - (3)])), "MINUS", dynamic_cast<exp*>((yyvsp[(3) - (3)])),(yyvsp[(2) - (3)])->lineNum);(yyval)->NodeRegister = registerManager.getCurrentRegisterName();;}
     break;
 
   case 45:
-#line 133 "parser.ypp"
-    {cout<<"==id=="<<endl;(yyval) = new exp((yyvsp[(1) - (1)]),"ID");(yyval)->NodeRegister = registerManager.getVarRegister((yyval)->NodeId, (yyval)->NodeRegister);;}
+#line 132 "parser.ypp"
+    {(yyval) = new exp((yyvsp[(1) - (1)]),"ID");(yyval)->NodeRegister = registerManager.getVarRegister((yyval)->NodeId, (yyval)->NodeRegister);;}
     break;
 
   case 46:
-#line 134 "parser.ypp"
-    {cout<<"==call=="<<endl;(yyval) = new exp(dynamic_cast<call*>((yyvsp[(1) - (1)])));;}
+#line 133 "parser.ypp"
+    {(yyval) = new exp(dynamic_cast<call*>((yyvsp[(1) - (1)])));;}
     break;
 
   case 47:
-#line 135 "parser.ypp"
-    {cout<<"==num=="<<endl;(yyval) = new exp((yyvsp[(1) - (1)]), 0, false);;}
+#line 134 "parser.ypp"
+    {(yyval) = new exp((yyvsp[(1) - (1)]), 0, false);;}
     break;
 
   case 48:
-#line 136 "parser.ypp"
-    {cout<<"==num b=="<<endl;(yyval) = new exp((yyvsp[(1) - (2)]), 0, true);;}
+#line 135 "parser.ypp"
+    {(yyval) = new exp((yyvsp[(1) - (2)]), 0, true);;}
     break;
 
   case 49:
-#line 137 "parser.ypp"
-    {cout<<"==string=="<<endl;(yyval) = new exp((yyvsp[(1) - (1)]),"STRING");;}
+#line 136 "parser.ypp"
+    {(yyval) = new exp((yyvsp[(1) - (1)]),"STRING");;}
     break;
 
   case 50:
-#line 138 "parser.ypp"
-    {cout<<"==true=="<<endl;(yyval) = new exp(true);;}
+#line 137 "parser.ypp"
+    {(yyval) = new exp(true);;}
     break;
 
   case 51:
-#line 139 "parser.ypp"
-    {cout<<"==false=="<<endl;(yyval) = new exp(false);;}
+#line 138 "parser.ypp"
+    {(yyval) = new exp(false);;}
     break;
 
   case 52:
-#line 140 "parser.ypp"
-    {cout<<"==not=="<<endl;(yyval) = new exp("NOT", dynamic_cast<exp*>((yyvsp[(2) - (2)])),(yyvsp[(1) - (2)])->lineNum);;}
+#line 139 "parser.ypp"
+    {(yyval) = new exp("NOT", dynamic_cast<exp*>((yyvsp[(2) - (2)])),(yyvsp[(1) - (2)])->lineNum);;}
     break;
 
   case 53:
-#line 141 "parser.ypp"
-    {cout<<"==and=="<<endl;(yyval) = new exp(dynamic_cast<exp*>((yyvsp[(1) - (4)])), "AND", dynamic_cast<exp*>((yyvsp[(4) - (4)])),(yyvsp[(2) - (4)])->lineNum,dynamic_cast<Marker*>((yyvsp[(3) - (4)])));;}
+#line 140 "parser.ypp"
+    {(yyval) = new exp(dynamic_cast<exp*>((yyvsp[(1) - (4)])), "AND", dynamic_cast<exp*>((yyvsp[(4) - (4)])),(yyvsp[(2) - (4)])->lineNum,dynamic_cast<Marker*>((yyvsp[(3) - (4)])));;}
     break;
 
   case 54:
-#line 142 "parser.ypp"
-    {cout<<"==OR=="<<endl;(yyval) = new exp(dynamic_cast<exp*>((yyvsp[(1) - (4)])), "OR", dynamic_cast<exp*>((yyvsp[(4) - (4)])),(yyvsp[(2) - (4)])->lineNum,dynamic_cast<Marker*>((yyvsp[(3) - (4)])));cout<<"==end OR=="<<endl;;}
+#line 141 "parser.ypp"
+    {(yyval) = new exp(dynamic_cast<exp*>((yyvsp[(1) - (4)])), "OR", dynamic_cast<exp*>((yyvsp[(4) - (4)])),(yyvsp[(2) - (4)])->lineNum,dynamic_cast<Marker*>((yyvsp[(3) - (4)])));;}
     break;
 
   case 55:
-#line 143 "parser.ypp"
-    {cout<<"==dani=="<<endl;(yyval) = new exp(dynamic_cast<exp*>((yyvsp[(1) - (3)])), (yyvsp[(2) - (3)])->val, dynamic_cast<exp*>((yyvsp[(3) - (3)])),(yyvsp[(2) - (3)])->lineNum);;}
+#line 142 "parser.ypp"
+    {(yyval) = new exp(dynamic_cast<exp*>((yyvsp[(1) - (3)])), (yyvsp[(2) - (3)])->val, dynamic_cast<exp*>((yyvsp[(3) - (3)])),(yyvsp[(2) - (3)])->lineNum);;}
     break;
 
   case 56:
-#line 144 "parser.ypp"
-    {cout<<"==bondar=="<<endl;(yyval) = new exp(dynamic_cast<exp*>((yyvsp[(1) - (3)])), (yyvsp[(2) - (3)])->val, dynamic_cast<exp*>((yyvsp[(3) - (3)])),(yyvsp[(2) - (3)])->lineNum);;}
+#line 143 "parser.ypp"
+    {(yyval) = new exp(dynamic_cast<exp*>((yyvsp[(1) - (3)])), (yyvsp[(2) - (3)])->val, dynamic_cast<exp*>((yyvsp[(3) - (3)])),(yyvsp[(2) - (3)])->lineNum);;}
     break;
 
   case 57:
-#line 145 "parser.ypp"
+#line 144 "parser.ypp"
     {(yyval) = new exp(dynamic_cast<type*>((yyvsp[(2) - (4)])), dynamic_cast<exp*>((yyvsp[(4) - (4)])),(yyvsp[(1) - (4)])->lineNum);;}
     break;
 
   case 58:
-#line 147 "parser.ypp"
+#line 146 "parser.ypp"
     {(yyval) = new Marker();;}
     break;
 
   case 59:
-#line 149 "parser.ypp"
+#line 148 "parser.ypp"
     {m_glob();;}
     break;
 
   case 60:
-#line 151 "parser.ypp"
+#line 150 "parser.ypp"
     {curFuncName = yytext;m_newScope();;}
     break;
 
   case 61:
-#line 153 "parser.ypp"
+#line 152 "parser.ypp"
     {m_newScope();;}
     break;
 
   case 62:
-#line 155 "parser.ypp"
+#line 154 "parser.ypp"
     {m_newScopeWhile();(yyval) = new Node(); (yyval)->nextInstruction = buffer.genLabelNextLine();;}
     break;
 
   case 63:
-#line 157 "parser.ypp"
+#line 156 "parser.ypp"
     {m_endScope();(yyval) = new Node(); (yyval)->elseCode();;}
     break;
 
 
 /* Line 1267 of yacc.c.  */
-#line 1846 "parser.tab.cpp"
+#line 1845 "parser.tab.cpp"
       default: break;
     }
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
@@ -2056,7 +2055,7 @@ yyreturn:
 }
 
 
-#line 158 "parser.ypp"
+#line 157 "parser.ypp"
 
 
 void yyerror (const char* err) {

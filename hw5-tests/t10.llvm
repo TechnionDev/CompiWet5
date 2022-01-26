@@ -1,34 +1,3 @@
-==id==
-==id==
-++++++++++
-==id==
-++++++++++
-==func decl==
-==num==
-==id==
-==id==
-==num==
-==plus==
-hiiiiiiiiiiiiii
-==RELOPNONASSOC==
-==
-==id==
-==num==
-==dani==
-hiiiiiiiiiiiiii
-this is first exp type: INT
-this is second exp type: INT
-==id==
-++++++++++
-==if statement==
-==num==
-==num==
-==plus==
-hiiiiiiiiiiiiii
-==id==
-++++++++++
-==func decl==
-==end of program==
 declare i32 @printf(i8*, ...)
 declare void @exit(i32)
 @.int_specifier = constant [4 x i8] c"%d\0A\00"

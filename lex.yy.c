@@ -952,12 +952,12 @@ yylval = new Node(yytext, yylineno);return ASSIGN;
 case 25:
 YY_RULE_SETUP
 #line 41 "scanner.lex"
-cout<<"==RELOPLEFT=="<<endl;yylval = new Node(yytext, yylineno);return RELOPLEFT;
+yylval = new Node(yytext, yylineno);return RELOPLEFT;
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
 #line 42 "scanner.lex"
-cout<<"==RELOPNONASSOC=="<<endl;yylval = new Node(yytext, yylineno);cout<<yylval->val<<endl;return RELOPNONASSOC;
+yylval = new Node(yytext, yylineno);return RELOPNONASSOC;
 	YY_BREAK
 case 27:
 YY_RULE_SETUP

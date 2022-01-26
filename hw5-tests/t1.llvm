@@ -1,29 +1,3 @@
-==id==
-==string==
-++++++++++
-==string==
-++++++++++
-==func decl==
-==true==
-++++++++++
-==false==
-++++++++++
-==true==
-==string==
-++++++++++
-==if statement==
-==false==
-==false==
-==true==
-==and==
-==OR==
-==start OR==
-==end OR==
-==string==
-++++++++++
-==if statement==
-==func decl==
-==end of program==
 declare i32 @printf(i8*, ...)
 declare void @exit(i32)
 @.int_specifier = constant [4 x i8] c"%d\0A\00"
