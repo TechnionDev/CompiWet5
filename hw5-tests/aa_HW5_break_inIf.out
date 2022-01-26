@@ -44,18 +44,6 @@ in second loop
 5
 break second loop
 5
-first loop didn't break
+break first loop
 8
-in first loop
-9
-in second loop
-4
-second loop didn't break
-4
-in second loop
-5
-break second loop
-5
-first loop didn't break
-9
 bye bye
