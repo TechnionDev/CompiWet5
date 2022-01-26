@@ -1,0 +1,347 @@
+STRING
+2
+line 2: prototype mismatch, function print expects arguments (STRING)
+STRING
+2
+line 2: prototype mismatch, function print expects arguments (STRING)
+usage: strace [-CdffhiqrtttTvVwxxy] [-I n] [-e expr]...
+              [-a column] [-o file] [-s strsize] [-P path]...
+              -p pid... / [-D] [-E var=val]... [-u username] PROG [ARGS]
+   or: strace -c[dfw] [-I n] [-e expr]... [-O overhead] [-S sortby]
+              -p pid... / [-D] [-E var=val]... [-u username] PROG [ARGS]
+
+Output format:
+  -a column      alignment COLUMN for printing syscall results (default 40)
+  -i             print instruction pointer at time of syscall
+  -k             obtain stack trace between each syscall (experimental)
+  -o file        send trace output to FILE instead of stderr
+  -q             suppress messages about attaching, detaching, etc.
+  -r             print relative timestamp
+  -s strsize     limit length of print strings to STRSIZE chars (default 32)
+  -t             print absolute timestamp
+  -tt            print absolute timestamp with usecs
+  -T             print time spent in each syscall
+  -x             print non-ascii strings in hex
+  -xx            print all strings in hex
+  -y             print paths associated with file descriptor arguments
+  -yy            print protocol specific information associated with socket file descriptors
+
+Statistics:
+  -c             count time, calls, and errors for each syscall and report summary
+  -C             like -c but also print regular output
+  -O overhead    set overhead for tracing syscalls to OVERHEAD usecs
+  -S sortby      sort syscall counts by: time, calls, name, nothing (default time)
+  -w             summarise syscall latency (default is system time)
+
+Filtering:
+  -e expr        a qualifying expression: option=[!]all or option=[!]val1[,val2]...
+     options:    trace, abbrev, verbose, raw, signal, read, write, fault
+  -P path        trace accesses to path
+
+Tracing:
+  -b execve      detach on execve syscall
+  -D             run tracer process as a detached grandchild, not as parent
+  -f             follow forks
+  -ff            follow forks with output into separate files
+  -I interruptible
+     1:          no signals are blocked
+     2:          fatal signals are blocked while decoding syscall (default)
+     3:          fatal signals are always blocked (default if '-o FILE PROG')
+     4:          fatal signals and SIGTSTP (^Z) are always blocked
+                 (useful to make 'strace -o FILE PROG' not stop on ^Z)
+
+Startup:
+  -E var         remove var from the environment for command
+  -E var=val     put var=val in the environment for command
+  -p pid         trace process with process id PID, may be repeated
+  -u username    run command as username handling setuid and/or setgid
+
+Miscellaneous:
+  -d             enable debug output to stderr
+  -v             verbose mode: print unabbreviated argv, stat, termios, etc. args
+  -h             print help message
+  -V             print version
+usage: strace [-CdffhiqrtttTvVwxxy] [-I n] [-e expr]...
+              [-a column] [-o file] [-s strsize] [-P path]...
+              -p pid... / [-D] [-E var=val]... [-u username] PROG [ARGS]
+   or: strace -c[dfw] [-I n] [-e expr]... [-O overhead] [-S sortby]
+              -p pid... / [-D] [-E var=val]... [-u username] PROG [ARGS]
+
+Output format:
+  -a column      alignment COLUMN for printing syscall results (default 40)
+  -i             print instruction pointer at time of syscall
+  -k             obtain stack trace between each syscall (experimental)
+  -o file        send trace output to FILE instead of stderr
+  -q             suppress messages about attaching, detaching, etc.
+  -r             print relative timestamp
+  -s strsize     limit length of print strings to STRSIZE chars (default 32)
+  -t             print absolute timestamp
+  -tt            print absolute timestamp with usecs
+  -T             print time spent in each syscall
+  -x             print non-ascii strings in hex
+  -xx            print all strings in hex
+  -y             print paths associated with file descriptor arguments
+  -yy            print protocol specific information associated with socket file descriptors
+
+Statistics:
+  -c             count time, calls, and errors for each syscall and report summary
+  -C             like -c but also print regular output
+  -O overhead    set overhead for tracing syscalls to OVERHEAD usecs
+  -S sortby      sort syscall counts by: time, calls, name, nothing (default time)
+  -w             summarise syscall latency (default is system time)
+
+Filtering:
+  -e expr        a qualifying expression: option=[!]all or option=[!]val1[,val2]...
+     options:    trace, abbrev, verbose, raw, signal, read, write, fault
+  -P path        trace accesses to path
+
+Tracing:
+  -b execve      detach on execve syscall
+  -D             run tracer process as a detached grandchild, not as parent
+  -f             follow forks
+  -ff            follow forks with output into separate files
+  -I interruptible
+     1:          no signals are blocked
+     2:          fatal signals are blocked while decoding syscall (default)
+     3:          fatal signals are always blocked (default if '-o FILE PROG')
+     4:          fatal signals and SIGTSTP (^Z) are always blocked
+                 (useful to make 'strace -o FILE PROG' not stop on ^Z)
+
+Startup:
+  -E var         remove var from the environment for command
+  -E var=val     put var=val in the environment for command
+  -p pid         trace process with process id PID, may be repeated
+  -u username    run command as username handling setuid and/or setgid
+
+Miscellaneous:
+  -d             enable debug output to stderr
+  -v             verbose mode: print unabbreviated argv, stat, termios, etc. args
+  -h             print help message
+  -V             print version
+usage: strace [-CdffhiqrtttTvVwxxy] [-I n] [-e expr]...
+              [-a column] [-o file] [-s strsize] [-P path]...
+              -p pid... / [-D] [-E var=val]... [-u username] PROG [ARGS]
+   or: strace -c[dfw] [-I n] [-e expr]... [-O overhead] [-S sortby]
+              -p pid... / [-D] [-E var=val]... [-u username] PROG [ARGS]
+
+Output format:
+  -a column      alignment COLUMN for printing syscall results (default 40)
+  -i             print instruction pointer at time of syscall
+  -k             obtain stack trace between each syscall (experimental)
+  -o file        send trace output to FILE instead of stderr
+  -q             suppress messages about attaching, detaching, etc.
+  -r             print relative timestamp
+  -s strsize     limit length of print strings to STRSIZE chars (default 32)
+  -t             print absolute timestamp
+  -tt            print absolute timestamp with usecs
+  -T             print time spent in each syscall
+  -x             print non-ascii strings in hex
+  -xx            print all strings in hex
+  -y             print paths associated with file descriptor arguments
+  -yy            print protocol specific information associated with socket file descriptors
+
+Statistics:
+  -c             count time, calls, and errors for each syscall and report summary
+  -C             like -c but also print regular output
+  -O overhead    set overhead for tracing syscalls to OVERHEAD usecs
+  -S sortby      sort syscall counts by: time, calls, name, nothing (default time)
+  -w             summarise syscall latency (default is system time)
+
+Filtering:
+  -e expr        a qualifying expression: option=[!]all or option=[!]val1[,val2]...
+     options:    trace, abbrev, verbose, raw, signal, read, write, fault
+  -P path        trace accesses to path
+
+Tracing:
+  -b execve      detach on execve syscall
+  -D             run tracer process as a detached grandchild, not as parent
+  -f             follow forks
+  -ff            follow forks with output into separate files
+  -I interruptible
+     1:          no signals are blocked
+     2:          fatal signals are blocked while decoding syscall (default)
+     3:          fatal signals are always blocked (default if '-o FILE PROG')
+     4:          fatal signals and SIGTSTP (^Z) are always blocked
+                 (useful to make 'strace -o FILE PROG' not stop on ^Z)
+
+Startup:
+  -E var         remove var from the environment for command
+  -E var=val     put var=val in the environment for command
+  -p pid         trace process with process id PID, may be repeated
+  -u username    run command as username handling setuid and/or setgid
+
+Miscellaneous:
+  -d             enable debug output to stderr
+  -v             verbose mode: print unabbreviated argv, stat, termios, etc. args
+  -h             print help message
+  -V             print version
+1c1
+< line 3: identifier a is already defined
+---
+> line 3: identifier a is already defined
+1,11c1,5
+< ---end scope---
+< x INT -1
+< ---end scope---
+< y INT 1
+< ---end scope---
+< i INT 0
+< ---end scope---
+< print (STRING)->VOID 0
+< printi (INT)->VOID 0
+< first (INT)->INT 0
+< main ()->VOID 0
+---
+> ---end scope---
+> x INT -1
+> INT
+> 2
+> line 6: prototype mismatch, function first expects arguments (INT)
+Usage: bison [OPTION]... FILE
+Generate a deterministic LR or generalized LR (GLR) parser employing
+LALR(1), IELR(1), or canonical LR(1) parser tables.  IELR(1) and
+canonical LR(1) support is experimental.
+
+Mandatory arguments to long options are mandatory for short options too.
+The same is true for optional arguments.
+
+Operation modes:
+  -h, --help                 display this help and exit
+  -V, --version              output version information and exit
+      --print-localedir      output directory containing locale-dependent data
+      --print-datadir        output directory containing skeletons and XSLT
+  -y, --yacc                 emulate POSIX Yacc
+  -W, --warnings[=CATEGORY]  report the warnings falling in CATEGORY
+  -f, --feature[=FEATURE]    activate miscellaneous features
+
+Parser:
+  -L, --language=LANGUAGE          specify the output programming language
+  -S, --skeleton=FILE              specify the skeleton to use
+  -t, --debug                      instrument the parser for tracing
+                                   same as '-Dparse.trace'
+      --locations                  enable location support
+  -D, --define=NAME[=VALUE]        similar to '%define NAME "VALUE"'
+  -F, --force-define=NAME[=VALUE]  override '%define NAME "VALUE"'
+  -p, --name-prefix=PREFIX         prepend PREFIX to the external symbols
+                                   deprecated by '-Dapi.prefix=PREFIX'
+  -l, --no-lines                   don't generate '#line' directives
+  -k, --token-table                include a table of token names
+
+Output:
+      --defines[=FILE]       also produce a header file
+  -d                         likewise but cannot specify FILE (for POSIX Yacc)
+  -r, --report=THINGS        also produce details on the automaton
+      --report-file=FILE     write report to FILE
+  -v, --verbose              same as '--report=state'
+  -b, --file-prefix=PREFIX   specify a PREFIX for output files
+  -o, --output=FILE          leave output to FILE
+  -g, --graph[=FILE]         also output a graph of the automaton
+  -x, --xml[=FILE]           also output an XML report of the automaton
+                             (the XML schema is experimental)
+
+Warning categories include:
+  'midrule-values'    unset or unused midrule values
+  'yacc'              incompatibilities with POSIX Yacc
+  'conflicts-sr'      S/R conflicts (enabled by default)
+  'conflicts-rr'      R/R conflicts (enabled by default)
+  'deprecated'        obsolete constructs
+  'empty-rule'        empty rules without %empty
+  'precedence'        useless precedence and associativity
+  'other'             all other warnings (enabled by default)
+  'all'               all the warnings except 'yacc'
+  'no-CATEGORY'       turn off warnings in CATEGORY
+  'none'              turn off all the warnings
+  'error[=CATEGORY]'  treat warnings as errors
+
+THINGS is a list of comma separated words that can include:
+  'state'        describe the states
+  'itemset'      complete the core item sets with their closure
+  'lookahead'    explicitly associate lookahead tokens to items
+  'solved'       describe shift/reduce conflicts solving
+  'all'          include all the above information
+  'none'         disable the report
+
+FEATURE is a list of comma separated words that can include:
+  'caret'        show errors with carets
+  'all'          all of the above
+  'none'         disable all of the above
+  
+Report bugs to <bug-bison@gnu.org>.
+GNU Bison home page: <http://www.gnu.org/software/bison/>.
+General help using GNU software: <http://www.gnu.org/gethelp/>.
+Report translation bugs to <http://translationproject.org/team/>.
+For complete documentation, run: info bison.
+Usage: bison [OPTION]... FILE
+Generate a deterministic LR or generalized LR (GLR) parser employing
+LALR(1), IELR(1), or canonical LR(1) parser tables.  IELR(1) and
+canonical LR(1) support is experimental.
+
+Mandatory arguments to long options are mandatory for short options too.
+The same is true for optional arguments.
+
+Operation modes:
+  -h, --help                 display this help and exit
+  -V, --version              output version information and exit
+      --print-localedir      output directory containing locale-dependent data
+      --print-datadir        output directory containing skeletons and XSLT
+  -y, --yacc                 emulate POSIX Yacc
+  -W, --warnings[=CATEGORY]  report the warnings falling in CATEGORY
+  -f, --feature[=FEATURE]    activate miscellaneous features
+
+Parser:
+  -L, --language=LANGUAGE          specify the output programming language
+  -S, --skeleton=FILE              specify the skeleton to use
+  -t, --debug                      instrument the parser for tracing
+                                   same as '-Dparse.trace'
+      --locations                  enable location support
+  -D, --define=NAME[=VALUE]        similar to '%define NAME "VALUE"'
+  -F, --force-define=NAME[=VALUE]  override '%define NAME "VALUE"'
+  -p, --name-prefix=PREFIX         prepend PREFIX to the external symbols
+                                   deprecated by '-Dapi.prefix=PREFIX'
+  -l, --no-lines                   don't generate '#line' directives
+  -k, --token-table                include a table of token names
+
+Output:
+      --defines[=FILE]       also produce a header file
+  -d                         likewise but cannot specify FILE (for POSIX Yacc)
+  -r, --report=THINGS        also produce details on the automaton
+      --report-file=FILE     write report to FILE
+  -v, --verbose              same as '--report=state'
+  -b, --file-prefix=PREFIX   specify a PREFIX for output files
+  -o, --output=FILE          leave output to FILE
+  -g, --graph[=FILE]         also output a graph of the automaton
+  -x, --xml[=FILE]           also output an XML report of the automaton
+                             (the XML schema is experimental)
+
+Warning categories include:
+  'midrule-values'    unset or unused midrule values
+  'yacc'              incompatibilities with POSIX Yacc
+  'conflicts-sr'      S/R conflicts (enabled by default)
+  'conflicts-rr'      R/R conflicts (enabled by default)
+  'deprecated'        obsolete constructs
+  'empty-rule'        empty rules without %empty
+  'precedence'        useless precedence and associativity
+  'other'             all other warnings (enabled by default)
+  'all'               all the warnings except 'yacc'
+  'no-CATEGORY'       turn off warnings in CATEGORY
+  'none'              turn off all the warnings
+  'error[=CATEGORY]'  treat warnings as errors
+
+THINGS is a list of comma separated words that can include:
+  'state'        describe the states
+  'itemset'      complete the core item sets with their closure
+  'lookahead'    explicitly associate lookahead tokens to items
+  'solved'       describe shift/reduce conflicts solving
+  'all'          include all the above information
+  'none'         disable the report
+
+FEATURE is a list of comma separated words that can include:
+  'caret'        show errors with carets
+  'all'          all of the above
+  'none'         disable all of the above
+  
+Report bugs to <bug-bison@gnu.org>.
+GNU Bison home page: <http://www.gnu.org/software/bison/>.
+General help using GNU software: <http://www.gnu.org/gethelp/>.
+Report translation bugs to <http://translationproject.org/team/>.
+For complete documentation, run: info bison.
